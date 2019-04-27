@@ -1,0 +1,24 @@
+{
+  "name": "rx-marble-design-system",
+  "version": "0.1.0",
+  "description": "A library and framework agnostic design system to visualize functional reactive programming with ReactiveExtensions",
+  "main": "index.html",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BioPhoton/Rx-Marble-Design-System.git"
+  },
+  "keywords": [
+    "Rx",
+    "Reactive Programming",
+    "Marble Diagrams",
+    "Marble Design System"
+  ],
+  "author": "Michael Hladky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BioPhoton/Rx-Marble-Design-System/issues"
+  },
+  "homepage": "https://biophoton.github.io/Rx-Marble-Design-System/"
+}
