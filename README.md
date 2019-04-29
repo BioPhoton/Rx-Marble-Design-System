@@ -1,15 +1,16 @@
 # Rx-Marble-Design-System
-A library and framework agnostic design system to visualize functional  
+A library and framework agnostic design system to visualize functional
 reactive programming with <a href="https://github.com/ReactiveX" title="ReactiveExtensions">ReactiveExtensions</a>
 
 -----
 <div style="width: 100%; text-align: center;">
   <img src="https://github.com/BioPhoton/Rx-Marble-Design-System/raw/master/assets/design-system/cover.png">
 </div>
+
 ------
 
 ## Index
------
+
 
  - DESIGN TOKENS
   - UNIT
@@ -43,5 +44,21 @@ reactive programming with <a href="https://github.com/ReactiveX" title="Reactive
 ## Preview
 
 <p style="width: 100%; text-align: center;">
-  <b>Work in progress<b/>
+  <div style="width: 100%; text-align: center;">
+    <img src="https://github.com/BioPhoton/Rx-Marble-Design-System/raw/master/assets/draft/Rx-Marbles-Design-System_Components.png">
+    <br>
+    <img src="https://github.com/BioPhoton/Rx-Marble-Design-System/raw/master/assets/draft/RxJS-Ratelimiting-Operators.jpeg">
+    <br>
+    <img src="https://github.com/BioPhoton/Rx-Marble-Design-System/raw/master/assets/operators/new/tap.jpg">
+    <br>
+    <img src="https://github.com/BioPhoton/Rx-Marble-Design-System/raw/master/assets/operators/new/tap_v2.jpg">
+    <br>
+    <img src="https://github.com/BioPhoton/Rx-Marble-Design-System/raw/master/assets/operators/new/tap_v3.jpg">
+    <br>
+    <img src="https://github.com/BioPhoton/Rx-Marble-Design-System/raw/master/assets/operators/new/finalize.jpg">
+    <br>
+    <img src="https://github.com/BioPhoton/Rx-Marble-Design-System/raw/master/assets/operators/new/finalize_v2.jpg">
+
+
+  </div>
 </p>
