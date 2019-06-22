@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Marble Design System</title>
+</head>
+<body>
+
+<div class="achievements-categories row">
+  categories
+</div>
+
+<div class="achievements-view-content">
+
+  <div id="{{$index}}" class="achievement col-xs-6 col-sm-4 col-md-3"
+    data-category="{{achievement.category}} {{(achievement.count>0)?'unlocked':'locked'}} {{(achievement.secret)?'secret':''}}"
+    ng-repeat="achievement in $ctrl.achievements track by $index">
+    achievement
+  </div>
+
+</div>
+
+</body>
+</html>

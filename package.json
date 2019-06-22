@@ -4,6 +4,7 @@
   "description": "A library and framework agnostic design system to visualize functional reactive programming with ReactiveExtensions",
   "main": "index.html",
   "scripts": {
+    "build": "tsc -p ./tsconfig.jons src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/BioPhoton/Rx-Marble-Design-System/issues"
   },
-  "homepage": "https://biophoton.github.io/Rx-Marble-Design-System/"
+  "homepage": "https://biophoton.github.io/Rx-Marble-Design-System/",
+  "dependencies": {
+    "flexboxgrid": "^6.3.1",
+    "d3": "^5.9.1",
+    "rxjs": "^6.4.0"
+  },
+  "devDependencies": {
+    "tsc": "^1.20150623.0"
+  }
 }
