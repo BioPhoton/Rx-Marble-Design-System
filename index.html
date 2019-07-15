@@ -1,163 +1,211 @@
 <!doctype html>
 <html lang="en">
-    <head>
+<head>
 
-        <meta charset="utf-8">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Marble Design System</title>
-    </head>
+  <title>Marble Design System</title>
+  <link rel = "stylesheet"
+    type = "text/css"
+    href = "./assets/css/index.css" />
 
-    <p>
-        <p>
+  <link rel = "stylesheet"
+    type = "text/css"
+    href = "./assets/css/flexboxgrid.css" />
+</head>
+<body class="page">
 
-            <h1>Rx Marble Design System</h1>
+<h1>Rx Marble Design System</h1>
 
-            <h4>
-                A library and framework agnostic design system to visualize functional
-                reactive programming with <a href="https://github.com/ReactiveX" title="ReactiveExtensions">ReactiveExtensions</a>
-            </h4>
+<h4>
+  A library and framework agnostic design system to visualize functional
+  reactive programming with <a href="https://github.com/ReactiveX"
+  title="ReactiveExtensions">ReactiveExtensions</a>
+</h4>
+<p>
+  As this is work in progress and the migration will take some time
+  we refer to the current version in form of a <a
+  href="https://github.com/BioPhoton/Rx-Marble-Design-System/raw/master/Rx-Marble-Design-System.pdf">PDF</a>.
+</p>
 
-            As this is work in progress and the migration will take some time
-            we refer to the current version in form of a <a
-                    href="https://github.com/BioPhoton/Rx-Marble-Design-System/raw/master/Rx-Marble-Design-System.pdf">PDF</a>.
-        </p>
+<br>
 
-        <br>
+<hr>
 
-        <hr>
+<br>
 
-        <br>
+<div>
+  <img
+    src="https://github.com/BioPhoton/Rx-Marble-Design-System/raw/master/assets/design-system/cover_v2.png">
+</div>
 
-        <div>
-            <img src="https://github.com/BioPhoton/Rx-Marble-Design-System/raw/master/assets/design-system/cover_v2.png">
-        </div>
+<br>
 
-        <br>
+<hr>
 
-        <hr>
-
-        <br>
-
-
-        <h1> The idea behind the MarbleDesignSystem </h1>
-
-        <p>
-            <b>
-                Diagrams have the unique ability to express complex things simply.
-                <br>
-                Never had reactive programming been made so visual.
-                <br>
-                Diagrams is transforming information into compelling images
-            </b>
-        </p>
-
-        <p>
-            Marble diagrams serve a <b>method for </b>
-            us to visualize processes over time.
-            This helps programmers and engineers to understand and design reactive processes.
-
-            The overall goal of the MarbleDesignSystem is to provide a unified way of reading and creating stream based
-            diagrams,
-            in particular one specific type of it, the marble diagrams.
-
-            This guide explains all building blocks of the design system step by step and in detail.
-        </p>
-        <p>
-            In general we have some main rules that system follows:
-        </p>
-        <ul>
-            <li>
-                Consistent
-            </li>
-            <li>
-                Intuitive
-            </li>
-            <li>
-                Easy
-            </li>
-            <li>
-                Detailed
-            </li>
-            <li>
-                Customizable
-            </li>
+<br>
 
 
-        </ul>
-        <h2>Consistency</h2>
-        <p>
-            There are several things to follow if you try to create a standard.
-            One of them is more <b>critical for a positive outcome </b>
-            than everything else, <b>consistency</b>.
-        </p>
+<h1> The idea behind the MarbleDesignSystem </h1>
 
-        <p>
-            By working with a <b>standardized, reproducible approach </b>
-            we managed to create <b> a consistent way </b> of drawing marble diagrams.
-            <b> A set of rules </b> developed over many many iterations, adopted and
-            simplified to serve as a guideline and blueprint for <b> creating and using </b>
-            these diagrams.
-        </p>
+<p>
+  <b>
+    Diagrams have the unique ability to express complex things simply.
+    <br>
+    Never had reactive programming been made so visual.
+    <br>
+    Diagrams is transforming information into compelling images
+  </b>
+</p>
 
-         <h2>Intuitive</h2>
+<p>
+  Marble diagrams serve a <b>method for </b>
+  us to visualize processes over time.
+  This helps programmers and engineers to understand and design reactive
+  processes.
 
-    <p>
-        As programming with Rx is hard we made sure to keep it intuitive.
-    </p>
+  The overall goal of the MarbleDesignSystem is to provide a unified way of
+  reading and creating stream based
+  diagrams,
+  in particular one specific type of it, the marble diagrams.
 
-       <p>
-
-           By <b> including </b>a lot of <b>people</b> into the process of the creation
-           of this guide we collected a lot of <b>personal feedback</b> to improve the system.
-
-       </p>
-
-    <p>
-
-        To make sure we consider <b> a common way</b> interpretation we created several <b>public polls</b>
-        we were collected and evaluated the general understanding.
-        This helped us to make our system <b>intuitive to understand</b>.
-
-    </p>
-<h2>
+  This guide explains all building blocks of the design system step by step and
+  in detail.
+</p>
+<p>
+  In general we have some main rules that system follows:
+</p>
+<ul>
+  <li>
+    Consistent
+  </li>
+  <li>
+    Intuitive
+  </li>
+  <li>
     Easy
+  </li>
+  <li>
+    Detailed
+  </li>
+  <li>
+    Customizable
+  </li>
+
+
+</ul>
+<h2>Consistency</h2>
+<p>
+  There are several things to follow if you try to create a standard.
+  One of them is more <b>critical for a positive outcome </b>
+  than everything else, <b>consistency</b>.
+</p>
+
+<p>
+  By working with a <b>standardized, reproducible approach </b>
+  we managed to create <b> a consistent way </b> of drawing marble diagrams.
+  <b> A set of rules </b> developed over many many iterations, adopted and
+  simplified to serve as a guideline and blueprint for <b> creating and
+  using </b>
+  these diagrams.
+</p>
+
+<h2>Intuitive</h2>
+
+<p>
+  As programming with Rx is hard we made sure to keep it intuitive.
+</p>
+
+<p>
+
+  By <b> including </b>a lot of <b>people</b> into the process of the creation
+  of this guide we collected a lot of <b>personal feedback</b> to improve the
+  system.
+
+</p>
+
+<p>
+
+  To make sure we consider <b> a common way</b> interpretation we created
+  several <b>public polls</b>
+  we were collected and evaluated the general understanding.
+  This helped us to make our system <b>intuitive to understand</b>.
+
+</p>
+<h2>
+  Easy
 </h2>
 
-    <p>
+<p>
 
-        As mindset behind the system are several principles.
-        One of them is <b>“Easy to adopt and create”</b>, which means we want to provide <b>a way for everybody</b> to
-        <b>read and create</b> marble diagrams.
+  As mindset behind the system are several principles.
+  One of them is <b>“Easy to adopt and create”</b>, which means we want to
+  provide <b>a way for everybody</b> to
+  <b>read and create</b> marble diagrams.
 
+</p>
+
+<p>
+  To achieve this we create all diagrams in either googleSlides oder Powerpoint.
+  We believe this two options <b> enable</b> a big group of <b>people</b> to <b>edit
+  and draw </b> these diagrams.
+</p>
+
+<h2>
+  Detailed
+</h2>
+
+
+<p>
+  Marble diagrams exist since a long time now.
+  As there was no well thought standard out there and not all edge cases
+  considered,
+  people started to create their own solutions to visualize processes.
+  These let to a variety of different ways of drawing these diagrams.
+  Some of the better approaches were able to visualize more complex prozesses,
+  but there is one essential thing which nobody considered yet,
+  but which is most critical to understand processes based on Rx. The internal
+  behavior of operators.
+
+</p>
+
+<p>
+  This system is not only providing a consistent, standardized way of drawing
+  marble diagrams,
+  but also offers a way to visualize the internals of operators.
+  Of course based on the systems rules it selfe.
+</p>
+
+
+<h1>
+  Design Tokens
+</h1>
+
+<div class="row">
+  <div class="col-xs-12
+              col-sm-8
+              col-md-6
+              col-lg-4">
+    <img src="./assets/design-system/unit_block.JPG"
+    alt="Unit Block" title="Unit Block">
+    <img src="./assets/design-system/unit_block-frame-timeline.JPG"
+      alt="Frame Timeline" title="Frame Timeline">
+  </div>
+  <div class="col-xs-12
+              col-md-6">
+    <p>The unit for width and height in marble diagrams is called a block.
+      A block is a rectangle with equal width and height.
+
+      Positioning of objects and text is also measured in blocks.
+
+      To have a convenient unit we use em with the base of 1 blok.
+
+      Sometimes time matters. The smallest unit of time is called frame.
+      A frame is a unit for time and expressed in width. 1 frame equals to the width of 2 blocks.
     </p>
-
-    <p>
-        To achieve this we create all diagrams in either googleSlides oder Powerpoint.
-        We believe this two options <b> enable</b> a big group of <b>people</b> to <b>edit and draw </b> these diagrams.
-    </p>
-
-    <h2>
-        Detailed
-    </h2>
-
-
-    <p>
-        Marble diagrams exist since a long time now.
-        As there was no well thought standard out there and not all edge cases considered,
-        people started to create their own solutions to visualize processes.
-        These let to a variety of different ways of drawing these diagrams.
-        Some of the better approaches were able to visualize more complex prozesses,
-        but there is one essential thing which nobody considered yet,
-        but which is most critical to understand processes based on Rx. The internal behavior of operators.
-
-    </p>
-
-    <p>
-        This system is not only providing a consistent, standardized way of drawing marble diagrams,
-        but also offers a way to visualize the internals of operators.
-        Of course based on the systems rules it selfe.
-    </p>
-    </body>
+  </div>
+</div>
+</body>
 </html>
