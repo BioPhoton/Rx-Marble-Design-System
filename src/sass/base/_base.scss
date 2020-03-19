@@ -1,0 +1,113 @@
+@import "abstracts/variables";
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  font-family: $font__primary;
+  line-height: 1.4;
+  color: $color__black;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+
+  @include breakpoint(tablet) {
+    font-size: 3.4rem;
+  }
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 4.5rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2rem;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 2.2rem;
+    margin-bottom: 5.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.6;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+
+  @include breakpoint(tablet) {
+    font-size: 2rem;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  transition: all 200ms ease-in-out;
+
+  /* &:hover {
+    color: $color__primary;
+  } */
+}
+
+p {
+  font-size: 1.6rem;
+  margin-top: 0px;
+  line-height: 1.7;
+}
+
+/// UTILS
+
+.wrapper {
+  padding: 3rem;
+}
+
+.section_space {
+  padding-bottom: 9.5rem;
+
+  @include breakpoint(desktop) {
+    padding-bottom: 14rem;
+  }
+}
+
+.section_space-both {
+  padding-top: 21.5rem;
+  padding-bottom: 9.5rem;
+
+  @include breakpoint(desktop) {
+    padding-top: 26rem;
+    padding-bottom: 14rem;
+  }
+}

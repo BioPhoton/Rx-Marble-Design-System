@@ -1,0 +1,86 @@
+@import "abstracts/index";
+
+.sidenav-container {
+  height: 100%;
+  background: $color__body;
+}
+
+.sidenav {
+  width: 260px;
+  background-color: $color__sidenav;
+
+  @include breakpoint(mobile-land) {
+    width: 300px;
+  }
+}
+
+.nav-caption {
+  display: inline-block;
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 0 20px $color__shadow;
+
+  &.toolbar-topnav {
+    background: $color__topnav;
+
+    button {
+      margin-right: 2rem;
+      border-radius: 10px;
+      color: $color__black;
+      box-shadow: 0 0 20px $color__shadow;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+  &.toolbar-sidenav {
+    background-color: $color__sidenav;
+    color: $color__black;
+  }
+}
+
+.mat-drawer-side {
+  border: none;
+}
+
+.mat-list-base {
+  margin-top: 2rem;
+}
+
+.mat-list-item {
+  color: $color__black;
+}
+
+.mat-icon-button {
+  height: 35px;
+  line-height: 25px;
+}
+
+.logo {
+  color: $color__black;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.mat-toolbar-single-row {
+  a.github {
+    margin-left: auto;
+    width: 30px;
+    height: calc(64px - 30px);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @include breakpoint-less(mobile-land) {
+    height: 64px;
+  }
+}

@@ -1,0 +1,30 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+
+$custom-typography: mat-typography-config(
+  $font-family: $font__primary
+);
+@include mat-core($custom-typography);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$marbles-design-system-docu-primary: mat-palette($mat-indigo);
+$marbles-design-system-docu-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$marbles-design-system-docu-warn: mat-palette($mat-red);
+
+$marbles-design-system-docu-theme: mat-light-theme(
+  $marbles-design-system-docu-primary,
+  $marbles-design-system-docu-accent,
+  $marbles-design-system-docu-warn
+);
+
+@include angular-material-theme($marbles-design-system-docu-theme);
+
+.mat-toolbar-single-row,
+.mat-list-item-content {
+  padding: 0 3rem !important;
+}

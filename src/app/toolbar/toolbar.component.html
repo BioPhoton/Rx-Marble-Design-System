@@ -1,0 +1,51 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)"
+  >
+    <mat-toolbar class="toolbar-sidenav">
+      <a routerLink="/" class="logo">Rx MDS Logo</a>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/" (click)="onClose()">
+        <mat-icon fontSet="material-icons-outlined">home</mat-icon>
+        <span class="nav-caption">Introduction</span>
+      </a>
+      <a mat-list-item routerLink="/design-tokens" (click)="onClose()">
+        <mat-icon fontSet="material-icons-outlined">blur_circular</mat-icon>
+        <span class="nav-caption">Design Tokens</span>
+      </a>
+      <a mat-list-item routerLink="/components" (click)="onClose()">
+        <mat-icon fontSet="material-icons-outlined">widgets</mat-icon>
+        <span class="nav-caption">Components</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="toolbar-topnav">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon>notes</mat-icon>
+      </button>
+      <a routerLink="/" class="logo" *ngIf="isHandset$ | async">Rx MDS Logo</a>
+      <a
+        class="github"
+        href="https://github.com/BioPhoton/Rx-Marble-Design-System"
+      >
+        <img src="../../assets/icons/icon-github.svg" alt="Github Icon" />
+      </a>
+    </mat-toolbar>
+    <div class="wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

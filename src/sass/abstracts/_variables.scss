@@ -1,0 +1,24 @@
+@import "mixins";
+
+//Fonts
+$font__primary: "Source Sans Pro", sans-serif;
+$font__diagrams: "Source Code Pro", sans-serif;
+
+//Colors
+$color__white: rgb(255, 255, 255);
+$color__black: rgb(0, 0, 0);
+
+$color__body: rgb(254, 254, 254);
+$color__topnav: rgb(254, 254, 254);
+$color__sidenav: rgb(246, 246, 250);
+
+$color__shadow: rgb(225, 228, 237);
+
+//Media Queries
+$breakpoints: (
+  mobile: 414px,
+  mobile-land: 600px,
+  tablet: 768px,
+  tablet-land: 960px,
+  desktop: 1024px
+);

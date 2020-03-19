@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'mds-root',
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'marbles-design-system-docu';
 }
