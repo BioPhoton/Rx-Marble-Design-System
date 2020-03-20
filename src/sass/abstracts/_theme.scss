@@ -84,7 +84,7 @@ $custom-typography: mat-typography-config(
 
 $mbs-primary: mat-palette($custom-blue, 400);
 $mbs-accent: mat-palette($custom-yellow, 500);
-$mbs-warn: mat-palette($custom-red, 700);
+$mbs-warn: mat-palette($custom-red, 100);
 
 $mbs-theme: mat-light-theme($mbs-primary, $mbs-accent, $mbs-warn);
 
