@@ -1,0 +1,91 @@
+$custom-blue: (
+  50: #e0e8f9,
+  100: #bed0f7,
+  200: #98aeeb,
+  300: #7b93db,
+  400: #647acb,
+  500: #4c63b6,
+  600: #4055a8,
+  700: #35469c,
+  800: #2d3a8c,
+  900: #19216c,
+  contrast: (
+    50: #19216c,
+    100: #19216c,
+    200: #19216c,
+    300: #19216c,
+    400: #e0e8f9,
+    500: #e0e8f9,
+    600: #e0e8f9,
+    700: #e0e8f9,
+    800: #e0e8f9,
+    900: #e0e8f9
+  )
+);
+
+$custom-yellow: (
+  50: #fffbea,
+  100: #fff3c4,
+  200: #fce588,
+  300: #fadb5f,
+  400: #f7c948,
+  500: #f0b429,
+  600: #de911d,
+  700: #cb6e17,
+  800: #b44d12,
+  900: #8d2b0b,
+  contrast: (
+    50: #8d2b0b,
+    100: #8d2b0b,
+    200: #8d2b0b,
+    300: #8d2b0b,
+    400: #8d2b0b,
+    500: #fffbea,
+    600: #fffbea,
+    700: #fffbea,
+    800: #fffbea,
+    900: #fffbea
+  )
+);
+
+$custom-red: (
+  50: #ffe3e3,
+  100: #ffbdbd,
+  200: #ff9b9b,
+  300: #f86a6a,
+  400: #ef4e4e,
+  500: #e12d39,
+  600: #cf1124,
+  700: #ab091e,
+  800: #8a041a,
+  900: #610316,
+  contrast: (
+    50: #610316,
+    100: #610316,
+    200: #610316,
+    300: #610316,
+    400: #610316,
+    500: #ffe3e3,
+    600: #ffe3e3,
+    700: #ffe3e3,
+    800: #ffe3e3,
+    900: #ffe3e3
+  )
+);
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+
+$custom-typography: mat-typography-config(
+  $font-family: $font__primary
+);
+@include mat-core($custom-typography);
+
+$mbs-primary: mat-palette($custom-blue, 400);
+$mbs-accent: mat-palette($custom-yellow, 500);
+$mbs-warn: mat-palette($custom-red, 700);
+
+$mbs-theme: mat-light-theme($mbs-primary, $mbs-accent, $mbs-warn);
+
+@include angular-material-theme($mbs-theme);

@@ -10,7 +10,6 @@ button {
   overflow: visible;
   text-transform: none;
   border: none;
-  background-color: transparent;
 }
 
 // Reset Default Button Styles End
@@ -22,15 +21,14 @@ button.btn {
   text-align: center;
   padding: 1.5rem 5rem;
   color: black;
-  background-color: darkcyan;
   cursor: pointer;
   transition: all 200ms ease-in-out;
   border: none;
   border-radius: 0.5rem;
   font: inherit;
+  box-shadow: 0 0 20px $color__shadow;
 
   &:hover {
     color: white;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
   }
 }
