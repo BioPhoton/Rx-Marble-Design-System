@@ -34,6 +34,7 @@ h3 {
 h1 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: $color__primary-900;
 
   @include breakpoint(tablet) {
     font-size: 3.4rem;
@@ -42,8 +43,9 @@ h1 {
 
 h2 {
   font-size: 1.8rem;
-  font-weight: 400;
-  margin-bottom: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1.8;
+  color: $color__primary-900;
 
   @include breakpoint(mobile) {
     font-size: 2rem;
@@ -51,7 +53,6 @@ h2 {
 
   @include breakpoint(tablet) {
     font-size: 2.2rem;
-    margin-bottom: 5.5rem;
   }
 }
 
@@ -59,6 +60,7 @@ h3 {
   font-size: 1.6;
   margin-top: 0;
   margin-bottom: 1.5rem;
+  color: $color__primary-900;
 
   @include breakpoint(tablet) {
     font-size: 2rem;
@@ -66,9 +68,28 @@ h3 {
 }
 
 ul {
+  color: $color__primary-600;
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  a {
+    color: $color__primary-600;
+    transition: all 0.25s;
+
+    &:hover {
+      color: $color__primary-300;
+    }
+  }
+}
+
+.bullet {
+  width: 10px;
+  height: 10px;
+  background-color: $color__primary-600;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 1.5rem;
 }
 
 a {
@@ -85,7 +106,12 @@ a {
 p {
   font-size: 1.6rem;
   margin-top: 0px;
-  line-height: 1.7;
+  line-height: 1.6;
+}
+
+strong {
+  color: $color__secondary-600;
+  font-weight: 400;
 }
 
 /// UTILS
@@ -94,20 +120,10 @@ p {
   padding: 3rem;
 }
 
-.section_space {
-  padding-bottom: 9.5rem;
+.text-block {
+  padding-bottom: 4rem;
 
   @include breakpoint(desktop) {
-    padding-bottom: 14rem;
-  }
-}
-
-.section_space-both {
-  padding-top: 21.5rem;
-  padding-bottom: 9.5rem;
-
-  @include breakpoint(desktop) {
-    padding-top: 26rem;
-    padding-bottom: 14rem;
+    padding-bottom: 6rem;
   }
 }

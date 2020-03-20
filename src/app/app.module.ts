@@ -9,6 +9,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { DesignTokensComponent } from './design-tokens/design-tokens.component';
 import { ComponentsComponent } from './components/components.component';
+import { DiagramsComponent } from './diagrams/diagrams.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ComponentsComponent } from './components/components.component';
     ToolbarComponent,
     IntroductionComponent,
     DesignTokensComponent,
-    ComponentsComponent
+    ComponentsComponent,
+    DiagramsComponent
   ],
   imports: [
     BrowserModule,

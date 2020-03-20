@@ -10,6 +10,29 @@ import { map } from 'rxjs/operators';
 })
 export class ToolbarComponent implements OnInit {
 
+  public navItems = [
+    {
+      routerLink: '/',
+      icon: 'home',
+      caption: 'Introduction'
+    },
+    {
+      routerLink: '/design-tokens',
+      icon: 'blur_circular',
+      caption: 'Design Tokens'
+    },
+    {
+      routerLink: '/components',
+      icon: 'widgets',
+      caption: 'Components'
+    },
+    {
+      routerLink: '/diagrams',
+      icon: 'insert_chart',
+      caption: 'Diagrams'
+    }
+  ];
+
   @Output() closeSidenav = new EventEmitter<void>();
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.HandsetPortrait)
@@ -20,10 +43,6 @@ export class ToolbarComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit() {
-  }
-
-  onClose() {
-    this.closeSidenav.emit();
   }
 
 }

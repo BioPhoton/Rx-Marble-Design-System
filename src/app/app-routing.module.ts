@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { DesignTokensComponent } from './design-tokens/design-tokens.component';
 import { ComponentsComponent } from './components/components.component';
+import { DiagramsComponent } from './diagrams/diagrams.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
     path: 'components',
     component: ComponentsComponent
   },
+  {
+    path: 'diagrams',
+    component: DiagramsComponent
+  }
 ];
 
 @NgModule({

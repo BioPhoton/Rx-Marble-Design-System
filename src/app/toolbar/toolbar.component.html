@@ -11,17 +11,15 @@
       <a routerLink="/" class="logo">Rx MDS Logo</a>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/" (click)="onClose()">
-        <mat-icon fontSet="material-icons-outlined">home</mat-icon>
-        <span class="nav-caption">Introduction</span>
-      </a>
-      <a mat-list-item routerLink="/design-tokens" (click)="onClose()">
-        <mat-icon fontSet="material-icons-outlined">blur_circular</mat-icon>
-        <span class="nav-caption">Design Tokens</span>
-      </a>
-      <a mat-list-item routerLink="/components" (click)="onClose()">
-        <mat-icon fontSet="material-icons-outlined">widgets</mat-icon>
-        <span class="nav-caption">Components</span>
+      <a
+        *ngFor="let navItem of navItems"
+        mat-list-item
+        [routerLink]="navItem.routerLink"
+      >
+        <mat-icon fontSet="material-icons-outlined">
+          {{ navItem.icon }}
+        </mat-icon>
+        <span class="nav-caption">{{ navItem.caption }}</span>
       </a>
     </mat-nav-list>
   </mat-sidenav>
