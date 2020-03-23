@@ -14,7 +14,10 @@
       <a
         *ngFor="let navItem of navItems"
         mat-list-item
-        [routerLink]="navItem.routerLink"
+        [routerLink]="[navItem.routerLink]"
+        routerLinkActive
+        #routerLinkActiveInstance="routerLinkActive"
+        [class.list-item-active]="routerLinkActiveInstance.isActive"
       >
         <mat-icon fontSet="material-icons-outlined">
           {{ navItem.icon }}

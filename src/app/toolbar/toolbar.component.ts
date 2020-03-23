@@ -12,7 +12,7 @@ export class ToolbarComponent implements OnInit {
 
   public navItems = [
     {
-      routerLink: '/',
+      routerLink: '/introduction',
       icon: 'home',
       caption: 'Introduction'
     },
@@ -33,6 +33,8 @@ export class ToolbarComponent implements OnInit {
     }
   ];
 
+  public drawer;
+
   @Output() closeSidenav = new EventEmitter<void>();
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.HandsetPortrait)
@@ -43,6 +45,12 @@ export class ToolbarComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit() {
+  }
+
+  public onClose() {
+    if (this.isHandset$) {
+      this.drawer.close();
+    }
   }
 
 }

@@ -11,6 +11,10 @@ const routes: Routes = [
     component: IntroductionComponent
   },
   {
+    path: 'introduction',
+    component: IntroductionComponent
+  },
+  {
     path: 'design-tokens',
     component: DesignTokensComponent
   },

@@ -10,7 +10,7 @@
   background-color: $color__sidenav;
 
   @include breakpoint(mobile-land) {
-    width: 300px;
+    width: 280px;
   }
 }
 
