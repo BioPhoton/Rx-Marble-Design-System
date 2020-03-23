@@ -1,8 +1,9 @@
 @import "mixins";
+@import "fonts";
 
 //Fonts
-$font__primary: "Source Sans Pro", sans-serif;
-$font__diagrams: "Source Code Pro", sans-serif;
+$font__primary: "Source Sans Pro Regular", sans-serif;
+$font__diagrams: "Source Code Pro Regular", sans-serif;
 
 //Colors
 $color__white: rgb(255, 255, 255);
