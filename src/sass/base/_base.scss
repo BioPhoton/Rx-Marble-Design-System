@@ -20,14 +20,16 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.6rem;
-  font-family: $font__primary;
+  font-family: $font__sans-serif;
   line-height: 1.4;
   color: $color__black;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
+  font-family: $font__sans-serif-bold;
   margin-top: 0;
 }
 
@@ -131,6 +133,18 @@ img {
   padding: 3rem 4rem;
 }
 
+.monospace {
+  font-family: $font__monospace;
+}
+
+.serif {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.proportional {
+  font-family: Arial, Geneva, sans-serif;
+}
+
 .text-block,
 .preview-block {
   padding-bottom: 4rem;
@@ -151,7 +165,6 @@ img {
 
   @include breakpoint(desktop) {
     display: flex;
-    align-items: center;
 
     .text-block {
       margin-left: 5rem;
@@ -160,6 +173,5 @@ img {
 }
 
 .list-item-active {
-  font-weight: 700;
   background: rgba(0, 0, 0, 0.04);
 }

@@ -2,8 +2,10 @@
 @import "fonts";
 
 //Fonts
-$font__primary: "Source Sans Pro Regular", sans-serif;
-$font__diagrams: "Source Code Pro Regular", sans-serif;
+$font__sans-serif: "SourceSansProRegular", sans-serif;
+$font__sans-serif-bold: "SourceSansProBold", sans-serif;
+$font__monospace: "SourceCodeProRegular", sans-serif;
+$font__monospace-bold: "SourceCodeProBold", sans-serif;
 
 //Colors
 $color__white: rgb(255, 255, 255);
@@ -15,42 +17,18 @@ $color__sidenav: rgb(246, 246, 250);
 
 $color__shadow: rgb(225, 228, 237);
 
-//TODO: connect colours to mat-palette and delete it here
+$color__disabled: rgb(154, 165, 177);
+
 //Primary
-$color__primary-50: #e0e8f9;
-$color__primary-100: #bed0f7;
-$color__primary-200: #98aeeb;
 $color__primary-300: #7b93db;
-$color__primary-400: #647acb;
-$color__primary-500: #4c63b6;
 $color__primary-600: #4055a8;
 $color__primary-700: #35469c;
 $color__primary-800: #2d3a8c;
 $color__primary-900: #19216c;
 
 //Supportive
-$color__secondary-50: #fffbea;
-$color__secondary-100: #fff3c4;
-$color__secondary-200: #fce588;
-$color__secondary-300: #fadb5f;
-$color__secondary-400: #f7c948;
-$color__secondary-500: #f0b429;
 $color__secondary-600: #de911d;
-$color__secondary-700: #cb6e17;
 $color__secondary-800: #b44d12;
-$color__secondary-900: #8d2b0b;
-
-//Neurals
-$color__neurals-50: #f5f7fa;
-$color__neurals-100: #e4e7eb;
-$color__neurals-200: #cbd2d9;
-$color__neurals-300: #9aa5b1;
-$color__neurals-400: #7b8794;
-$color__neurals-500: #616e7c;
-$color__neurals-600: #52606d;
-$color__neurals-700: #3e4c59;
-$color__neurals-800: #323f4b;
-$color__neurals-900: #1f2933;
 
 //Media Queries
 $breakpoints: (

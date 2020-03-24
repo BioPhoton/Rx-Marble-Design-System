@@ -78,7 +78,7 @@ $custom-red: (
 @import "~@angular/material/theming";
 
 $custom-typography: mat-typography-config(
-  $font-family: $font__primary
+  $font-family: $font__sans-serif
 );
 @include mat-core($custom-typography);
 

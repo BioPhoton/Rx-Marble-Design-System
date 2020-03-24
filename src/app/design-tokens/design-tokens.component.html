@@ -1,1 +1,82 @@
-<h1>Design Tokens works!</h1>
+<h1>Design Tokens</h1>
+<h2>Unit</h2>
+<div class="flex-columns">
+  <div class="preview-block">
+    <img src="../../assets/test-img.png" alt="Test Img" />
+  </div>
+  <div class="text-block">
+    <p>
+      The unit for width and height in marble diagrams is called a block.
+      <strong>A block is a rectangle with equal width and height</strong>.
+    </p>
+    <p>Positioning of objects and text is also measured in blocks.</p>
+    <p>
+      To have a convenient unit we use
+      <strong>em with the base of 1 block</strong>.
+    </p>
+    <p>
+      Sometimes time matters. The smallest unit of time is called frame.
+      <strong>A frame is a unit for time</strong> and expressed in width.
+      <strong>1 frame equals to the width of 2 blocks</strong>.
+    </p>
+  </div>
+</div>
+
+<h2>Font</h2>
+<p>
+  Text is used to name things or give more information to a specific part of a
+  diagram like observables, operators and events like subscribe or unsubscribe.
+  It is furthermore used in notifications to give more detailed information
+  about their content.
+</p>
+
+<h3>Font-Face</h3>
+<p>
+  The design guide doesn’t limit the choice of font. <br />Only a few
+  limitations are suggested. <br />Serif font-face and mono-space letter.
+</p>
+
+<!-- //TODO: Schriften durch SVG animationen ersetzen -->
+<div class="flex-columns">
+  <div class="preview-block">
+    <div class="font-1">
+      <h4>Sans-Serif</h4>
+      <span>ABCDEFGHIJ</span>
+      <span>stuvwxyz01</span>
+    </div>
+    <div class="font-2">
+      <h4>Serif</h4>
+      <span class="serif">ABCDEFGHIJ</span>
+      <span class="serif">stuvwxyz01</span>
+    </div>
+  </div>
+  <div class="text-block">
+    <h4>Serif</h4>
+    <p>
+      Serif font-face has compared to the serif font-faces less visual noise.
+    </p>
+  </div>
+</div>
+<div class="flex-columns">
+  <div class="preview-block">
+    <div class="font-1">
+      <h4>Monospace</h4>
+      <span class="monospace">ABCDEFGHIJ</span>
+      <span class="monospace">stuvwxyz01</span>
+    </div>
+    <div class="font-2">
+      <h4>Proportional</h4>
+      <span class="proportional">ABCDEFGHIJ</span>
+      <span class="proportional">stuvwxyz01</span>
+    </div>
+  </div>
+  <div class="text-block">
+    <h4>Mono-space</h4>
+    <p>
+      Mono-space font has to be used in the description of observables,
+      operators or in the text of notifications. This ensures that the with of
+      text is directly proportional to the number of characters and therefore
+      simplifies the positioning and alignment of text in diagrams.
+    </p>
+  </div>
+</div>
