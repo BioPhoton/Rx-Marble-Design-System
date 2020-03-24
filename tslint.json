@@ -4,12 +4,12 @@
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {
-      "severity": "warn"
+      "severity": "warning"
     },
     "component-class-suffix": true,
     "contextual-lifecycle": true,
     "directive-class-suffix": true,
-    "directive-selector": [true, "attribute", "app", "camelCase"],
+    "directive-selector": [true, "attribute", "mds", "camelCase"],
     "component-selector": [true, "element", "mds", "kebab-case"],
     "import-blacklist": [true, "rxjs/Rx"],
     "interface-name": false,
@@ -34,7 +34,6 @@
     "no-non-null-assertion": true,
     "no-redundant-jsdoc": true,
     "no-switch-case-fall-through": true,
-    "no-use-before-declare": true,
     "no-var-requires": false,
     "object-literal-key-quotes": [true, "as-needed"],
     "object-literal-sort-keys": false,
