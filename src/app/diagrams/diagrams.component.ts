@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-diagrams',
+  selector: 'mds-diagrams',
   templateUrl: './diagrams.component.html',
   styleUrls: ['./diagrams.component.scss']
 })
 export class DiagramsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

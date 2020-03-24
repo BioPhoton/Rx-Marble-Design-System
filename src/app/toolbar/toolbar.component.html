@@ -5,7 +5,7 @@
     fixedInViewport="true"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="!(isHandset$ | async)"
+    [opened]="(isHandset$ | async) === false"
   >
     <mat-toolbar class="toolbar-sidenav">
       <a routerLink="/" class="logo">Rx MDS Logo</a>
