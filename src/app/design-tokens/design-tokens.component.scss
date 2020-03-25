@@ -3,6 +3,7 @@
 .preview-block {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   h4 {
     color: $color__primary-600;
@@ -10,5 +11,16 @@
 
   span {
     display: block;
+  }
+}
+
+.line {
+  font-family: "SourceCodeProRegular";
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+
+  svg {
+    width: 150px;
+    margin-bottom: 1rem;
   }
 }
