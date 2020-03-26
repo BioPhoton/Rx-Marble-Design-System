@@ -85,3 +85,33 @@ mat-toolbar {
     height: 64px;
   }
 }
+
+//////
+
+.full-width {
+  width: 100%;
+}
+.menu-button {
+  transition: 300ms ease-in-out;
+  transform: rotate(0deg);
+}
+.menu-button.rotated {
+  transform: rotate(180deg);
+}
+.submenu {
+  overflow-y: hidden;
+  transition: transform 300ms ease;
+  transform: scaleY(0);
+  transform-origin: top;
+  padding-left: 30px;
+  display: none;
+
+  a {
+    padding-left: 3rem;
+    color: $color__primary-900 !important;
+  }
+}
+.submenu.expanded {
+  transform: scaleY(1);
+  display: block;
+}

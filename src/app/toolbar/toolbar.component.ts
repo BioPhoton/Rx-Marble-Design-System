@@ -9,6 +9,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
+  isExpanded: boolean;
 
   public navItems = [
     {
@@ -17,9 +18,18 @@ export class ToolbarComponent implements OnInit {
       caption: 'Introduction'
     },
     {
-      routerLink: '/design-tokens',
       icon: 'blur_circular',
-      caption: 'Design Tokens'
+      caption: 'Design Tokens',
+      children: [
+        {
+          routerLink: '/design-tokens/unit',
+          caption: 'Unit',
+        },
+        {
+          routerLink: '/design-tokens/font',
+          caption: 'Font',
+        }
+      ]
     },
     {
       routerLink: '/components',
@@ -33,8 +43,6 @@ export class ToolbarComponent implements OnInit {
     }
   ];
 
-  public drawer;
-
   @Output() closeSidenav = new EventEmitter<void>();
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.HandsetPortrait)
@@ -47,10 +55,8 @@ export class ToolbarComponent implements OnInit {
   ngOnInit() {
   }
 
-  public onClose() {
-    if (this.isHandset$) {
-      this.drawer.close();
-    }
+  public toggleSubMenu(navItem) {
+    navItem.isExpanded = !navItem.isExpanded;
   }
 
 }

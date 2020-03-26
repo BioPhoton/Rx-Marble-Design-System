@@ -11,19 +11,39 @@
       <a routerLink="/" class="logo">Rx MDS Logo</a>
     </mat-toolbar>
     <mat-nav-list>
-      <a
-        *ngFor="let navItem of navItems"
-        mat-list-item
-        [routerLink]="[navItem.routerLink]"
-        routerLinkActive
-        #routerLinkActiveInstance="routerLinkActive"
-        [class.list-item-active]="routerLinkActiveInstance.isActive"
-      >
-        <mat-icon fontSet="material-icons-outlined">
-          {{ navItem.icon }}
-        </mat-icon>
-        <span class="nav-caption">{{ navItem.caption }}</span>
-      </a>
+      <div class="nav-items" *ngFor="let navItem of navItems">
+        <a
+          mat-list-item
+          (click)="toggleSubMenu(navItem)"
+          [routerLink]="navItem.routerLink ? [navItem.routerLink] : []"
+          routerLinkActive
+          #routerLinkActiveInstance="routerLinkActive"
+          [class.list-item-active]="routerLinkActiveInstance.isActive"
+        >
+          <mat-icon fontSet="material-icons-outlined">{{
+            navItem.icon
+          }}</mat-icon>
+          <span class="full-width nav-caption">{{ navItem.caption }}</span>
+          <mat-icon
+            class="menu-button"
+            [ngClass]="{ rotated: navItem.isExpanded }"
+            *ngIf="navItem.children"
+            >expand_more</mat-icon
+          >
+        </a>
+        <div
+          class="submenu"
+          [ngClass]="{ expanded: navItem.isExpanded }"
+          *ngIf="navItem.children && navItem.isExpanded"
+        >
+          <a
+            mat-list-item
+            *ngFor="let child of navItem.children"
+            [routerLink]="[child.routerLink]"
+            >{{ child.caption }}</a
+          >
+        </div>
+      </div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
