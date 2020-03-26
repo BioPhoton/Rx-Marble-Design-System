@@ -123,10 +123,6 @@ strong {
   font-weight: 400;
 }
 
-img {
-  width: 100%;
-}
-
 /// UTILS
 
 .wrapper {
@@ -174,4 +170,17 @@ img {
 
 .list-item-active {
   background: rgba(0, 0, 0, 0.04);
+}
+
+figure {
+  margin: 0 0 2rem 0;
+
+  img {
+    margin-bottom: 1rem;
+  }
+
+  figcaption {
+    font-family: "SourceCodeProRegular";
+    font-size: 1.4rem;
+  }
 }
