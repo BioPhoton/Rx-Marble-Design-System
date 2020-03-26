@@ -10,6 +10,10 @@ import { IntroductionComponent } from './introduction/introduction.component';
 import { DesignTokensComponent } from './design-tokens/design-tokens.component';
 import { ComponentsComponent } from './components/components.component';
 import { DiagramsComponent } from './diagrams/diagrams.component';
+import { UnitComponent } from './design-tokens/unit/unit.component';
+import { FontComponent } from './design-tokens/font/font.component';
+import { ColorComponent } from './design-tokens/color/color.component';
+import { LineComponent } from './design-tokens/line/line.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { DiagramsComponent } from './diagrams/diagrams.component';
     IntroductionComponent,
     DesignTokensComponent,
     ComponentsComponent,
-    DiagramsComponent
+    DiagramsComponent,
+    UnitComponent,
+    FontComponent,
+    ColorComponent,
+    LineComponent
   ],
   imports: [
     BrowserModule,

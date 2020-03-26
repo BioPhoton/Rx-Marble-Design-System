@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'mds-design-tokens',
-  templateUrl: './design-tokens.component.html',
-  styleUrls: ['./design-tokens.component.scss']
+  templateUrl: './design-tokens.component.html'
 })
 export class DesignTokensComponent implements OnInit {
 

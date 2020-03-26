@@ -8,7 +8,9 @@
     [opened]="(isHandset$ | async) === false"
   >
     <mat-toolbar class="toolbar-sidenav">
-      <a routerLink="/" class="logo">Rx MDS Logo</a>
+      <a routerLink="/" class="logo">
+        <img src="/assets/mds-logo.png" alt="Marble Design System Logo" />
+      </a>
     </mat-toolbar>
     <mat-nav-list>
       <div class="nav-items" *ngFor="let navItem of navItems">
@@ -16,9 +18,7 @@
           mat-list-item
           (click)="toggleSubMenu(navItem)"
           [routerLink]="navItem.routerLink ? [navItem.routerLink] : []"
-          routerLinkActive
-          #routerLinkActiveInstance="routerLinkActive"
-          [class.list-item-active]="routerLinkActiveInstance.isActive"
+          routerLinkActive="list-item-active"
         >
           <mat-icon fontSet="material-icons-outlined">{{
             navItem.icon
@@ -40,14 +40,25 @@
             mat-list-item
             *ngFor="let child of navItem.children"
             [routerLink]="[child.routerLink]"
-            >{{ child.caption }}</a
+            routerLinkActive="list-item-active"
           >
+            <span>{{ child.caption }}</span>
+          </a>
         </div>
       </div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="toolbar-topnav">
+      <a routerLink="/" class="logo" *ngIf="isHandset$ | async">
+        <img src="/assets/mds-logo.png" alt="Marble Design System Logo" />
+      </a>
+      <a
+        class="github"
+        href="https://github.com/BioPhoton/Rx-Marble-Design-System"
+      >
+        <img src="../../assets/icons/icon-github.svg" alt="Github Icon" />
+      </a>
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -57,13 +68,6 @@
       >
         <mat-icon>notes</mat-icon>
       </button>
-      <a routerLink="/" class="logo" *ngIf="isHandset$ | async">Rx MDS Logo</a>
-      <a
-        class="github"
-        href="https://github.com/BioPhoton/Rx-Marble-Design-System"
-      >
-        <img src="../../assets/icons/icon-github.svg" alt="Github Icon" />
-      </a>
     </mat-toolbar>
     <div class="wrapper">
       <router-outlet></router-outlet>

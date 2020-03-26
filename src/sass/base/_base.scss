@@ -77,7 +77,6 @@ h4 {
 }
 
 ul {
-  color: $color__primary-600;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -95,7 +94,7 @@ ul {
 .bullet {
   width: 10px;
   height: 10px;
-  background-color: $color__primary-600;
+  background-color: $color__secondary-600;
   border-radius: 2px;
   display: inline-block;
   margin-right: 1.5rem;
@@ -134,11 +133,11 @@ strong {
 }
 
 .serif {
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: $font__serif;
 }
 
 .proportional {
-  font-family: Arial, Geneva, sans-serif;
+  font-family: $font__proportional;
 }
 
 .text-block,
@@ -147,6 +146,20 @@ strong {
 
   @include breakpoint(desktop) {
     padding-bottom: 6rem;
+  }
+}
+
+.preview-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  h4 {
+    color: $color__primary-600;
+  }
+
+  span {
+    display: block;
   }
 }
 
