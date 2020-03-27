@@ -119,11 +119,11 @@ p {
 
 strong {
   color: $color__secondary-600;
+}
 
-  &.bold {
-    color: $color__black;
-    font-family: "SourceSansProBold";
-  }
+.bold {
+  color: $color__black;
+  font-family: "SourceSansProBold";
 }
 
 /// UTILS
