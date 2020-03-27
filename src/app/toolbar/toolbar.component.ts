@@ -2,7 +2,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { RouterLinkActive } from '@angular/router';
+import { Router, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'mds-toolbar',
@@ -16,11 +16,14 @@ export class ToolbarComponent implements OnInit {
     {
       routerLink: '/introduction',
       icon: 'home',
-      caption: 'Introduction'
+      caption: 'Introduction',
+      isExpanded: false
     },
     {
       icon: 'blur_circular',
       caption: 'Design Tokens',
+      routerLink: '/design-tokens',
+      isExpanded: false,
       children: [
         {
           routerLink: '/design-tokens/unit',
@@ -43,12 +46,14 @@ export class ToolbarComponent implements OnInit {
     {
       routerLink: '/components',
       icon: 'widgets',
+      isExpanded: false,
       caption: 'Components'
     },
     {
       routerLink: '/diagrams',
       icon: 'insert_chart',
-      caption: 'Diagrams'
+      caption: 'Diagrams',
+      isExpanded: false
     }
   ];
 
@@ -59,11 +64,21 @@ export class ToolbarComponent implements OnInit {
       map(result => result.matches)
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
+    this.router.events.subscribe((event: NavigationStart) => {
+      if (!event.url) {
+        return;
+      }
+
+      const item = this.navItems.find(it => it.routerLink.indexOf('/' + event.url.split('/')[1]) === 0);
+      if (item) {
+        item['isExpanded'] = true;
+      }
+    });
+  }
 
   ngOnInit() {
   }
-
   public toggleSubMenu(navItem) {
     navItem.isExpanded = !navItem.isExpanded;
   }
