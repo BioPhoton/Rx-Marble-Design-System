@@ -10,30 +10,47 @@ $font__monospace-bold: "SourceCodeProBold", sans-serif;
 $font__serif: "Georgia, Times, " Times New Roman ", serif";
 $font__proportional: Arial, Geneva, sans-serif;
 
-//Colors
+//Page Colors
 $color__white: rgb(255, 255, 255);
 $color__black: rgb(0, 0, 0);
-
 $color__body: rgb(254, 254, 254);
 $color__topnav: rgb(254, 254, 254);
 $color__sidenav: rgb(246, 246, 250);
-
 $color__shadow: rgb(225, 228, 237);
-
 $color__disabled: rgb(154, 165, 177);
 
-//Primary
+//Page Primary Colors
 $color__primary-300: #7b93db;
 $color__primary-600: #4055a8;
 $color__primary-700: #35469c;
 $color__primary-800: #2d3a8c;
 $color__primary-900: #19216c;
 
-//Supportive
+//Page Supportive Colors
 $color__secondary-600: #de911d;
 $color__secondary-800: #b44d12;
 
-//Media Queries
+//MAB Design System Colors
+$color__line: #434343;
+$color__background: #ffffff;
+$color__inactive: #b7b7b7;
+
+$color__palette-1__noti-1: #ffcb21;
+$color__palette-1__noti-2: #89c540;
+$color__palette-1__noti-3: #f77c00;
+$color__palette-1__noti-4: #6734ba;
+
+$color__palette-2__noti-1: #d01c8b;
+$color__palette-2__noti-2: #f1b6da;
+$color__palette-2__noti-3: #b8e186;
+$color__palette-2__noti-4: #4dac26;
+
+$color__palette-3__noti-1: #36175e;
+$color__palette-3__noti-2: #553285;
+$color__palette-3__noti-3: #7b52ab;
+$color__palette-3__noti-4: #9768d1;
+
+//Page Media Queries
 $breakpoints: (
   mobile: 414px,
   mobile-land: 600px,

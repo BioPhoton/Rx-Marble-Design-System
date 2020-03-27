@@ -34,7 +34,7 @@ h4 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 2rem;
   color: $color__primary-900;
 
@@ -44,14 +44,10 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1.8;
+  margin-bottom: 1.8rem;
   color: $color__primary-900;
-
-  @include breakpoint(mobile) {
-    font-size: 2rem;
-  }
 
   @include breakpoint(tablet) {
     font-size: 2.2rem;
@@ -59,13 +55,13 @@ h2 {
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: $color__primary-900;
 
   @include breakpoint(tablet) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 
@@ -106,9 +102,13 @@ a {
   font-weight: 400;
   transition: all 200ms ease-in-out;
 
-  /* &:hover {
-    color: $color__primary;
-  } */
+  &.link {
+    color: $color__primary-700;
+
+    &:hover {
+      color: $color__primary-300;
+    }
+  }
 }
 
 p {
@@ -119,7 +119,11 @@ p {
 
 strong {
   color: $color__secondary-600;
-  font-weight: 400;
+
+  &.bold {
+    color: $color__black;
+    font-family: "SourceSansProBold";
+  }
 }
 
 /// UTILS
@@ -130,6 +134,7 @@ strong {
 
 .monospace {
   font-family: $font__monospace;
+  font-size: 1.4rem;
 }
 
 .serif {
@@ -151,7 +156,6 @@ strong {
 
 .preview-block {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 
   h4 {

@@ -1,0 +1,96 @@
+@import "abstracts/index";
+
+h3 {
+  @include breakpoint-less(mobile-land) {
+    text-align: center;
+  }
+}
+
+.preview-block {
+  @include breakpoint-less(mobile-land) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.color-block {
+  margin-bottom: 3rem;
+  margin-right: 2rem;
+  width: 200px;
+
+  @include breakpoint-less(mobile-land) {
+    margin-right: 0;
+  }
+}
+
+.color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80px;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px $color__shadow;
+
+  &.dark {
+    color: $color__black;
+  }
+
+  &.light {
+    color: $color__white;
+  }
+}
+
+//Drawing
+.line {
+  background-color: $color__line;
+}
+.background {
+  background-color: $color__background;
+}
+.inactive {
+  background-color: $color__inactive;
+}
+
+//Palettes
+.palette-1__noti-1 {
+  background-color: $color__palette-1__noti-1;
+}
+.palette-1__noti-2 {
+  background-color: $color__palette-1__noti-2;
+}
+.palette-1__noti-3 {
+  background-color: $color__palette-1__noti-3;
+}
+.palette-1__noti-4 {
+  background-color: $color__palette-1__noti-4;
+}
+
+.palette-2__noti-1 {
+  background-color: $color__palette-2__noti-1;
+}
+.palette-2__noti-2 {
+  background-color: $color__palette-2__noti-2;
+}
+.palette-2__noti-3 {
+  background-color: $color__palette-2__noti-3;
+}
+.palette-2__noti-4 {
+  background-color: $color__palette-2__noti-4;
+}
+
+.palette-3__noti-1 {
+  background-color: $color__palette-3__noti-1;
+}
+.palette-3__noti-2 {
+  background-color: $color__palette-3__noti-2;
+}
+.palette-3__noti-3 {
+  background-color: $color__palette-3__noti-3;
+}
+.palette-3__noti-4 {
+  background-color: $color__palette-3__noti-4;
+}

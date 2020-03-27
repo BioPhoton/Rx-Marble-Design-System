@@ -1,4 +1,97 @@
 <h1>Color</h1>
 <div class="text-block">
-  <p>//</p>
+  <p>
+    All colors are are barrier free and used for specific things in the diagram.
+    There are <strong>3 fixed colors</strong> and
+    <strong>4 to n colors</strong> that are <strong>free to choose</strong>. For
+    Text, lines, and arrows the <strong>“line” color</strong> is used. The
+    <strong>“background” color</strong> is not only used for the background but
+    also for text to get an acceptable color ratio. You can check your pallet
+    here. The <strong>“inactive” color</strong> is used for anything that should
+    be recognized as inactive.
+  </p>
+</div>
+<div class="preview-block">
+  <div class="color-block monospace" *ngFor="let drawingColor of drawingColors">
+    <span
+      class="color {{ drawingColor.textColor }} {{
+        drawingColor.backgroundColor
+      }}"
+      >{{ drawingColor.name }}</span
+    >
+    <div class="description">
+      <span><strong class="bold">Name:</strong> {{ drawingColor.name }}</span>
+      <span
+        ><strong class="bold">Hexcode:</strong> {{ drawingColor.hexCode }}</span
+      >
+      <span><strong class="bold">Usage:</strong> {{ drawingColor.usage }}</span>
+    </div>
+  </div>
+</div>
+
+<h2>Color Palettes</h2>
+<div class="text-block">
+  <p>
+    Colors serve the purpose to distinguish between notifications or
+    observables. Try to use as less colors as possible to keep the visual noise
+    of a marble diagram low. If you create your own color patterns keep in mind
+    that you can use text inside shapes.
+  </p>
+  <p>
+    Also always check your palette including text with a color contrast tool
+    like
+    <a class="link" href="https://toolness.github.io/accessible-color-matrix/"
+      >accessible-color-matrix</a
+    >.
+  </p>
+  <p>
+    For <strong>“notification” colors</strong> you can use the defined colors 1
+    - 4 or any other color of your choice. All notification colors have the same
+    meaning. There is no “danger” or “success” color.
+  </p>
+</div>
+<h3>Palette 1</h3>
+<div class="preview-block">
+  <div class="color-block monospace" *ngFor="let firstPalette of firstPalettes">
+    <span
+      class="color {{ firstPalette.textColor }} {{
+        firstPalette.backgroundColor
+      }}"
+      >{{ firstPalette.name }}</span
+    >
+    <div class="description">
+      <span>{{ firstPalette.hexCode }}</span>
+    </div>
+  </div>
+</div>
+<h3>Palette 2</h3>
+<div class="preview-block">
+  <div
+    class="color-block monospace"
+    *ngFor="let secondPalette of secondPalettes"
+  >
+    <span
+      class="color {{ secondPalette.textColor }} {{
+        secondPalette.backgroundColor
+      }}"
+      >{{ secondPalette.name }}</span
+    >
+    <div class="description">
+      <span>{{ secondPalette.hexCode }}</span>
+    </div>
+  </div>
+</div>
+<h3>Palette 3</h3>
+<div class="preview-block">
+  <div class="color-block monospace" *ngFor="let thirdPalette of thirdPalettes">
+    <span
+      class="color {{ thirdPalette.textColor }} {{
+        thirdPalette.backgroundColor
+      }}"
+      >{{ thirdPalette.name }}</span
+    >
+    <div class="description">
+      <span>{{ thirdPalette.hexCode }}</span>
+    </div>
+  </div>
 </div>
