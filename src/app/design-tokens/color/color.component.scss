@@ -6,14 +6,6 @@ h3 {
   }
 }
 
-.preview-block {
-  @include breakpoint-less(mobile-land) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
-
 .color-block {
   margin-bottom: 3rem;
   margin-right: 2rem;

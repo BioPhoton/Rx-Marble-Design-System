@@ -13,13 +13,13 @@
   </p>
 </div>
 <div class="preview-block">
-  <figure role="group">
-    <img src="/assets/graphics/lines/graphic_line1.svg" alt="Line 1 Graphic" />
+  <figure role="group" *ngFor="let line of lines">
+    <img [src]="line.img" alt="{{ line.alt }}" />
     <figcaption>
-      <span>Style: Solid</span>
-      <span>Weight: 0.06em</span>
-      <span>Start: none</span>
-      <span>End: Filled Arrow</span>
+      <span>Style: {{ line.style }}</span>
+      <span>Weight: {{ line.weight }}</span>
+      <span>Start: {{ line.start }}</span>
+      <span>End: {{ line.end }}</span>
     </figcaption>
   </figure>
 </div>

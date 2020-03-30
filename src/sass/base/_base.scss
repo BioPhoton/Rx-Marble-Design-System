@@ -158,6 +158,12 @@ strong {
   display: flex;
   flex-wrap: wrap;
 
+  @include breakpoint-less(mobile-land) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   h4 {
     color: $color__primary-600;
   }
