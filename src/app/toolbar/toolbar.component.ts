@@ -40,6 +40,10 @@ export class ToolbarComponent implements OnInit {
         {
           routerLink: '/design-tokens/line',
           caption: 'Line',
+        },
+        {
+          routerLink: '/design-tokens/shape',
+          caption: 'Shape',
         }
       ]
     },

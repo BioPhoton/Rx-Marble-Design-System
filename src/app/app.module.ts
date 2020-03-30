@@ -14,6 +14,7 @@ import { UnitComponent } from './design-tokens/unit/unit.component';
 import { FontComponent } from './design-tokens/font/font.component';
 import { ColorComponent } from './design-tokens/color/color.component';
 import { LineComponent } from './design-tokens/line/line.component';
+import { ShapeComponent } from './design-tokens/shape/shape.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LineComponent } from './design-tokens/line/line.component';
     UnitComponent,
     FontComponent,
     ColorComponent,
-    LineComponent
+    LineComponent,
+    ShapeComponent
   ],
   imports: [
     BrowserModule,

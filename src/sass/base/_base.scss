@@ -174,10 +174,7 @@ strong {
 }
 
 .flex-columns {
-  .text-block {
-    flex: 2;
-  }
-
+  .text-block,
   .preview-block {
     flex: 1;
   }
@@ -196,10 +193,11 @@ strong {
 }
 
 figure {
-  margin: 0 0 2rem 0;
+  margin: 0 5rem 3rem 0;
 
   img {
     margin-bottom: 1rem;
+    height: 120px;
   }
 
   figcaption {

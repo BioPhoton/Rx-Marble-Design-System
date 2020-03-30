@@ -8,6 +8,7 @@ import { UnitComponent } from './design-tokens/unit/unit.component';
 import { FontComponent } from './design-tokens/font/font.component';
 import { ColorComponent } from './design-tokens/color/color.component';
 import { LineComponent } from './design-tokens/line/line.component';
+import { ShapeComponent } from './design-tokens/shape/shape.component';
 
 const routes: Routes = [
   {
@@ -25,7 +26,8 @@ const routes: Routes = [
       { path: 'unit', component: UnitComponent },
       { path: 'font', component: FontComponent },
       { path: 'color', component: ColorComponent },
-      { path: 'line', component: LineComponent }
+      { path: 'line', component: LineComponent },
+      { path: 'shape', component: ShapeComponent }
     ]
   },
   {

@@ -1,0 +1,36 @@
+<h1>Shape</h1>
+<div class="text-block">
+  <p>
+    Shapes, <strong>same as colors help</strong> to distinguish between
+    notifications. You can use the suggested set or create your own set of
+    shapes. Try to use as less different shapes as possible to keep the visual
+    noise of a marble diagram low.
+  </p>
+  <img
+    class="img__shapes"
+    src="/assets/graphics/design-tokens/shapes/shapes.svg"
+    alt="Shapes Graphic"
+  />
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let shape of shapes">
+    <img [src]="shape.img" alt="{{ shape.alt }}" />
+    <figcaption>
+      <span>{{ shape.desc }}</span>
+    </figcaption>
+  </figure>
+</div>
+
+<div class="text-block">
+  <p>
+    If you create your own shapes keep in mind that evers shape should be same
+    height and width to keep the sizing and spacing as easy as possible. Also
+    consider that every shape should be able to have dynamic with (dynamic in
+    number of blocks).
+  </p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let ownShape of ownShapes">
+    <img [src]="ownShape.img" alt="{{ ownShape.alt }}" />
+  </figure>
+</div>
