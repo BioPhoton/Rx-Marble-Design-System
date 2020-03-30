@@ -10,6 +10,7 @@ import { ColorComponent } from './design-tokens/color/color.component';
 import { LineComponent } from './design-tokens/line/line.component';
 import { ShapeComponent } from './design-tokens/shape/shape.component';
 import { SizeComponent } from './design-tokens/size/size.component';
+import { OverviewComponent } from './components/overview/overview.component';
 
 const routes: Routes = [
   {
@@ -34,7 +35,10 @@ const routes: Routes = [
   },
   {
     path: 'components',
-    component: ComponentsComponent
+    component: ComponentsComponent,
+    children: [
+      { path: 'overview', component: OverviewComponent }
+    ]
   },
   {
     path: 'diagrams',

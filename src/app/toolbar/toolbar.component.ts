@@ -55,7 +55,13 @@ export class ToolbarComponent implements OnInit {
       routerLink: '/components',
       icon: 'widgets',
       isExpanded: false,
-      caption: 'Components'
+      caption: 'Components',
+      children: [
+        {
+          routerLink: '/components/overview',
+          caption: 'Overview',
+        }
+      ]
     },
     {
       routerLink: '/diagrams',

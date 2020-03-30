@@ -195,6 +195,10 @@ strong {
 figure {
   margin: 0 5rem 3rem 0;
 
+  @include breakpoint-less(mobile-land) {
+    margin: 0 0 3rem 0;
+  }
+
   img {
     margin-bottom: 1rem;
     height: 120px;

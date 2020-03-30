@@ -1,0 +1,16 @@
+<h1>Overview</h1>
+<div class="text-block">
+  <p>
+    Components are the smallest entities in marble diagrams. The different
+    design tokens are applied on components. Diagrams are a composition of
+    components.
+  </p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let component of components">
+    <img [src]="component.img" alt="{{ component.alt }}" />
+    <figcaption>
+      <span>{{ component.desc }}</span>
+    </figcaption>
+  </figure>
+</div>
