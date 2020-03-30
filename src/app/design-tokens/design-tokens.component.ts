@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,10 +8,12 @@ import { Router } from '@angular/router';
 })
 export class DesignTokensComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private location: Location) { }
 
   ngOnInit() {
-    this.router.navigate(['design-tokens', 'unit']);
+    if (this.location.path() === '/design-tokens') {
+      this.router.navigate(['design-tokens', 'unit']);
+    }
   }
 
 }
