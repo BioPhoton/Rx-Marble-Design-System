@@ -1,12 +1,26 @@
 <h1>Size</h1>
 <div class="text-block">
-  <p></p>
+  <p>
+    There are 2 different sizes, normal (2em) and small (1em). Small size is
+    only possible for this subset:
+  </p>
+  <ul>
+    <li><strong>[1]</strong> Time</li>
+    <li><strong>[2]</strong> Notification</li>
+    <li><strong>[3]</strong> Completion</li>
+    <li><strong>[4]</strong> Error</li>
+  </ul>
+  <p>
+    <strong>Small size is rarely used</strong> but can serve in some cases as a
+    useful detail information. For example to sketch higher order observables or
+    operators.
+  </p>
 </div>
-<!-- <div class="preview-block">
+<div class="preview-block">
   <figure role="group" *ngFor="let size of sizes">
     <img [src]="size.img" alt="{{ size.alt }}" />
     <figcaption>
       <span>{{ size.desc }}</span>
     </figcaption>
   </figure>
-</div> -->
+</div>
