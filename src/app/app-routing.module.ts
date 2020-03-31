@@ -12,6 +12,7 @@ import { ShapeComponent } from './design-tokens/shape/shape.component';
 import { SizeComponent } from './design-tokens/size/size.component';
 import { OverviewComponent } from './components/overview/overview.component';
 import { ObservableComponent } from './components/observable/observable.component';
+import { TimeSpanComponent } from './components/time-span/time-span.component';
 
 const routes: Routes = [
   {
@@ -39,7 +40,8 @@ const routes: Routes = [
     component: ComponentsComponent,
     children: [
       { path: 'overview', component: OverviewComponent },
-      { path: 'observable', component: ObservableComponent }
+      { path: 'observable', component: ObservableComponent },
+      { path: 'time-span', component: TimeSpanComponent }
     ]
   },
   {

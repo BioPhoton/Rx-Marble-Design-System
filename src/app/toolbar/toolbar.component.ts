@@ -64,6 +64,10 @@ export class ToolbarComponent implements OnInit {
         {
           routerLink: '/components/observable',
           caption: 'Observable',
+        },
+        {
+          routerLink: '/components/time-span',
+          caption: 'Time Span',
         }
       ]
     },

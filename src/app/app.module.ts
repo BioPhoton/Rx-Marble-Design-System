@@ -18,6 +18,7 @@ import { ShapeComponent } from './design-tokens/shape/shape.component';
 import { SizeComponent } from './design-tokens/size/size.component';
 import { OverviewComponent } from './components/overview/overview.component';
 import { ObservableComponent } from './components/observable/observable.component';
+import { TimeSpanComponent } from './components/time-span/time-span.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ObservableComponent } from './components/observable/observable.componen
     ShapeComponent,
     SizeComponent,
     OverviewComponent,
-    ObservableComponent
+    ObservableComponent,
+    TimeSpanComponent
   ],
   imports: [
     BrowserModule,
