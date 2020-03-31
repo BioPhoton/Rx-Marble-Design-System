@@ -195,6 +195,10 @@ strong {
 figure {
   margin: 0 5rem 3rem 0;
 
+  @include breakpoint-less(tablet) {
+    width: 100%;
+  }
+
   @include breakpoint-less(mobile-land) {
     margin: 0 0 3rem 0;
   }
@@ -204,6 +208,7 @@ figure {
     width: 210px;
 
     &.bigger {
+      width: 100%;
       @include breakpoint(tablet) {
         width: 400px;
       }

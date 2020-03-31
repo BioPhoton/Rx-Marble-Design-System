@@ -18,6 +18,7 @@ import { OperationComponent } from './components/operation/operation.component';
 import { ConsumerEventComponent } from './components/consumer-event/consumer-event.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { CompletionComponent } from './components/completion/completion.component';
+import { ErrorComponent } from './components/error/error.component';
 
 const routes: Routes = [
   {
@@ -51,7 +52,8 @@ const routes: Routes = [
       { path: 'operation', component: OperationComponent },
       { path: 'consumer-event', component: ConsumerEventComponent },
       { path: 'notification', component: NotificationComponent },
-      { path: 'completion', component: CompletionComponent }
+      { path: 'completion', component: CompletionComponent },
+      { path: 'error', component: ErrorComponent }
     ]
   },
   {

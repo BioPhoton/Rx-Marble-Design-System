@@ -88,6 +88,10 @@ export class ToolbarComponent implements OnInit {
         {
           routerLink: '/components/completion',
           caption: 'Completion',
+        },
+        {
+          routerLink: '/components/error',
+          caption: 'Error',
         }
       ]
     },
