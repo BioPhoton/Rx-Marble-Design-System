@@ -16,6 +16,7 @@ import { TimeSpanComponent } from './components/time-span/time-span.component';
 import { EventInTimeComponent } from './components/event-in-time/event-in-time.component';
 import { OperationComponent } from './components/operation/operation.component';
 import { ConsumerEventComponent } from './components/consumer-event/consumer-event.component';
+import { NotificationComponent } from './components/notification/notification.component';
 
 const routes: Routes = [
   {
@@ -47,7 +48,8 @@ const routes: Routes = [
       { path: 'time-span', component: TimeSpanComponent },
       { path: 'event-in-time', component: EventInTimeComponent },
       { path: 'operation', component: OperationComponent },
-      { path: 'consumer-event', component: ConsumerEventComponent }
+      { path: 'consumer-event', component: ConsumerEventComponent },
+      { path: 'notification', component: NotificationComponent }
     ]
   },
   {

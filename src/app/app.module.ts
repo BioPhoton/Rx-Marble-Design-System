@@ -22,6 +22,7 @@ import { TimeSpanComponent } from './components/time-span/time-span.component';
 import { EventInTimeComponent } from './components/event-in-time/event-in-time.component';
 import { OperationComponent } from './components/operation/operation.component';
 import { ConsumerEventComponent } from './components/consumer-event/consumer-event.component';
+import { NotificationComponent } from './components/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ConsumerEventComponent } from './components/consumer-event/consumer-eve
     TimeSpanComponent,
     EventInTimeComponent,
     OperationComponent,
-    ConsumerEventComponent
+    ConsumerEventComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,

@@ -80,6 +80,10 @@ export class ToolbarComponent implements OnInit {
         {
           routerLink: '/components/consumer-event',
           caption: 'Consumer Event',
+        },
+        {
+          routerLink: '/components/notification',
+          caption: 'Notification',
         }
       ]
     },

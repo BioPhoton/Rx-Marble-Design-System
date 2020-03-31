@@ -1,0 +1,37 @@
+<h1>Notification</h1>
+<div class="text-block">
+  <p>
+    Notifications are the possible content of observables. They ocurre over time
+    and are a representation of any particular thing. Notifications can have:
+  </p>
+  <ul>
+    <li><span class="bullet"></span>Color</li>
+    <li><span class="bullet"></span>Shape</li>
+    <li><span class="bullet"></span>Content (proper contrast to fill color)</li>
+    <li><span class="bullet"></span>Width (in full blocks)</li>
+  </ul>
+  <p>
+    <strong>Color and content</strong> combination should always have a proper
+    contrast. Find a onlinetool here:
+    <a class="link" href="https://webaim.org/resources/contrastchecker/"
+      >Contrast checker</a
+    >.
+  </p>
+  <p>
+    The <strong>value color can be only black or white</strong>. With is here to
+    provide enough space for more content than just 1 chars. Every shape can
+    have a dynamic width.
+  </p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let notification of notifications">
+    <img
+      [class]="notification.styleClass"
+      [src]="notification.img"
+      alt="{{ notification.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="notification.desc">{{ notification.desc }}</span>
+    </figcaption>
+  </figure>
+</div>
