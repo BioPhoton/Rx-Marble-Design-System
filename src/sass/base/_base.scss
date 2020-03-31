@@ -194,6 +194,7 @@ strong {
 
 figure {
   margin: 0 5rem 3rem 0;
+  max-width: auto;
 
   @include breakpoint-less(mobile-land) {
     margin: 0 0 3rem 0;
@@ -201,7 +202,7 @@ figure {
 
   img {
     margin-bottom: 1rem;
-    height: 120px;
+    width: 100%;
   }
 
   figcaption {

@@ -17,6 +17,7 @@ import { LineComponent } from './design-tokens/line/line.component';
 import { ShapeComponent } from './design-tokens/shape/shape.component';
 import { SizeComponent } from './design-tokens/size/size.component';
 import { OverviewComponent } from './components/overview/overview.component';
+import { ObservableComponent } from './components/observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { OverviewComponent } from './components/overview/overview.component';
     LineComponent,
     ShapeComponent,
     SizeComponent,
-    OverviewComponent
+    OverviewComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,

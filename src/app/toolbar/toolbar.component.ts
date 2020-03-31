@@ -60,6 +60,10 @@ export class ToolbarComponent implements OnInit {
         {
           routerLink: '/components/overview',
           caption: 'Overview',
+        },
+        {
+          routerLink: '/components/observable',
+          caption: 'Observable',
         }
       ]
     },
