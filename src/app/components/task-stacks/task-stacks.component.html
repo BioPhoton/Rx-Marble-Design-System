@@ -1,0 +1,16 @@
+<h1>Task Stacks</h1>
+<div class="text-block">
+  <p></p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let taskStack of taskStacks">
+    <img
+      [class]="taskStack.styleClass"
+      [src]="taskStack.img"
+      alt="{{ taskStack.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="taskStack.desc">{{ taskStack.desc }}</span>
+    </figcaption>
+  </figure>
+</div>

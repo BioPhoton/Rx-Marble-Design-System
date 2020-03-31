@@ -1,0 +1,22 @@
+<h1>Operator</h1>
+<div class="text-block">
+  <p>
+    The <strong>operator</strong> symbolizes the logic which
+    <strong>interacts with</strong> observables and their
+    <strong>notifications</strong>. Operators can contain any other component in
+    small as well as normal. Also text. In case the content contains components
+    they can have a description on their left side.
+  </p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let operator of operators">
+    <img
+      [class]="operator.styleClass"
+      [src]="operator.img"
+      alt="{{ operator.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="operator.desc">{{ operator.desc }}</span>
+    </figcaption>
+  </figure>
+</div>

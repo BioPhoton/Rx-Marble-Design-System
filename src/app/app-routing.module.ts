@@ -19,6 +19,8 @@ import { ConsumerEventComponent } from './components/consumer-event/consumer-eve
 import { NotificationComponent } from './components/notification/notification.component';
 import { CompletionComponent } from './components/completion/completion.component';
 import { ErrorComponent } from './components/error/error.component';
+import { OperatorComponent } from './components/operator/operator.component';
+import { TaskStacksComponent } from './components/task-stacks/task-stacks.component';
 
 const routes: Routes = [
   {
@@ -53,7 +55,9 @@ const routes: Routes = [
       { path: 'consumer-event', component: ConsumerEventComponent },
       { path: 'notification', component: NotificationComponent },
       { path: 'completion', component: CompletionComponent },
-      { path: 'error', component: ErrorComponent }
+      { path: 'error', component: ErrorComponent },
+      { path: 'operator', component: OperatorComponent },
+      { path: 'task-stacks', component: TaskStacksComponent }
     ]
   },
   {

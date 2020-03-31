@@ -92,6 +92,14 @@ export class ToolbarComponent implements OnInit {
         {
           routerLink: '/components/error',
           caption: 'Error',
+        },
+        {
+          routerLink: '/components/operator',
+          caption: 'Operator',
+        },
+        {
+          routerLink: '/components/task-stacks',
+          caption: 'Task Stacks',
         }
       ]
     },
