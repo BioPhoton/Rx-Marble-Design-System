@@ -14,6 +14,7 @@ import { OverviewComponent } from './components/overview/overview.component';
 import { ObservableComponent } from './components/observable/observable.component';
 import { TimeSpanComponent } from './components/time-span/time-span.component';
 import { EventInTimeComponent } from './components/event-in-time/event-in-time.component';
+import { OperationComponent } from './components/operation/operation.component';
 
 const routes: Routes = [
   {
@@ -43,7 +44,8 @@ const routes: Routes = [
       { path: 'overview', component: OverviewComponent },
       { path: 'observable', component: ObservableComponent },
       { path: 'time-span', component: TimeSpanComponent },
-      { path: 'event-in-time', component: EventInTimeComponent }
+      { path: 'event-in-time', component: EventInTimeComponent },
+      { path: 'operation', component: OperationComponent }
     ]
   },
   {

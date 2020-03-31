@@ -1,0 +1,20 @@
+<h1>Operation</h1>
+<div class="text-block">
+  <p>
+    Operation is an event triggered from the consumer of an observable.
+    Operation symbolizes the interaction with the notifications and operators.
+    The operator start from notifications.
+  </p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let operation of operations">
+    <img
+      [class]="operation.styleClass"
+      [src]="operation.img"
+      alt="{{ operation.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="operation.desc">Object: {{ operation.desc }}</span>
+    </figcaption>
+  </figure>
+</div>

@@ -20,6 +20,7 @@ import { OverviewComponent } from './components/overview/overview.component';
 import { ObservableComponent } from './components/observable/observable.component';
 import { TimeSpanComponent } from './components/time-span/time-span.component';
 import { EventInTimeComponent } from './components/event-in-time/event-in-time.component';
+import { OperationComponent } from './components/operation/operation.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { EventInTimeComponent } from './components/event-in-time/event-in-time.c
     OverviewComponent,
     ObservableComponent,
     TimeSpanComponent,
-    EventInTimeComponent
+    EventInTimeComponent,
+    OperationComponent
   ],
   imports: [
     BrowserModule,
