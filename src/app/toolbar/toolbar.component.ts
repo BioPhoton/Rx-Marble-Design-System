@@ -68,6 +68,10 @@ export class ToolbarComponent implements OnInit {
         {
           routerLink: '/components/time-span',
           caption: 'Time Span',
+        },
+        {
+          routerLink: '/components/event-in-time',
+          caption: 'Event in Time',
         }
       ]
     },

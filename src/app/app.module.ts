@@ -19,6 +19,7 @@ import { SizeComponent } from './design-tokens/size/size.component';
 import { OverviewComponent } from './components/overview/overview.component';
 import { ObservableComponent } from './components/observable/observable.component';
 import { TimeSpanComponent } from './components/time-span/time-span.component';
+import { EventInTimeComponent } from './components/event-in-time/event-in-time.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TimeSpanComponent } from './components/time-span/time-span.component';
     SizeComponent,
     OverviewComponent,
     ObservableComponent,
-    TimeSpanComponent
+    TimeSpanComponent,
+    EventInTimeComponent
   ],
   imports: [
     BrowserModule,
