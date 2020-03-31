@@ -76,6 +76,10 @@ export class ToolbarComponent implements OnInit {
         {
           routerLink: '/components/operation',
           caption: 'Operation',
+        },
+        {
+          routerLink: '/components/consumer-event',
+          caption: 'Consumer Event',
         }
       ]
     },

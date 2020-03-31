@@ -1,0 +1,24 @@
+<h1>Consumer Event</h1>
+<div class="text-block">
+  <p>
+    <strong>Consumer events are directed bottom up</strong>. It starts from the
+    result observable and ends at the operator context, or the observable
+    itself. Use <strong>[S]</strong> If you subscribe And
+    <strong>[U]</strong> If you unsubscribe The position of the box is 0.15em
+    above the observable. If the box has to be placed next to it on the left
+    side and 0.15em inside the start of the observable. Other components in the
+    same frame are queued in the next free block to the right.
+  </p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let consumerEvent of consumerEvents">
+    <img
+      [class]="consumerEvent.styleClass"
+      [src]="consumerEvent.img"
+      alt="{{ consumerEvent.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="consumerEvent.desc">{{ consumerEvent.desc }}</span>
+    </figcaption>
+  </figure>
+</div>
