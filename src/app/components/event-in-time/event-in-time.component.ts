@@ -7,6 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventInTimeComponent implements OnInit {
 
+  public eventInTimes = [
+    {
+      img: '/assets/graphics/components/event-in-time/event-in-time1.svg',
+      alt: 'Event in Time 1 Graphic',
+      object: ' ',
+      shape: 'Circle'
+    },
+    {
+      img: '/assets/graphics/components/event-in-time/event-in-time2.svg',
+      alt: 'Event in Time 2 Graphic',
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

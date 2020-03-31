@@ -15,20 +15,11 @@
   </p>
 </div>
 <div class="preview-block">
-  <figure role="group">
-    <img
-      src="/assets/graphics/components/time-span/time-span1.svg"
-      alt="Time Span 1 Graphic"
-    />
+  <figure role="group" *ngFor="let timeSpan of timeSpans">
+    <img [src]="timeSpan.img" alt="{{ timeSpan.alt }}" />
     <figcaption>
-      <span>Object: </span>
-      <span>Shape: Rectangle</span>
+      <span *ngIf="timeSpan.object">Object: {{ timeSpan.object }}</span>
+      <span *ngIf="timeSpan.shape">Shape: {{ timeSpan.shape }}</span>
     </figcaption>
-  </figure>
-  <figure role="group">
-    <img
-      src="/assets/graphics/components/time-span/time-span2.svg"
-      alt="Time Span 2 Graphic"
-    />
   </figure>
 </div>
