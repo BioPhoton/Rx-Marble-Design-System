@@ -23,6 +23,7 @@ import { EventInTimeComponent } from './components/event-in-time/event-in-time.c
 import { OperationComponent } from './components/operation/operation.component';
 import { ConsumerEventComponent } from './components/consumer-event/consumer-event.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { CompletionComponent } from './components/completion/completion.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { NotificationComponent } from './components/notification/notification.co
     EventInTimeComponent,
     OperationComponent,
     ConsumerEventComponent,
-    NotificationComponent
+    NotificationComponent,
+    CompletionComponent
   ],
   imports: [
     BrowserModule,

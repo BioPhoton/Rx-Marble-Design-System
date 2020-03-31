@@ -84,6 +84,10 @@ export class ToolbarComponent implements OnInit {
         {
           routerLink: '/components/notification',
           caption: 'Notification',
+        },
+        {
+          routerLink: '/components/completion',
+          caption: 'Completion',
         }
       ]
     },

@@ -1,0 +1,18 @@
+<h1>Completion</h1>
+<div class="text-block">
+  <p>
+    Completion symbolizes one possible end of an observable.
+  </p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let completion of completions">
+    <img
+      [class]="completion.styleClass"
+      [src]="completion.img"
+      alt="{{ completion.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="completion.desc">{{ completion.desc }}</span>
+    </figcaption>
+  </figure>
+</div>

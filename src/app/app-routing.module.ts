@@ -17,6 +17,7 @@ import { EventInTimeComponent } from './components/event-in-time/event-in-time.c
 import { OperationComponent } from './components/operation/operation.component';
 import { ConsumerEventComponent } from './components/consumer-event/consumer-event.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { CompletionComponent } from './components/completion/completion.component';
 
 const routes: Routes = [
   {
@@ -49,7 +50,8 @@ const routes: Routes = [
       { path: 'event-in-time', component: EventInTimeComponent },
       { path: 'operation', component: OperationComponent },
       { path: 'consumer-event', component: ConsumerEventComponent },
-      { path: 'notification', component: NotificationComponent }
+      { path: 'notification', component: NotificationComponent },
+      { path: 'completion', component: CompletionComponent }
     ]
   },
   {
