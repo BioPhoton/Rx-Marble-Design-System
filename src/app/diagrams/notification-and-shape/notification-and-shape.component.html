@@ -1,1 +1,30 @@
 <h1>Notification and Shape</h1>
+<div class="text-block">
+  <p>
+    Notifications have shape. <strong>Shape is closely</strong> connected to
+    content and serves an <strong>abstraction for the data type</strong>. I.e.
+    number or complex objects In some cases it helps the readability of a
+    diagram. Especially when you have
+    <strong
+      >data type transformations or observables that emit different data
+      types</strong
+    >.
+  </p>
+</div>
+<div class="preview-block">
+  <figure
+    role="group"
+    *ngFor="let notificationAndShape of notificationAndShapes"
+  >
+    <img
+      [class]="notificationAndShape.styleClass"
+      [src]="notificationAndShape.img"
+      alt="{{ notificationAndShape.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="notificationAndShape.desc">{{
+        notificationAndShape.desc
+      }}</span>
+    </figcaption>
+  </figure>
+</div>

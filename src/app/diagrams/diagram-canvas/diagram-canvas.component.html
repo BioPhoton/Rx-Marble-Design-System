@@ -1,1 +1,51 @@
 <h1>Diagram Canvas</h1>
+<div class="text-block">
+  <h3>Diagram:</h3>
+  <ul>
+    <li><span class="bullet"></span>Grid</li>
+    <ul>
+      <li><span class="bullet sub"></span>Padding</li>
+      <li><span class="bullet sub"></span>Frame scale</li>
+      <li><span class="bullet sub"></span>Block scale</li>
+      <li><span class="bullet sub"></span>Min-Width</li>
+    </ul>
+    <li><span class="bullet"></span>Positioning</li>
+    <ul>
+      <li><span class="bullet sub"></span>Lanes</li>
+      <li><span class="bullet sub"></span>Horizontal</li>
+      <li><span class="bullet sub"></span>Vertical</li>
+    </ul>
+    <li><span class="bullet"></span>Notifications</li>
+    <ul>
+      <li><span class="bullet sub"></span>Content</li>
+      <li><span class="bullet sub"></span>Shape</li>
+      <li><span class="bullet sub"></span>Color</li>
+      <li><span class="bullet sub"></span>Multiple notifications</li>
+      <li><span class="bullet sub"></span>Dynamic width</li>
+      <li><span class="bullet sub"></span>Inner components</li>
+      <li><span class="bullet sub"></span>Inner state => scan, buffer</li>
+      <li><span class="bullet sub"></span>Multiple Operations</li>
+    </ul>
+    <li><span class="bullet"></span>Operator</li>
+    <ul>
+      <li><span class="bullet sub"></span>Padding</li>
+      <li><span class="bullet sub"></span>Operations and lines</li>
+      <li><span class="bullet sub"></span>Operator grouping</li>
+    </ul>
+    <li><span class="bullet"></span>Multiple components</li>
+    <li><span class="bullet"></span>Inactive components</li>
+    <li><span class="bullet"></span>Order of involved observables</li>
+  </ul>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let diagramCanvas of diagramsCanvas">
+    <img
+      [class]="diagramCanvas.styleClass"
+      [src]="diagramCanvas.img"
+      alt="{{ diagramCanvas.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="diagramCanvas.desc">{{ diagramCanvas.desc }}</span>
+    </figcaption>
+  </figure>
+</div>

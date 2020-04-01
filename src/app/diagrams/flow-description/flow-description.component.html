@@ -1,1 +1,21 @@
 <h1>Flow Description</h1>
+<div class="text-block">
+  <ul>
+    <li><strong>[1]</strong> Bold + Big (Observable)</li>
+    <li><strong>[2]</strong> Normal + Big (Operator)</li>
+    <li><strong>[3]</strong> Normal + Medium (Notification, Timespan)</li>
+    <li><strong>[4]</strong> Bold + Small (Index + Legend)</li>
+  </ul>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let flowDescription of flowDescriptions">
+    <img
+      [class]="flowDescription.styleClass"
+      [src]="flowDescription.img"
+      alt="{{ flowDescription.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="flowDescription.desc">{{ flowDescription.desc }}</span>
+    </figcaption>
+  </figure>
+</div>

@@ -1,1 +1,28 @@
 <h1>Operator and Line</h1>
+<div class="text-block">
+  <p>
+    Operators perform
+    <strong>operations which happen at a certain point in time</strong> and are
+    displayed as
+    <strong>vertical dashed lines with and arrow at the lower end</strong>. Form
+    <strong>simple operations the lines are behind the operator box</strong>.
+    This helps to have no overlappings with the operator content. For operators
+    where the
+    <strong
+      >internal visible the lines are on top of the operator and end in another
+      component</strong
+    >.
+  </p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let operatorAndLine of operatorAndLines">
+    <img
+      [class]="operatorAndLine.styleClass"
+      [src]="operatorAndLine.img"
+      alt="{{ operatorAndLine.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="operatorAndLine.desc">{{ operatorAndLine.desc }}</span>
+    </figcaption>
+  </figure>
+</div>

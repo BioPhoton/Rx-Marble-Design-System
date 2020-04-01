@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExamplesPerOperatorComponent implements OnInit {
 
+  public examplesPerOperator = [
+    {
+      img: '/assets/graphics/diagrams/examples-per-operator/examples-per-operator1.svg',
+      alt: 'Examples per Operator 1 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

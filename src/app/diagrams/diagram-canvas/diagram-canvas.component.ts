@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./diagram-canvas.component.scss']
 })
 export class DiagramCanvasComponent implements OnInit {
+  public diagramsCanvas = [
+    {
+      img: '/assets/graphics/diagrams/diagram-canvas/diagram-canvas1.svg',
+      alt: 'Diagram Canvas 1 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
 
   constructor() { }
 

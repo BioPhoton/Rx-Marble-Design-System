@@ -1,1 +1,22 @@
 <h1>Grid</h1>
+<div class="text-block">
+  <p>
+    The diagram is drawn in a <strong>grid</strong> which is made out of blocks.
+    It’s optional to display. The grid has a
+    <strong>padding of 1 block</strong>. Also
+    <strong>optional are the blocks and frames scales</strong>. The
+    <strong>block scale</strong> is mainly here to position components. It is
+    <strong>very rarely used</strong>. The
+    <strong>frame scale is here to measure the exact time</strong> in diagrams.
+    For a consistent appearance we suggest a
+    <strong>minimal with of 38 blocks</strong>.
+  </p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let grid of grids">
+    <img [class]="grid.styleClass" [src]="grid.img" alt="{{ grid.alt }}" />
+    <figcaption>
+      <span *ngIf="grid.desc">{{ grid.desc }}</span>
+    </figcaption>
+  </figure>
+</div>

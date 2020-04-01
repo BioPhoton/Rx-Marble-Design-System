@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LegendComponent implements OnInit {
 
+  public legends = [
+    {
+      img: '/assets/graphics/diagrams/legend/legend1.svg',
+      alt: 'Legend 1 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

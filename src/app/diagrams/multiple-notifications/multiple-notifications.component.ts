@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MultipleNotificationsComponent implements OnInit {
 
+  public multipleNotifications = [
+    {
+      img: '/assets/graphics/diagrams/multiple-notifications/multiple-notifications1.svg',
+      alt: 'Multiple Notifications 1 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

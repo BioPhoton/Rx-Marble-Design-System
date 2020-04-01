@@ -1,1 +1,25 @@
 <h1>Positioning</h1>
+<div class="text-block">
+  <p>
+    For every <strong>component</strong> you have to provide a
+    <strong>space of 2 by 2 blocks</strong>. This is important in combination
+    with the frame scale. The components are <strong>arranged in lanes</strong>.
+    The minimum <strong>vertical space is 1 block</strong>. Lines are placed
+    either horizontally or vertically on the edges of a block. Horizontal lines
+    can only be placed in the center of a frame.
+    <strong>Between lanes</strong> there has to be a
+    <strong>horizontal space of 1 block</strong>.
+  </p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let positioning of positionings">
+    <img
+      [class]="positioning.styleClass"
+      [src]="positioning.img"
+      alt="{{ positioning.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="positioning.desc">{{ positioning.desc }}</span>
+    </figcaption>
+  </figure>
+</div>

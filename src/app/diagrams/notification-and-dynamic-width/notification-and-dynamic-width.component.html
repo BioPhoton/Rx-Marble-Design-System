@@ -1,1 +1,21 @@
 <h1>Notification and Dynamic Width</h1>
+<div class="text-block">
+  <p></p>
+</div>
+<div class="preview-block">
+  <figure
+    role="group"
+    *ngFor="let notificationAndDynamicWidth of notificationAndDynamicWidths"
+  >
+    <img
+      [class]="notificationAndDynamicWidth.styleClass"
+      [src]="notificationAndDynamicWidth.img"
+      alt="{{ notificationAndDynamicWidth.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="notificationAndDynamicWidth.desc">{{
+        notificationAndDynamicWidth.desc
+      }}</span>
+    </figcaption>
+  </figure>
+</div>

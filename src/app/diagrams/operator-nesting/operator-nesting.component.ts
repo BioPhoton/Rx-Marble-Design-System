@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OperatorNestingComponent implements OnInit {
 
+  public operatorNestings = [
+    {
+      img: '/assets/graphics/diagrams/operator-nesting/operator-nesting1.svg',
+      alt: 'Operator Nesting 1 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

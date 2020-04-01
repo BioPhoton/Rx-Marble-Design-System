@@ -1,1 +1,33 @@
 <h1>Legend</h1>
+<div class="text-block">
+  <p>
+    The legend section is the second possible section in a diagram. It can have
+    <strong>variable height</strong>.
+    <strong>This section is optional too</strong>, but compared the the
+    description section it is always part of the diagrams as we want to have the
+    legend as part of the diagram itself. Use
+    <strong>small font size for the legend</strong>. For
+    <strong>font weight use normal for description</strong> and
+    <strong>bold for indexes, operator params, or content references</strong>.
+  </p>
+  <ul>
+    <li><span class="bullet"></span>Time per frame</li>
+    <li><span class="bullet"></span>Name and color</li>
+    <li><span class="bullet"></span>Datatype and shape</li>
+    <li><span class="bullet"></span>Content</li>
+    <li><span class="bullet"></span>Indexe</li>
+    <li><span class="bullet"></span>Operator params</li>
+  </ul>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let legend of legends">
+    <img
+      [class]="legend.styleClass"
+      [src]="legend.img"
+      alt="{{ legend.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="legend.desc">{{ legend.desc }}</span>
+    </figcaption>
+  </figure>
+</div>

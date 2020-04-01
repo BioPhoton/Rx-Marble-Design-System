@@ -1,1 +1,24 @@
 <h1>Inactive Components</h1>
+<div class="text-block">
+  <p>
+    Sometimes it serves helpful information to
+    <strong
+      >show notifications and operations as well as complete and error, in
+      inactive color if they don’t occur</strong
+    >.
+    <strong>Inactive operations can also end on the operator context</strong>.
+    This could be on the <strong>in and outside</strong>.
+  </p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let inactiveComponent of inactiveComponents">
+    <img
+      [class]="inactiveComponent.styleClass"
+      [src]="inactiveComponent.img"
+      alt="{{ inactiveComponent.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="inactiveComponent.desc">{{ inactiveComponent.desc }}</span>
+    </figcaption>
+  </figure>
+</div>

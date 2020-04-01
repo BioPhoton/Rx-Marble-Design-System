@@ -7,6 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificationAndContentComponent implements OnInit {
 
+  public notificationAndContents = [
+    {
+      img: '/assets/graphics/diagrams/notification-and-content/notification-and-content1.svg',
+      alt: 'Notification and Content 1 Graphic',
+      styleClass: 'bigger'
+    },
+    {
+      img: '/assets/graphics/diagrams/notification-and-content/notification-and-content2.svg',
+      alt: 'Notification and Content 2 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

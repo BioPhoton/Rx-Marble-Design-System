@@ -1,1 +1,21 @@
 <h1>Multiple Notifications in One Frame</h1>
+<div class="text-block">
+  <p></p>
+</div>
+<div class="preview-block">
+  <figure
+    role="group"
+    *ngFor="let multipleNotification of multipleNotifications"
+  >
+    <img
+      [class]="multipleNotification.styleClass"
+      [src]="multipleNotification.img"
+      alt="{{ multipleNotification.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="multipleNotification.desc">{{
+        multipleNotification.desc
+      }}</span>
+    </figcaption>
+  </figure>
+</div>

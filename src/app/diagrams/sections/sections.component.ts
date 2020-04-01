@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SectionsComponent implements OnInit {
 
+  public sections = [
+    {
+      img: '/assets/graphics/diagrams/sections/sections1.svg',
+      alt: 'Sections 1 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

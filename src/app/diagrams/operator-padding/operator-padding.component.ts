@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OperatorPaddingComponent implements OnInit {
 
+  public operatorPaddings = [
+    {
+      img: '/assets/graphics/diagrams/operator-padding/operator-padding1.svg',
+      alt: 'Operator Padding 1 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

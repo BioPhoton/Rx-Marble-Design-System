@@ -33,11 +33,12 @@ mat-toolbar {
     button {
       margin-left: 2rem;
       border-radius: 10px;
-      color: $color__black;
       box-shadow: 0 0 20px $color__shadow;
 
       &:hover {
-        color: $color__secondary-800;
+        .mat-icon {
+          color: $color__primary-300;
+        }
       }
     }
   }
@@ -47,16 +48,17 @@ mat-toolbar {
   }
 }
 
+.mat-icon {
+  color: $color__primary-700;
+  transition: all 200ms ease-in-out;
+}
+
 .mat-drawer-side {
   border: none;
 }
 
 .mat-list-base {
   margin-top: 2rem;
-}
-
-.mat-icon {
-  color: $color__primary-700;
 }
 
 .mat-icon-button {
@@ -107,7 +109,7 @@ mat-toolbar {
   display: none;
 
   a {
-    padding-left: 5.5rem;
+    padding-left: 5.2rem;
     color: $color__primary-900 !important;
   }
 }

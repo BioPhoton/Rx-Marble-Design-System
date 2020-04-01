@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InactiveComponentsComponent implements OnInit {
 
+  public inactiveComponents = [
+    {
+      img: '/assets/graphics/diagrams/inactive-components/inactive-components1.svg',
+      alt: 'Inactive Components 1 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

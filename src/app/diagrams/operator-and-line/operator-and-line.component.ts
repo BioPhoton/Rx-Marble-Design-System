@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OperatorAndLineComponent implements OnInit {
 
+  public operatorAndLines = [
+    {
+      img: '/assets/graphics/diagrams/operator-and-line/operator-and-line1.svg',
+      alt: 'Operator and Line 1 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

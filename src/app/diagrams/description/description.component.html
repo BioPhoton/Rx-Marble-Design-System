@@ -1,1 +1,22 @@
 <h1>Description</h1>
+<div class="text-block">
+  <p>
+    The description section is the first section possible in a diagram. It can
+    have <strong>variable height</strong>.
+    <strong>This section is optional</strong> as most of the time we want to
+    have our textual description as text, not as image but it’s completely fine
+    to include the description in the diagram.
+  </p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let description of descriptions">
+    <img
+      [class]="description.styleClass"
+      [src]="description.img"
+      alt="{{ description.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="description.desc">{{ description.desc }}</span>
+    </figcaption>
+  </figure>
+</div>

@@ -1,1 +1,30 @@
 <h1>Notification and Inner Components</h1>
+<div class="text-block">
+  <p>
+    If you want to display higher order observables you can use small components
+    size for it. <strong>Small size is rarely used</strong> and only serve as a
+    symbol. As normal as well as small components take a 2 by 2 blocks space
+    <strong>all positioning and spacing rules apply also for small</strong>
+    components. <strong>It does not reflect the real behaviour</strong> of the
+    inner observable.
+    <strong>The real behavior is displayed in the operator</strong> which takes
+    these notifications.
+  </p>
+</div>
+<div class="preview-block">
+  <figure
+    role="group"
+    *ngFor="let notificationAndInnerComponent of notificationAndInnerComponents"
+  >
+    <img
+      [class]="notificationAndInnerComponent.styleClass"
+      [src]="notificationAndInnerComponent.img"
+      alt="{{ notificationAndInnerComponent.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="notificationAndInnerComponent.desc">{{
+        notificationAndInnerComponent.desc
+      }}</span>
+    </figcaption>
+  </figure>
+</div>

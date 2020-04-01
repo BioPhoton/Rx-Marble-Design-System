@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificationAndDynamicWidthComponent implements OnInit {
 
+  public notificationAndDynamicWidths = [
+    {
+      img: '/assets/graphics/diagrams/notification-and-dynamic-width/notification-and-dynamic-width1.svg',
+      alt: 'Notification and Dynamic Width 1 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

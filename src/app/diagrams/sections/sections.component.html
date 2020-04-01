@@ -1,1 +1,19 @@
 <h1>Sections</h1>
+<div class="text-block">
+  <p>
+    A diagram consists at least of the diagram section. Description, legend as
+    well as flow description are optional.
+  </p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let section of sections">
+    <img
+      [class]="section.styleClass"
+      [src]="section.img"
+      alt="{{ section.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="section.desc">{{ section.desc }}</span>
+    </figcaption>
+  </figure>
+</div>

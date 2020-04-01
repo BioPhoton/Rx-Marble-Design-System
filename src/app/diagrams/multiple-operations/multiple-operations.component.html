@@ -1,1 +1,16 @@
-<h1>Multiple Operations</h1>
+<h1>Multiple Operations in One Frame</h1>
+<div class="text-block">
+  <p></p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let multipleOperation of multipleOperations">
+    <img
+      [class]="multipleOperation.styleClass"
+      [src]="multipleOperation.img"
+      alt="{{ multipleOperation.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="multipleOperation.desc">{{ multipleOperation.desc }}</span>
+    </figcaption>
+  </figure>
+</div>

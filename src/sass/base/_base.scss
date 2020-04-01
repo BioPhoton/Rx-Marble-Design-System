@@ -50,7 +50,7 @@ h2 {
   color: $color__primary-900;
 
   @include breakpoint(tablet) {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
   }
 }
 
@@ -61,7 +61,7 @@ h3 {
   color: $color__primary-900;
 
   @include breakpoint(tablet) {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -69,7 +69,7 @@ h4 {
   font-size: 1.6rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
-  color: $color__secondary-600;
+  color: $color__primary-300;
 }
 
 ul {
@@ -111,10 +111,10 @@ a {
   transition: all 200ms ease-in-out;
 
   &.link {
-    color: $color__primary-700;
+    color: $color__secondary-600;
 
     &:hover {
-      color: $color__primary-300;
+      color: $color__secondary-300;
     }
   }
 }
@@ -155,10 +155,10 @@ strong {
 
 .text-block,
 .preview-block {
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 
   @include breakpoint(desktop) {
-    padding-bottom: 6rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -172,27 +172,24 @@ strong {
     text-align: center;
   }
 
-  h4 {
-    color: $color__primary-600;
-  }
-
   span {
     display: block;
   }
 }
 
 .flex-columns {
-  .text-block,
-  .preview-block {
-    flex: 1;
+  .text-block {
+    display: flex;
+    flex-wrap: wrap;
+
+    div,
+    p {
+      margin: 0 5rem 3rem 0;
+    }
   }
 
-  @include breakpoint(desktop) {
-    display: flex;
-
-    .text-block {
-      margin-left: 5rem;
-    }
+  @include breakpoint-less(mobile-land) {
+    margin: 0 0 3rem 0;
   }
 }
 

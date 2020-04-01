@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificationAndShapeComponent implements OnInit {
 
+  public notificationAndShapes = [
+    {
+      img: '/assets/graphics/diagrams/notification-and-shape/notification-and-shape1.svg',
+      alt: 'Notification and Shape 1 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

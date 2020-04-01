@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MultipleOperationsComponent implements OnInit {
 
+  public multipleOperations = [
+    {
+      img: '/assets/graphics/diagrams/multiple-operations/multiple-operations1.svg',
+      alt: 'Multiple Operations 1 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

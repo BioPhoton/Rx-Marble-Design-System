@@ -1,1 +1,48 @@
 <h1>Notification and Content</h1>
+<div class="text-block">
+  <p>
+    In marble diagrams the
+    <strong>emissions of observables are called notifications</strong>. They are
+    displayed as shapes with color. To give more
+    <strong
+      >information about the data of a notification you can use content </strong
+    >. Content is <strong>any set of characters</strong> placed centered
+    <strong>in the shapes area</strong>. Content can also be
+    <strong>represented as symbol of any kind</strong>. In special szenarios the
+    content can also <strong>be a producer event</strong>.
+  </p>
+  <p>
+    Content can be directly representing the notification or serving as a
+    reference for the legend with details.
+  </p>
+  <p>
+    You can use the prime symbol [`] to show relations in derived notifications.
+    A => A` => A``
+  </p>
+  <div class="flex-columns">
+    <div class="text-block">
+      <p>
+        a: ['a', 'b', 'c', 'd', 'e']<br />b: ['e', 'f', 'g', 'h', 'i']<br />c:
+        ['i', 'k']
+      </p>
+      <p>a`: 'abcde'<br />b`: 'efghi'<br />c`: 'ik'</p>
+    </div>
+  </div>
+</div>
+<div class="preview-block">
+  <figure
+    role="group"
+    *ngFor="let notificationAndContent of notificationAndContents"
+  >
+    <img
+      [class]="notificationAndContent.styleClass"
+      [src]="notificationAndContent.img"
+      alt="{{ notificationAndContent.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="notificationAndContent.desc">{{
+        notificationAndContent.desc
+      }}</span>
+    </figcaption>
+  </figure>
+</div>

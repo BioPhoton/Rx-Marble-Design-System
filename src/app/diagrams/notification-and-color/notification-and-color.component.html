@@ -1,1 +1,38 @@
 <h1>Notification and Color</h1>
+<div class="text-block">
+  <p>
+    Color in diagrams <strong>is used to distinguish</strong> notifications from
+    different <strong>observables</strong>. Colors are
+    <strong>applied to input observables</strong>. The
+    <strong>output observable can be drawn in 2 versions</strong>.
+  </p>
+  <ul>
+    <li><strong>a)</strong> It has a different color</li>
+    <li>
+      <strong>b)</strong> It has no own color, but is a result of all colors
+      from the input
+    </li>
+  </ul>
+  <p>
+    The <strong>output observable has no own color</strong>, but is a result of
+    all colors from the input. In more complex diagrams you have to
+    <strong>decide when to switch back to a single color</strong> or not.
+  </p>
+</div>
+<div class="preview-block">
+  <figure
+    role="group"
+    *ngFor="let notificationAndColor of notificationAndColors"
+  >
+    <img
+      [class]="notificationAndColor.styleClass"
+      [src]="notificationAndColor.img"
+      alt="{{ notificationAndColor.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="notificationAndColor.desc">{{
+        notificationAndColor.desc
+      }}</span>
+    </figcaption>
+  </figure>
+</div>

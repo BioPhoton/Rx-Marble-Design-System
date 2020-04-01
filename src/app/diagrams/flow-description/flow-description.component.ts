@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlowDescriptionComponent implements OnInit {
 
+  public flowDescriptions = [
+    {
+      img: '/assets/graphics/diagrams/flow-description/flow-description1.svg',
+      alt: 'Flow Description 1 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

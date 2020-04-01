@@ -1,1 +1,16 @@
 <h1>Operator Padding</h1>
+<div class="text-block">
+  <p></p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let operatorPadding of operatorPaddings">
+    <img
+      [class]="operatorPadding.styleClass"
+      [src]="operatorPadding.img"
+      alt="{{ operatorPadding.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="operatorPadding.desc">{{ operatorPadding.desc }}</span>
+    </figcaption>
+  </figure>
+</div>
