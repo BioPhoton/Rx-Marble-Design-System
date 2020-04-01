@@ -206,6 +206,10 @@ export class ToolbarComponent implements OnInit {
           caption: 'Alternative Units',
         },
         {
+          routerLink: '/beyond-the-standard/todos',
+          caption: 'ToDos',
+        },
+        {
           routerLink: '/beyond-the-standard/vertical-layout',
           caption: 'Vertical Layout',
         }

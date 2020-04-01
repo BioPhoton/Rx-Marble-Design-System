@@ -44,6 +44,7 @@ import { ExamplesPerOperatorComponent } from './diagrams/examples-per-operator/e
 import { BeyondTheStandardComponent } from './beyond-the-standard/beyond-the-standard.component';
 import { AlternativeShapeComponent } from './beyond-the-standard/alternative-shape/alternative-shape.component';
 import { AlternativeUnitsComponent } from './beyond-the-standard/alternative-units/alternative-units.component';
+import { TodosComponent } from './beyond-the-standard/todos/todos.component';
 import { VerticalLayoutComponent } from './beyond-the-standard/vertical-layout/vertical-layout.component';
 
 const routes: Routes = [
@@ -116,6 +117,7 @@ const routes: Routes = [
     children: [
       { path: 'alternative-shape', component: AlternativeShapeComponent },
       { path: 'alternative-units', component: AlternativeUnitsComponent },
+      { path: 'todos', component: TodosComponent },
       { path: 'vertical-layout', component: VerticalLayoutComponent }
     ]
   }

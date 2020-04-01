@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlternativeShapeComponent implements OnInit {
 
+  public alternativeShapes = [
+    {
+      img: '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape1.svg',
+      alt: 'Alternative Shape 1 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

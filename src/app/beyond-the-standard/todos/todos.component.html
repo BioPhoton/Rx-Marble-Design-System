@@ -1,0 +1,12 @@
+<h1>ToDos</h1>
+<div class="text-block">
+  <p></p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let todo of todos">
+    <img [class]="todo.styleClass" [src]="todo.img" alt="{{ todo.alt }}" />
+    <figcaption>
+      <span *ngIf="todo.desc">{{ todo.desc }}</span>
+    </figcaption>
+  </figure>
+</div>

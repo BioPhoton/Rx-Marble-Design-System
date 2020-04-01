@@ -12,6 +12,11 @@ export class LegendComponent implements OnInit {
       img: '/assets/graphics/diagrams/legend/legend1.svg',
       alt: 'Legend 1 Graphic',
       styleClass: 'bigger'
+    },
+    {
+      img: '/assets/graphics/diagrams/legend/legend2.svg',
+      alt: 'Legend 2 Graphic',
+      styleClass: 'bigger'
     }
   ];
 

@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlternativeUnitsComponent implements OnInit {
 
+  public alternativeUnits = [
+    {
+      img: '/assets/graphics/beyond-the-standard/alternative-units/alternative-units1.svg',
+      alt: 'Alternative Units 1 Graphic'
+    },
+    {
+      img: '/assets/graphics/beyond-the-standard/alternative-units/alternative-units2.svg',
+      alt: 'Alternative Units 2 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

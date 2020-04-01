@@ -7,6 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VerticalLayoutComponent implements OnInit {
 
+  public verticalLayouts = [
+    {
+      img: '/assets/graphics/beyond-the-standard/vertical-layout/vertical-layout1.svg',
+      alt: 'Vertical Layout 1 Graphic',
+      styleClass: 'bigger'
+    },
+    {
+      img: '/assets/graphics/beyond-the-standard/vertical-layout/vertical-layout2.svg',
+      alt: 'Vertical Layout 2 Graphic',
+      styleClass: 'bigger'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

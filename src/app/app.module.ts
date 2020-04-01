@@ -51,6 +51,7 @@ import { AlternativeShapeComponent } from './beyond-the-standard/alternative-sha
 import { AlternativeUnitsComponent } from './beyond-the-standard/alternative-units/alternative-units.component';
 import { VerticalLayoutComponent } from './beyond-the-standard/vertical-layout/vertical-layout.component';
 import { InnerStateComponent } from './diagrams/inner-state/inner-state.component';
+import { TodosComponent } from './beyond-the-standard/todos/todos.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +101,8 @@ import { InnerStateComponent } from './diagrams/inner-state/inner-state.componen
     AlternativeShapeComponent,
     AlternativeUnitsComponent,
     VerticalLayoutComponent,
-    InnerStateComponent
+    InnerStateComponent,
+    TodosComponent
   ],
   imports: [
     BrowserModule,

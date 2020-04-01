@@ -1,1 +1,16 @@
 <h1>Vertical Layout</h1>
+<div class="text-block">
+  <p></p>
+</div>
+<div class="preview-block">
+  <figure role="group" *ngFor="let verticalLayout of verticalLayouts">
+    <img
+      [class]="verticalLayout.styleClass"
+      [src]="verticalLayout.img"
+      alt="{{ verticalLayout.alt }}"
+    />
+    <figcaption>
+      <span *ngIf="verticalLayout.desc">{{ verticalLayout.desc }}</span>
+    </figcaption>
+  </figure>
+</div>
