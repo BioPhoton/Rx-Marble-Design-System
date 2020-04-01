@@ -77,6 +77,10 @@ ul {
   margin: 0 0 16px 0;
   padding: 0;
 
+  > ul {
+    padding-left: 2.6rem;
+  }
+
   a {
     color: $color__primary-600;
     transition: all 0.25s;
@@ -90,10 +94,14 @@ ul {
 .bullet {
   width: 10px;
   height: 10px;
-  background-color: $color__secondary-600;
+  background-color: $color__primary-600;
   border-radius: 2px;
   display: inline-block;
   margin-right: 1.5rem;
+
+  &.sub {
+    background-color: $color__secondary-600;
+  }
 }
 
 a {
@@ -118,7 +126,7 @@ p {
 }
 
 strong {
-  color: $color__secondary-600;
+  color: $color__primary-600;
 }
 
 .bold {
