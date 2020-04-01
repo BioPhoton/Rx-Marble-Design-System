@@ -16,7 +16,7 @@
       <div class="nav-items" *ngFor="let navItem of navItems">
         <a
           mat-list-item
-          (click)="toggleSubMenu(navItem)"
+          (click)="toggleSubMenu($event, navItem)"
           [routerLink]="navItem.routerLink ? [navItem.routerLink] : []"
           routerLinkActive="list-item-active"
         >

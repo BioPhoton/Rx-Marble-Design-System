@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, take } from 'rxjs/operators';
 import { Router, NavigationStart } from '@angular/router';
 
 @Component({
@@ -225,7 +225,7 @@ export class ToolbarComponent implements OnInit {
     );
 
   constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
-    this.router.events.subscribe((event: NavigationStart) => {
+    this.router.events.pipe(take(1)).subscribe((event: NavigationStart) => {
       if (!event.url) {
         return;
       }
@@ -239,7 +239,18 @@ export class ToolbarComponent implements OnInit {
 
   ngOnInit() {
   }
-  public toggleSubMenu(navItem) {
-    navItem.isExpanded = !navItem.isExpanded;
+  public toggleSubMenu(event, navItem) {
+    if (!navItem.isExpanded) {
+      this.closeOpenItems();
+      navItem.isExpanded = true;
+    } else {
+      navItem.isExpanded = false;
+    }
+  }
+
+  private closeOpenItems() {
+    this.navItems.forEach(item => {
+      item.isExpanded = false;
+    });
   }
 }
