@@ -16,7 +16,7 @@ export class OperatorComponent implements OnInit {
     {
       img: '/assets/graphics/components/operator/operator2.svg',
       alt: 'Operator 2 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'big'
     }
   ];
 

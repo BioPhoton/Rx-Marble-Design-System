@@ -11,7 +11,7 @@ export class OperatorAndLineComponent implements OnInit {
     {
       img: '/assets/graphics/diagrams/operator-and-line/operator-and-line1.svg',
       alt: 'Operator and Line 1 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'big'
     }
   ];
 

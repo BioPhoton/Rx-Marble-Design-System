@@ -11,7 +11,7 @@ export class MultipleOperationsComponent implements OnInit {
     {
       img: '/assets/graphics/diagrams/multiple-operations/multiple-operations1.svg',
       alt: 'Multiple Operations 1 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'big'
     }
   ];
 

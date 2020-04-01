@@ -16,7 +16,7 @@ export class ConsumerEventComponent implements OnInit {
     {
       img: '/assets/graphics/components/consumer-event/consumer-event2.svg',
       alt: 'Consumer Events 2 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'big'
     }
   ];
 

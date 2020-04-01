@@ -15,7 +15,7 @@ export class AlternativeUnitsComponent implements OnInit {
     {
       img: '/assets/graphics/beyond-the-standard/alternative-units/alternative-units2.svg',
       alt: 'Alternative Units 2 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'big'
     }
   ];
 

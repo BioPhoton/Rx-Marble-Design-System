@@ -16,7 +16,7 @@ export class OperationComponent implements OnInit {
     {
       img: '/assets/graphics/components/operation/operation2.svg',
       alt: 'Operation 2 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'big'
     }
   ];
 

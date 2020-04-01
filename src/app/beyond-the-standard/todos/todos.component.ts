@@ -11,12 +11,12 @@ export class TodosComponent implements OnInit {
     {
       img: '/assets/graphics/beyond-the-standard/todos/todos1.svg',
       alt: 'Todos 1 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'big'
     },
     {
       img: '/assets/graphics/beyond-the-standard/todos/todos2.svg',
       alt: 'Todos 2 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'big'
     }
   ];
 

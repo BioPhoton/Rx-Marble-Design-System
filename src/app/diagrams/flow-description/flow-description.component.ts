@@ -16,7 +16,7 @@ export class FlowDescriptionComponent implements OnInit {
     {
       img: '/assets/graphics/diagrams/flow-description/flow-description2.svg',
       alt: 'Flow Description 2 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'big'
     }
   ];
 

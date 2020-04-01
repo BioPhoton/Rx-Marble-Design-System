@@ -11,7 +11,7 @@ export class InactiveComponentsComponent implements OnInit {
     {
       img: '/assets/graphics/diagrams/inactive-components/inactive-components1.svg',
       alt: 'Inactive Components 1 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'big'
     }
   ];
 

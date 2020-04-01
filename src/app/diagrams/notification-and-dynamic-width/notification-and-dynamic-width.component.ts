@@ -11,7 +11,7 @@ export class NotificationAndDynamicWidthComponent implements OnInit {
     {
       img: '/assets/graphics/diagrams/notification-and-dynamic-width/notification-and-dynamic-width1.svg',
       alt: 'Notification and Dynamic Width 1 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'big'
     }
   ];
 

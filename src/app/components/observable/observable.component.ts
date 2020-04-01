@@ -16,7 +16,7 @@ export class ObservableComponent implements OnInit {
     {
       img: '/assets/graphics/components/observable/observable2.svg',
       alt: 'Observable 2 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'big'
     }
   ];
 

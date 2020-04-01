@@ -11,7 +11,7 @@ export class NotificationAndContentComponent implements OnInit {
     {
       img: '/assets/graphics/diagrams/notification-and-content/notification-and-content1.svg',
       alt: 'Notification and Content 1 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'big'
     },
     {
       img: '/assets/graphics/diagrams/notification-and-content/notification-and-content2.svg',

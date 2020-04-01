@@ -208,20 +208,29 @@ figure {
     margin: 0 0 3rem 0;
   }
 
-  img {
-    margin-bottom: 1rem;
-    width: 210px;
-
-    &.bigger {
-      width: 100%;
-      @include breakpoint(tablet) {
-        width: 400px;
-      }
-    }
-  }
-
   figcaption {
     font-family: "SourceCodeProRegular";
     font-size: 1.4rem;
+  }
+}
+
+img {
+  margin-bottom: 1rem;
+  width: 180px;
+
+  &.big {
+    width: 100%;
+    @include breakpoint(tablet) {
+      width: 400px;
+    }
+  }
+  &.bigger {
+    width: 100%;
+    @include breakpoint(tablet) {
+      width: 450px;
+    }
+    @include breakpoint(desktop) {
+      width: 700px;
+    }
   }
 }

@@ -11,7 +11,7 @@ export class InnerStateComponent implements OnInit {
     {
       img: '/assets/graphics/diagrams/inner-state/inner-state1.svg',
       alt: 'Inner State 1 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'big'
     }
   ];
 

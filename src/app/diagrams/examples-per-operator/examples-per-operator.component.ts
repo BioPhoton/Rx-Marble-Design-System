@@ -11,7 +11,7 @@ export class ExamplesPerOperatorComponent implements OnInit {
     {
       img: '/assets/graphics/diagrams/examples-per-operator/examples-per-operator1.svg',
       alt: 'Examples per Operator 1 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'big'
     }
   ];
 
