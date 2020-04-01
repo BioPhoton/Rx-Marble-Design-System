@@ -162,6 +162,10 @@ export class ToolbarComponent implements OnInit {
           caption: 'Notification and Inner Components',
         },
         {
+          routerLink: '/diagrams/inner-state',
+          caption: 'Inner State',
+        },
+        {
           routerLink: '/diagrams/operator-padding',
           caption: 'Operator Padding',
         },

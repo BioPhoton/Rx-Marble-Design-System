@@ -34,6 +34,7 @@ import { NotificationAndColorComponent } from './diagrams/notification-and-color
 import { MultipleNotificationsComponent } from './diagrams/multiple-notifications/multiple-notifications.component';
 import { NotificationAndDynamicWidthComponent } from './diagrams/notification-and-dynamic-width/notification-and-dynamic-width.component';
 import { NotificationAndInnerComponentsComponent } from './diagrams/notification-and-inner-components/notification-and-inner-components.component';
+import { InnerStateComponent } from './diagrams/inner-state/inner-state.component';
 import { OperatorPaddingComponent } from './diagrams/operator-padding/operator-padding.component';
 import { OperatorAndLineComponent } from './diagrams/operator-and-line/operator-and-line.component';
 import { MultipleOperationsComponent } from './diagrams/multiple-operations/multiple-operations.component';
@@ -100,6 +101,7 @@ const routes: Routes = [
       { path: 'multiple-notifications', component: MultipleNotificationsComponent },
       { path: 'notification-and-dynamic-width', component: NotificationAndDynamicWidthComponent },
       { path: 'notification-and-inner-components', component: NotificationAndInnerComponentsComponent },
+      { path: 'inner-state', component: InnerStateComponent },
       { path: 'operator-padding', component: OperatorPaddingComponent },
       { path: 'operator-and-line', component: OperatorAndLineComponent },
       { path: 'multiple-operations', component: MultipleOperationsComponent },
