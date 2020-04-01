@@ -11,11 +11,7 @@
   </p>
 </div>
 <div class="preview-block">
-  <figure>
-    <img
-      class="bigger"
-      src="/assets/graphics/design-tokens/unit/unit1.svg"
-      alt="Unit Graphic"
-    />
+  <figure role="group" *ngFor="let unit of units">
+    <img [class]="unit.styleClass" [src]="unit.img" alt="{{ unit.alt }}" />
   </figure>
 </div>
