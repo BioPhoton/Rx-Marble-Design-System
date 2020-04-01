@@ -40,6 +40,10 @@ import { MultipleOperationsComponent } from './diagrams/multiple-operations/mult
 import { OperatorNestingComponent } from './diagrams/operator-nesting/operator-nesting.component';
 import { InactiveComponentsComponent } from './diagrams/inactive-components/inactive-components.component';
 import { ExamplesPerOperatorComponent } from './diagrams/examples-per-operator/examples-per-operator.component';
+import { BeyondTheStandardComponent } from './beyond-the-standard/beyond-the-standard.component';
+import { AlternativeShapeComponent } from './beyond-the-standard/alternative-shape/alternative-shape.component';
+import { AlternativeUnitsComponent } from './beyond-the-standard/alternative-units/alternative-units.component';
+import { VerticalLayoutComponent } from './beyond-the-standard/vertical-layout/vertical-layout.component';
 
 const routes: Routes = [
   {
@@ -102,6 +106,15 @@ const routes: Routes = [
       { path: 'operator-nesting', component: OperatorNestingComponent },
       { path: 'inactive-components', component: InactiveComponentsComponent },
       { path: 'examples-per-operator', component: ExamplesPerOperatorComponent }
+    ]
+  },
+  {
+    path: 'beyond-the-standard',
+    component: BeyondTheStandardComponent,
+    children: [
+      { path: 'alternative-shape', component: AlternativeShapeComponent },
+      { path: 'alternative-units', component: AlternativeUnitsComponent },
+      { path: 'vertical-layout', component: VerticalLayoutComponent }
     ]
   }
 ];

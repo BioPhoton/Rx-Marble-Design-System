@@ -46,6 +46,10 @@ import { MultipleOperationsComponent } from './diagrams/multiple-operations/mult
 import { OperatorNestingComponent } from './diagrams/operator-nesting/operator-nesting.component';
 import { InactiveComponentsComponent } from './diagrams/inactive-components/inactive-components.component';
 import { ExamplesPerOperatorComponent } from './diagrams/examples-per-operator/examples-per-operator.component';
+import { BeyondTheStandardComponent } from './beyond-the-standard/beyond-the-standard.component';
+import { AlternativeShapeComponent } from './beyond-the-standard/alternative-shape/alternative-shape.component';
+import { AlternativeUnitsComponent } from './beyond-the-standard/alternative-units/alternative-units.component';
+import { VerticalLayoutComponent } from './beyond-the-standard/vertical-layout/vertical-layout.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +94,11 @@ import { ExamplesPerOperatorComponent } from './diagrams/examples-per-operator/e
     MultipleOperationsComponent,
     OperatorNestingComponent,
     InactiveComponentsComponent,
-    ExamplesPerOperatorComponent
+    ExamplesPerOperatorComponent,
+    BeyondTheStandardComponent,
+    AlternativeShapeComponent,
+    AlternativeUnitsComponent,
+    VerticalLayoutComponent
   ],
   imports: [
     BrowserModule,

@@ -186,6 +186,26 @@ export class ToolbarComponent implements OnInit {
           caption: 'Examples per Operator',
         }
       ]
+    },
+    {
+      routerLink: '/beyond-the-standard',
+      icon: 'toys',
+      caption: 'Beyond the Standard',
+      isExpanded: false,
+      children: [
+        {
+          routerLink: '/beyond-the-standard/alternative-shape',
+          caption: 'Alternative Shape',
+        },
+        {
+          routerLink: '/beyond-the-standard/alternative-units',
+          caption: 'Alternative Units',
+        },
+        {
+          routerLink: '/beyond-the-standard/vertical-layout',
+          caption: 'Vertical Layout',
+        }
+      ]
     }
   ];
 
