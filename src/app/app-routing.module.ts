@@ -21,6 +21,25 @@ import { CompletionComponent } from './components/completion/completion.componen
 import { ErrorComponent } from './components/error/error.component';
 import { OperatorComponent } from './components/operator/operator.component';
 import { TaskStacksComponent } from './components/task-stacks/task-stacks.component';
+import { SectionsComponent } from './diagrams/sections/sections.component';
+import { DescriptionComponent } from './diagrams/description/description.component';
+import { LegendComponent } from './diagrams/legend/legend.component';
+import { FlowDescriptionComponent } from './diagrams/flow-description/flow-description.component';
+import { DiagramCanvasComponent } from './diagrams/diagram-canvas/diagram-canvas.component';
+import { GridComponent } from './diagrams/grid/grid.component';
+import { PositioningComponent } from './diagrams/positioning/positioning.component';
+import { NotificationAndContentComponent } from './diagrams/notification-and-content/notification-and-content.component';
+import { NotificationAndShapeComponent } from './diagrams/notification-and-shape/notification-and-shape.component';
+import { NotificationAndColorComponent } from './diagrams/notification-and-color/notification-and-color.component';
+import { MultipleNotificationsComponent } from './diagrams/multiple-notifications/multiple-notifications.component';
+import { NotificationAndDynamicWidthComponent } from './diagrams/notification-and-dynamic-width/notification-and-dynamic-width.component';
+import { NotificationAndInnerComponentsComponent } from './diagrams/notification-and-inner-components/notification-and-inner-components.component';
+import { OperatorPaddingComponent } from './diagrams/operator-padding/operator-padding.component';
+import { OperatorAndLineComponent } from './diagrams/operator-and-line/operator-and-line.component';
+import { MultipleOperationsComponent } from './diagrams/multiple-operations/multiple-operations.component';
+import { OperatorNestingComponent } from './diagrams/operator-nesting/operator-nesting.component';
+import { InactiveComponentsComponent } from './diagrams/inactive-components/inactive-components.component';
+import { ExamplesPerOperatorComponent } from './diagrams/examples-per-operator/examples-per-operator.component';
 
 const routes: Routes = [
   {
@@ -62,7 +81,28 @@ const routes: Routes = [
   },
   {
     path: 'diagrams',
-    component: DiagramsComponent
+    component: DiagramsComponent,
+    children: [
+      { path: 'sections', component: SectionsComponent },
+      { path: 'description', component: DescriptionComponent },
+      { path: 'legend', component: LegendComponent },
+      { path: 'flow-description', component: FlowDescriptionComponent },
+      { path: 'diagram-canvas', component: DiagramCanvasComponent },
+      { path: 'grid', component: GridComponent },
+      { path: 'positioning', component: PositioningComponent },
+      { path: 'notification-and-content', component: NotificationAndContentComponent },
+      { path: 'notification-and-shape', component: NotificationAndShapeComponent },
+      { path: 'notification-and-color', component: NotificationAndColorComponent },
+      { path: 'multiple-notifications', component: MultipleNotificationsComponent },
+      { path: 'notification-and-dynamic-width', component: NotificationAndDynamicWidthComponent },
+      { path: 'notification-and-inner-components', component: NotificationAndInnerComponentsComponent },
+      { path: 'operator-padding', component: OperatorPaddingComponent },
+      { path: 'operator-and-line', component: OperatorAndLineComponent },
+      { path: 'multiple-operations', component: MultipleOperationsComponent },
+      { path: 'operator-nesting', component: OperatorNestingComponent },
+      { path: 'inactive-components', component: InactiveComponentsComponent },
+      { path: 'examples-per-operator', component: ExamplesPerOperatorComponent }
+    ]
   }
 ];
 

@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'mds-diagrams',
-  templateUrl: './diagrams.component.html',
-  styleUrls: ['./diagrams.component.scss']
+  templateUrl: './diagrams.component.html'
 })
 export class DiagramsComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router, private location: Location) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (this.location.path() === '/diagrams') {
+      this.router.navigate(['diagrams', 'sections']);
+    }
+  }
 }

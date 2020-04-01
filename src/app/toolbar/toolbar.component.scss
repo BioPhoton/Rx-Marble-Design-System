@@ -16,7 +16,7 @@
 
 .nav-caption {
   display: inline-block;
-  padding: 2rem;
+  padding: 0 2rem;
   font-size: 1.6rem;
   color: $color__primary-900;
 }
@@ -107,7 +107,7 @@ mat-toolbar {
   display: none;
 
   a {
-    padding-left: 6rem;
+    padding-left: 5.5rem;
     color: $color__primary-900 !important;
   }
 }

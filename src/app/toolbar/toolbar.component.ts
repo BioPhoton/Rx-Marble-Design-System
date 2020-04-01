@@ -107,7 +107,85 @@ export class ToolbarComponent implements OnInit {
       routerLink: '/diagrams',
       icon: 'insert_chart',
       caption: 'Diagrams',
-      isExpanded: false
+      isExpanded: false,
+      children: [
+        {
+          routerLink: '/diagrams/sections',
+          caption: 'Sections',
+        },
+        {
+          routerLink: '/diagrams/description',
+          caption: 'Description',
+        },
+        {
+          routerLink: '/diagrams/legend',
+          caption: 'Legend',
+        },
+        {
+          routerLink: '/diagrams/flow-description',
+          caption: 'Flow Description',
+        },
+        {
+          routerLink: '/diagrams/diagram-canvas',
+          caption: 'Diagram Canvas',
+        },
+        {
+          routerLink: '/diagrams/grid',
+          caption: 'Grid',
+        },
+        {
+          routerLink: '/diagrams/positioning',
+          caption: 'Positioning',
+        },
+        {
+          routerLink: '/diagrams/notification-and-content',
+          caption: 'Notification and Content',
+        },
+        {
+          routerLink: '/diagrams/notification-and-shape',
+          caption: 'Notification and Shape',
+        },
+        {
+          routerLink: '/diagrams/notification-and-color',
+          caption: 'Notification and Color',
+        },
+        {
+          routerLink: '/diagrams/multiple-notifications',
+          caption: 'Multiple Notifications',
+        },
+        {
+          routerLink: '/diagrams/notification-and-dynamic-width',
+          caption: 'Notification and Dynamic Width',
+        },
+        {
+          routerLink: '/diagrams/notification-and-inner-components',
+          caption: 'Notification and Inner Components',
+        },
+        {
+          routerLink: '/diagrams/operator-padding',
+          caption: 'Operator Padding',
+        },
+        {
+          routerLink: '/diagrams/operator-and-line',
+          caption: 'Operator and Line',
+        },
+        {
+          routerLink: '/diagrams/multiple-operations',
+          caption: 'Multiple Operations',
+        },
+        {
+          routerLink: '/diagrams/operator-nesting',
+          caption: 'Operator Nesting',
+        },
+        {
+          routerLink: '/diagrams/inactive-components',
+          caption: 'Inactive Components',
+        },
+        {
+          routerLink: '/diagrams/examples-per-operator',
+          caption: 'Examples per Operator',
+        }
+      ]
     }
   ];
 

@@ -27,6 +27,25 @@ import { CompletionComponent } from './components/completion/completion.componen
 import { ErrorComponent } from './components/error/error.component';
 import { OperatorComponent } from './components/operator/operator.component';
 import { TaskStacksComponent } from './components/task-stacks/task-stacks.component';
+import { SectionsComponent } from './diagrams/sections/sections.component';
+import { DescriptionComponent } from './diagrams/description/description.component';
+import { LegendComponent } from './diagrams/legend/legend.component';
+import { FlowDescriptionComponent } from './diagrams/flow-description/flow-description.component';
+import { DiagramCanvasComponent } from './diagrams/diagram-canvas/diagram-canvas.component';
+import { GridComponent } from './diagrams/grid/grid.component';
+import { PositioningComponent } from './diagrams/positioning/positioning.component';
+import { NotificationAndContentComponent } from './diagrams/notification-and-content/notification-and-content.component';
+import { NotificationAndShapeComponent } from './diagrams/notification-and-shape/notification-and-shape.component';
+import { NotificationAndColorComponent } from './diagrams/notification-and-color/notification-and-color.component';
+import { MultipleNotificationsComponent } from './diagrams/multiple-notifications/multiple-notifications.component';
+import { NotificationAndDynamicWidthComponent } from './diagrams/notification-and-dynamic-width/notification-and-dynamic-width.component';
+import { NotificationAndInnerComponentsComponent } from './diagrams/notification-and-inner-components/notification-and-inner-components.component';
+import { OperatorPaddingComponent } from './diagrams/operator-padding/operator-padding.component';
+import { OperatorAndLineComponent } from './diagrams/operator-and-line/operator-and-line.component';
+import { MultipleOperationsComponent } from './diagrams/multiple-operations/multiple-operations.component';
+import { OperatorNestingComponent } from './diagrams/operator-nesting/operator-nesting.component';
+import { InactiveComponentsComponent } from './diagrams/inactive-components/inactive-components.component';
+import { ExamplesPerOperatorComponent } from './diagrams/examples-per-operator/examples-per-operator.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +71,26 @@ import { TaskStacksComponent } from './components/task-stacks/task-stacks.compon
     CompletionComponent,
     ErrorComponent,
     OperatorComponent,
-    TaskStacksComponent
+    TaskStacksComponent,
+    SectionsComponent,
+    DescriptionComponent,
+    LegendComponent,
+    FlowDescriptionComponent,
+    DiagramCanvasComponent,
+    GridComponent,
+    PositioningComponent,
+    NotificationAndContentComponent,
+    NotificationAndShapeComponent,
+    NotificationAndColorComponent,
+    MultipleNotificationsComponent,
+    NotificationAndDynamicWidthComponent,
+    NotificationAndInnerComponentsComponent,
+    OperatorPaddingComponent,
+    OperatorAndLineComponent,
+    MultipleOperationsComponent,
+    OperatorNestingComponent,
+    InactiveComponentsComponent,
+    ExamplesPerOperatorComponent
   ],
   imports: [
     BrowserModule,
