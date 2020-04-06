@@ -1,18 +1,25 @@
 <h1>Alternative Shape</h1>
 <div class="text-block">
   <p>
-    Its also possible to use images, emoticons and so on.
+    Its also possible to use Images, emoticons and so on.
   </p>
+  <img
+    class="bigger"
+    src="/assets/graphics/beyond-the-standard/alternative-shape/alternative-shapes.svg"
+    alt="Alternative Shapes Graphic"
+  />
 </div>
 <div class="preview-block">
   <figure role="group" *ngFor="let alternativeShape of alternativeShapes">
-    <img
-      [class]="alternativeShape.styleClass"
-      [src]="alternativeShape.img"
-      alt="{{ alternativeShape.alt }}"
-    />
+    <img [src]="alternativeShape.img" alt="{{ alternativeShape.alt }}" />
     <figcaption>
-      <span *ngIf="alternativeShape.desc">{{ alternativeShape.desc }}</span>
+      <span>{{ alternativeShape.desc }}</span>
     </figcaption>
+  </figure>
+</div>
+
+<div class="preview-block">
+  <figure role="group" *ngFor="let ownAlternativeShape of ownAlternativeShapes">
+    <img [src]="ownAlternativeShape.img" alt="{{ ownAlternativeShape.alt }}" />
   </figure>
 </div>
