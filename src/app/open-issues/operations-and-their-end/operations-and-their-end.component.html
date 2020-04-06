@@ -1,0 +1,16 @@
+<h1>Operations and their end</h1>
+<div class="text-block">
+  <p></p>
+</div>
+<div class="preview-block">
+  <figure
+    role="group"
+    *ngFor="let operationAndTheirEnd of operationsAndTheirEnd"
+  >
+    <img
+      [class]="operationAndTheirEnd.styleClass"
+      [src]="operationAndTheirEnd.img"
+      alt="{{ operationAndTheirEnd.alt }}"
+    />
+  </figure>
+</div>

@@ -214,6 +214,18 @@ export class ToolbarComponent implements OnInit {
           caption: 'Vertical Layout',
         }
       ]
+    },
+    {
+      routerLink: '/open-issues',
+      icon: 'report_problem',
+      caption: 'Open Issues',
+      isExpanded: false,
+      children: [
+        {
+          routerLink: '/open-issues/operations-and-their-end',
+          caption: 'Operation and their end',
+        }
+      ]
     }
   ];
 

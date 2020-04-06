@@ -52,6 +52,8 @@ import { AlternativeUnitsComponent } from './beyond-the-standard/alternative-uni
 import { VerticalLayoutComponent } from './beyond-the-standard/vertical-layout/vertical-layout.component';
 import { InnerStateComponent } from './diagrams/inner-state/inner-state.component';
 import { TodosComponent } from './beyond-the-standard/todos/todos.component';
+import { OpenIssuesComponent } from './open-issues/open-issues.component';
+import { OperationsAndTheirEndComponent } from './open-issues/operations-and-their-end/operations-and-their-end.component';
 
 @NgModule({
   declarations: [
@@ -102,7 +104,9 @@ import { TodosComponent } from './beyond-the-standard/todos/todos.component';
     AlternativeUnitsComponent,
     VerticalLayoutComponent,
     InnerStateComponent,
-    TodosComponent
+    TodosComponent,
+    OpenIssuesComponent,
+    OperationsAndTheirEndComponent
   ],
   imports: [
     BrowserModule,

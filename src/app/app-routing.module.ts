@@ -46,6 +46,8 @@ import { AlternativeShapeComponent } from './beyond-the-standard/alternative-sha
 import { AlternativeUnitsComponent } from './beyond-the-standard/alternative-units/alternative-units.component';
 import { TodosComponent } from './beyond-the-standard/todos/todos.component';
 import { VerticalLayoutComponent } from './beyond-the-standard/vertical-layout/vertical-layout.component';
+import { OpenIssuesComponent } from './open-issues/open-issues.component';
+import { OperationsAndTheirEndComponent } from './open-issues/operations-and-their-end/operations-and-their-end.component';
 
 const routes: Routes = [
   {
@@ -119,6 +121,13 @@ const routes: Routes = [
       { path: 'alternative-units', component: AlternativeUnitsComponent },
       { path: 'todos', component: TodosComponent },
       { path: 'vertical-layout', component: VerticalLayoutComponent }
+    ]
+  },
+  {
+    path: 'open-issues',
+    component: OpenIssuesComponent,
+    children: [
+      { path: 'operations-and-their-end', component: OperationsAndTheirEndComponent }
     ]
   }
 ];
