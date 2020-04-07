@@ -7,13 +7,29 @@
 }
 
 .big {
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 .medium {
-  font-size: 0.67em;
+  font-size: 1em;
 }
 
 .small {
-  font-size: 0.5em;
+  font-size: 0.75em;
+}
+
+.big-anim {
+  animation: big 5s infinite;
+}
+
+@keyframes big {
+  0% {
+    font-size: 1em;
+  }
+  50% {
+    font-size: 2em;
+  }
+  100% {
+    font-size: 1em;
+  }
 }
