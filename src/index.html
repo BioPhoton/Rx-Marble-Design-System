@@ -56,8 +56,61 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico" />
+
+    <style type="text/css">
+      body,
+      html {
+        height: 100%;
+      }
+      @keyframes animate-blocks {
+        0% {
+          background: #f4ba64;
+        }
+        25% {
+          background: #f4ba64;
+        }
+        25.25% {
+          background: #35469c;
+        }
+        100% {
+          background: #35469c;
+        }
+      }
+      .loading-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      .loading-spinner {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        transform: translateZ(0) scale(1);
+        backface-visibility: hidden;
+        transform-origin: 0 0;
+      }
+      .loading-spinner div {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: #35469c;
+        animation: animate-blocks 1s linear infinite;
+        box-sizing: content-box;
+      }
+    </style>
   </head>
   <body>
-    <mds-root></mds-root>
+    <mds-root>
+      <div class="loading-container">
+        <div class="loading-spinner">
+          <div style="left: 59px; top: 59px; animation-delay: 0s;"></div>
+          <div style="left: 101px; top: 59px; animation-delay: 0.25s;"></div>
+          <div style="left: 59px; top: 101px; animation-delay: 0.75s;"></div>
+          <div style="left: 101px; top: 101px; animation-delay: 0.5s;"></div>
+        </div>
+      </div>
+    </mds-root>
   </body>
 </html>

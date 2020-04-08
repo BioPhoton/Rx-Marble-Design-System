@@ -20,9 +20,9 @@ export class ToolbarComponent implements OnInit {
       isExpanded: false
     },
     {
+      routerLink: '/design-tokens/unit',
       icon: 'blur_circular',
       caption: 'Design Tokens',
-      routerLink: '/design-tokens',
       isExpanded: false,
       children: [
         {
@@ -52,7 +52,7 @@ export class ToolbarComponent implements OnInit {
       ]
     },
     {
-      routerLink: '/components',
+      routerLink: '/components/overview',
       icon: 'widgets',
       isExpanded: false,
       caption: 'Components',
@@ -104,7 +104,7 @@ export class ToolbarComponent implements OnInit {
       ]
     },
     {
-      routerLink: '/diagrams',
+      routerLink: '/diagrams/sections',
       icon: 'insert_chart',
       caption: 'Diagrams',
       isExpanded: false,
@@ -192,7 +192,7 @@ export class ToolbarComponent implements OnInit {
       ]
     },
     {
-      routerLink: '/beyond-the-standard',
+      routerLink: '/beyond-the-standard/alternative-shape',
       icon: 'toys',
       caption: 'Beyond the Standard',
       isExpanded: false,
@@ -216,7 +216,7 @@ export class ToolbarComponent implements OnInit {
       ]
     },
     {
-      routerLink: '/open-issues',
+      routerLink: '/open-issues/operations-and-their-end',
       icon: 'report_problem',
       caption: 'Open Issues',
       isExpanded: false,
