@@ -48,6 +48,7 @@ import { TodosComponent } from './beyond-the-standard/todos/todos.component';
 import { VerticalLayoutComponent } from './beyond-the-standard/vertical-layout/vertical-layout.component';
 import { OpenIssuesComponent } from './open-issues/open-issues.component';
 import { OperationsAndTheirEndComponent } from './open-issues/operations-and-their-end/operations-and-their-end.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -129,7 +130,8 @@ const routes: Routes = [
     children: [
       { path: 'operations-and-their-end', component: OperationsAndTheirEndComponent }
     ]
-  }
+  },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

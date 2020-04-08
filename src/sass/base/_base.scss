@@ -238,3 +238,18 @@ img {
     }
   }
 }
+
+.illustration {
+  width: 65%;
+  margin-bottom: 3rem;
+}
+
+.center {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}

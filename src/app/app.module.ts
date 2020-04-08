@@ -54,6 +54,7 @@ import { InnerStateComponent } from './diagrams/inner-state/inner-state.componen
 import { TodosComponent } from './beyond-the-standard/todos/todos.component';
 import { OpenIssuesComponent } from './open-issues/open-issues.component';
 import { OperationsAndTheirEndComponent } from './open-issues/operations-and-their-end/operations-and-their-end.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -106,7 +107,8 @@ import { OperationsAndTheirEndComponent } from './open-issues/operations-and-the
     InnerStateComponent,
     TodosComponent,
     OpenIssuesComponent,
-    OperationsAndTheirEndComponent
+    OperationsAndTheirEndComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
