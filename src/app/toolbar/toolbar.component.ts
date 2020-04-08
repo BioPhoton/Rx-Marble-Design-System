@@ -82,8 +82,8 @@ export class ToolbarComponent implements OnInit {
           caption: 'Consumer Event',
         },
         {
-          routerLink: '/components/notification',
-          caption: 'Notification',
+          routerLink: '/components/notifications',
+          caption: 'Notifications',
         },
         {
           routerLink: '/components/completion',

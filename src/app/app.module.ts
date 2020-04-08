@@ -22,7 +22,7 @@ import { TimeSpanComponent } from './components/time-span/time-span.component';
 import { EventInTimeComponent } from './components/event-in-time/event-in-time.component';
 import { OperationComponent } from './components/operation/operation.component';
 import { ConsumerEventComponent } from './components/consumer-event/consumer-event.component';
-import { NotificationComponent } from './components/notification/notification.component';
+import { NotificationsComponent } from './components/notifications/notifications.component';
 import { CompletionComponent } from './components/completion/completion.component';
 import { ErrorComponent } from './components/error/error.component';
 import { OperatorComponent } from './components/operator/operator.component';
@@ -75,7 +75,7 @@ import { OperationsAndTheirEndComponent } from './open-issues/operations-and-the
     EventInTimeComponent,
     OperationComponent,
     ConsumerEventComponent,
-    NotificationComponent,
+    NotificationsComponent,
     CompletionComponent,
     ErrorComponent,
     OperatorComponent,
