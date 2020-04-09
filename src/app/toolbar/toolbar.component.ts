@@ -1,8 +1,9 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 import { Router, NavigationStart } from '@angular/router';
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'mds-toolbar',
@@ -231,6 +232,8 @@ export class ToolbarComponent implements OnInit {
 
   @Output() closeSidenav = new EventEmitter<void>();
 
+  @ViewChild('toggleSidenav') toggleSidenav: MatButton;
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.HandsetPortrait)
     .pipe(
       map(result => result.matches)
@@ -264,5 +267,18 @@ export class ToolbarComponent implements OnInit {
     this.navItems.forEach(item => {
       item.isExpanded = false;
     });
+  }
+
+  public changeParentLink(parentLink, childLink) {
+    const item = this.navItems.find(it => it.routerLink === parentLink);
+    if (item) {
+      item.routerLink = childLink;
+    }
+  }
+
+  public closeSidebar(hasChildren) {
+    if (this.toggleSidenav && !hasChildren) {
+      this.toggleSidenav._elementRef.nativeElement.click();
+    }
   }
 }

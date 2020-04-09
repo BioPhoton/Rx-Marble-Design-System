@@ -16,7 +16,9 @@
       <div class="nav-items" *ngFor="let navItem of navItems">
         <a
           mat-list-item
-          (click)="toggleSubMenu($event, navItem)"
+          (click)="
+            toggleSubMenu($event, navItem); closeSidebar(navItem.children)
+          "
           [routerLink]="navItem.routerLink ? [navItem.routerLink] : []"
           routerLinkActive="list-item-active"
         >
@@ -41,6 +43,10 @@
             *ngFor="let child of navItem.children"
             [routerLink]="[child.routerLink]"
             routerLinkActive="list-item-active"
+            (click)="
+              changeParentLink(navItem.routerLink, child.routerLink);
+              closeSidebar()
+            "
           >
             <span>{{ child.caption }}</span>
           </a>
@@ -63,6 +69,7 @@
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
+        #toggleSidenav
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async"
       >
