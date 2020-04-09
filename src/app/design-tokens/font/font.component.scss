@@ -1,5 +1,6 @@
 .font {
   margin-bottom: 2rem;
+  overflow-wrap: break-word;
 }
 
 .alphabet {
@@ -7,29 +8,17 @@
 }
 
 .big {
-  font-size: 1.5em;
+  font-size: 5rem;
 }
 
 .medium {
-  font-size: 1em;
+  font-size: 4rem;
 }
 
 .small {
-  font-size: 0.75em;
+  font-size: 3rem;
 }
 
 .big-anim {
   animation: big 5s infinite;
-}
-
-@keyframes big {
-  0% {
-    font-size: 1em;
-  }
-  50% {
-    font-size: 2em;
-  }
-  100% {
-    font-size: 1em;
-  }
 }
