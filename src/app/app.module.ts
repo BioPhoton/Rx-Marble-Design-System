@@ -55,6 +55,8 @@ import { TodosComponent } from './beyond-the-standard/todos/todos.component';
 import { OpenIssuesComponent } from './open-issues/open-issues.component';
 import { OperationsAndTheirEndComponent } from './open-issues/operations-and-their-end/operations-and-their-end.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MdsDiagramsComponent } from './mds-diagrams/mds-diagrams.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -108,7 +110,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     TodosComponent,
     OpenIssuesComponent,
     OperationsAndTheirEndComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MdsDiagramsComponent
   ],
   imports: [
     BrowserModule,

@@ -49,6 +49,7 @@ import { VerticalLayoutComponent } from './beyond-the-standard/vertical-layout/v
 import { OpenIssuesComponent } from './open-issues/open-issues.component';
 import { OperationsAndTheirEndComponent } from './open-issues/operations-and-their-end/operations-and-their-end.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MdsDiagramsComponent } from './mds-diagrams/mds-diagrams.component';
 
 const routes: Routes = [
   {
@@ -130,6 +131,10 @@ const routes: Routes = [
     children: [
       { path: 'operations-and-their-end', component: OperationsAndTheirEndComponent }
     ]
+  },
+  {
+    path: 'mds-diagrams',
+    component: MdsDiagramsComponent
   },
   { path: '**', component: PageNotFoundComponent }
 ];

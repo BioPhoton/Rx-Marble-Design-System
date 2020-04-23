@@ -227,6 +227,12 @@ export class ToolbarComponent implements OnInit {
           caption: 'Operation and their end',
         }
       ]
+    },
+    {
+      routerLink: '/mds-diagrams',
+      icon: 'toc',
+      caption: 'Marble Design Diagrams',
+      isExpanded: false
     }
   ];
 
