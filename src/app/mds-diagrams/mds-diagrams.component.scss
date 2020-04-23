@@ -1,0 +1,24 @@
+@import "abstracts/index";
+
+.layout-buttons {
+  margin-bottom: 2rem;
+
+  button {
+    margin-right: 1rem;
+    @include breakpoint-less(mobile) {
+      font-size: 13px;
+    }
+  }
+}
+
+form {
+  margin-bottom: 5rem;
+}
+
+p {
+  font-family: Lato;
+}
+
+.active {
+  background-color: $color__primary-600;
+}
