@@ -32,11 +32,13 @@ export class MdsDiagramsComponent implements OnInit {
   public indexItems = [
     {
       class: 'rate-limit',
-      desc: 'audit'
+      desc: 'audit',
+      image: 'https://github.com/BioPhoton/Rx-Marble-Design-System/blob/dev/assets/operators/new/rate-limiting/audit.png?raw=true'
     },
     {
       class: 'rate-limit',
-      desc: 'auditTime'
+      desc: 'auditTime',
+      image: 'https://github.com/BioPhoton/Rx-Marble-Design-System/blob/dev/assets/operators/new/rate-limiting/auditTime.png?raw=true'
     },
     {
       class: 'buffer',

@@ -37,9 +37,22 @@
 
 <div class="index-items" *ngIf="tileView">
   <ul class="index-list">
-    <a class="index-list-route">
-      <li class="index-list-item">
-        Tile View
+    <a class="index-list-route-tile" *ngFor="let indexItem of indexItems">
+      <li class="index-list-item-tile">
+        <img
+          *ngIf="indexItem.image"
+          [src]="indexItem.image"
+          alt="Operator Image Preview"
+        />
+        <img
+          *ngIf="!indexItem.image"
+          src="../../assets/no-preview.svg"
+          alt="No Preview Image"
+        />
+        <div class="index-info">
+          <span class="index-group {{ indexItem.class }}"></span
+          >{{ indexItem.desc }}
+        </div>
       </li>
     </a>
   </ul>
