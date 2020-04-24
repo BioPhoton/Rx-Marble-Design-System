@@ -57,6 +57,7 @@ import { OperationsAndTheirEndComponent } from './open-issues/operations-and-the
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MdsDiagramsComponent } from './mds-diagrams/mds-diagrams.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { DiagramDetailsComponent } from './mds-diagrams/diagram-details/diagram-details.component';
 
 @NgModule({
   declarations: [
@@ -111,7 +112,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     OpenIssuesComponent,
     OperationsAndTheirEndComponent,
     PageNotFoundComponent,
-    MdsDiagramsComponent
+    MdsDiagramsComponent,
+    DiagramDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -9,10 +9,9 @@
 </div>
 
 <h3>Search</h3>
-<p>//Search Tools here (Dropdown, Text-search)</p>
-<!-- <form>
+<form>
   <mat-form-field>
-    <mat-label>Type: </mat-label>
+    <mat-label>Select Type</mat-label>
     <mat-select>
       <mat-option
         *ngFor="let indexGroup of indexGroups"
@@ -22,7 +21,12 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
-</form> -->
+
+  <mat-form-field>
+    <mat-label>Search Text</mat-label>
+    <input matInput placeholder="ex. defaultEmpty" value="" />
+  </mat-form-field>
+</form>
 
 <div class="index-items" *ngIf="listView">
   <ul class="index-list">

@@ -1,7 +1,7 @@
 @import "abstracts/index";
 
 .layout-buttons {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   button {
     margin-right: 1rem;
@@ -12,11 +12,20 @@
 }
 
 form {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
-p {
-  font-family: Lato;
+mat-form-field {
+  font: inherit;
+  margin-right: 4rem;
+  @include breakpoint-less(tablet) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+mat-option {
+  font: inherit;
 }
 
 .active {

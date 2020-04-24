@@ -50,6 +50,7 @@ import { OpenIssuesComponent } from './open-issues/open-issues.component';
 import { OperationsAndTheirEndComponent } from './open-issues/operations-and-their-end/operations-and-their-end.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MdsDiagramsComponent } from './mds-diagrams/mds-diagrams.component';
+import { DiagramDetailsComponent } from './mds-diagrams/diagram-details/diagram-details.component';
 
 const routes: Routes = [
   {
@@ -134,7 +135,10 @@ const routes: Routes = [
   },
   {
     path: 'mds-diagrams',
-    component: MdsDiagramsComponent
+    component: MdsDiagramsComponent,
+    children: [
+      { path: 'diagram-detail/:selected', component: DiagramDetailsComponent }
+    ]
   },
   { path: '**', component: PageNotFoundComponent }
 ];
