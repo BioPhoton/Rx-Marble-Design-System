@@ -12,10 +12,11 @@
 <form>
   <mat-form-field>
     <mat-label>Select Type</mat-label>
-    <mat-select>
+    <mat-select [(ngModel)]="groupFilter" (ngModelChange)="applyFilters()" [ngModelOptions]="{standalone: true}">
       <mat-option
         *ngFor="let indexGroup of indexGroups"
-        [value]="indexGroup.group"
+        [value]="indexGroup.value"
+
       >
         {{ indexGroup.group }}
       </mat-option>
@@ -24,24 +25,27 @@
 
   <mat-form-field>
     <mat-label>Search Text</mat-label>
-    <input matInput placeholder="ex. defaultEmpty" value="" />
+    <input matInput  [(ngModel)]="searchFilter" (ngModelChange)="applyFilters()" [ngModelOptions]="{standalone: true}" placeholder="ex. defaultEmpty" value="" />
   </mat-form-field>
 </form>
 
 <div class="index-items" *ngIf="listView">
   <ul class="index-list">
-    <a class="index-list-route" *ngFor="let indexItem of indexItems">
+    <ng-container *ngFor="let indexItem of displayItems">
+    <a class="index-list-route" *ngIf="!indexItem.hidden" [routerLink]="'detail/' +indexItem.desc">
       <li class="index-list-item">
         <span class="index-group {{ indexItem.class }}"></span
         >{{ indexItem.desc }}
       </li>
     </a>
+    </ng-container>
   </ul>
 </div>
 
 <div class="index-items" *ngIf="tileView">
   <ul class="index-list">
-    <a class="index-list-route-tile" *ngFor="let indexItem of indexItems">
+    <ng-container *ngFor="let indexItem of displayItems">
+    <a class="index-list-route-tile" *ngIf="!indexItem.hidden" [routerLink]="'detail/' +indexItem.desc">
       <li class="index-list-item-tile">
         <img
           *ngIf="indexItem.image"
@@ -59,5 +63,6 @@
         </div>
       </li>
     </a>
+    </ng-container>
   </ul>
 </div>

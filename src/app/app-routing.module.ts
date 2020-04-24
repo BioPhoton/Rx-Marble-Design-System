@@ -135,9 +135,9 @@ const routes: Routes = [
   },
   {
     path: 'mds-diagrams',
-    component: MdsDiagramsComponent,
     children: [
-      { path: 'diagram-detail/:selected', component: DiagramDetailsComponent }
+      { path: '', component: MdsDiagramsComponent},
+      { path: 'detail/:selected', component: DiagramDetailsComponent }
     ]
   },
   { path: '**', component: PageNotFoundComponent }

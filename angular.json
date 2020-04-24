@@ -45,11 +45,18 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": [],
             "stylePreprocessorOptions": {
-              "includePaths": ["src/sass"]
+              "includePaths": [
+                "src/sass"
+              ]
             }
           },
           "configurations": {
@@ -100,16 +107,22 @@
             "browserTarget": "marbles-design-system-docu:build"
           }
         },
-
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["tsconfig.app.json"],
-            "exclude": ["**/node_modules/**"]
+            "tsConfig": [
+              "tsconfig.app.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
     }
   },
-  "defaultProject": "marbles-design-system-docu"
+  "defaultProject": "marbles-design-system-docu",
+  "cli": {
+    "analytics": false
+  }
 }
