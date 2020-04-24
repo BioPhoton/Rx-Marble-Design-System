@@ -51,7 +51,7 @@
   }
 
   .index-info {
-    padding: 2rem;
+    padding: 1rem 2rem 1.5rem 2rem;
   }
 }
 
@@ -64,6 +64,7 @@
   text-align: center;
   width: 20px;
   margin-right: 10px;
+  vertical-align: middle;
 
   &::after {
     display: inline-block;

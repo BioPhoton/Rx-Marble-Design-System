@@ -1,1 +1,28 @@
-{{diagram | json }}
+<h1><span class="index-group {{ diagram.class }}"></span>{{ diagram.desc }}</h1>
+<img
+  *ngIf="diagram.image"
+  [src]="diagram.image"
+  alt="Diagram Preview Image"
+  class="bigger"
+/>
+<img
+  *ngIf="!diagram.image && diagram.text"
+  src="../../assets/no-preview.svg"
+  alt="No Preview Image"
+  class="bigger"
+/>
+
+<img
+  *ngIf="!diagram.image && !diagram.text"
+  src="../../assets/no-details.svg"
+  alt="No Details Image"
+  class="bigger"
+/>
+
+<div *ngIf="diagram.text" class="text-block">
+  <p>{{ diagram.text }}</p>
+</div>
+
+<div>
+  <a [routerLink]="'/mds-diagrams'" mat-button>&larr; Back to Overview</a>
+</div>
