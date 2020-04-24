@@ -74,7 +74,8 @@ export class MdsDiagramsComponent implements OnInit {
     },
     {
       class: 'merge',
-      desc: 'concat'
+      desc: 'concat',
+      image: 'https://github.com/BioPhoton/Rx-Marble-Design-System/blob/dev/assets/operators/new/flattening/concat/concat.png?raw=true'
     },
     {
       class: 'merge',
