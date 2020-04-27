@@ -12,6 +12,11 @@
 </div>
 <div class="preview-block">
   <figure role="group" *ngFor="let unit of units">
-    <img [class]="unit.styleClass" [src]="unit.img" alt="{{ unit.alt }}" />
+    <img
+      [class]="unit.styleClass"
+      [src]="unit.img"
+      alt="{{ unit.alt }}"
+      loading="lazy"
+    />
   </figure>
 </div>

@@ -4,7 +4,7 @@
 </div>
 <div class="preview-block">
   <figure role="group" *ngFor="let eventInTime of eventInTimes">
-    <img [src]="eventInTime.img" alt="{{ eventInTime.alt }}" />
+    <img [src]="eventInTime.img" alt="{{ eventInTime.alt }}" loading="lazy" />
     <figcaption>
       <span *ngIf="eventInTime.object">Object: {{ eventInTime.object }}</span>
       <span *ngIf="eventInTime.shape">Shape: {{ eventInTime.shape }}</span>

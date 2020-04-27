@@ -10,11 +10,12 @@
     class="bigger"
     src="/assets/graphics/design-tokens/shapes/shapes.svg"
     alt="Shapes Graphic"
+    loading="lazy"
   />
 </div>
 <div class="preview-block">
   <figure role="group" *ngFor="let shape of shapes">
-    <img [src]="shape.img" alt="{{ shape.alt }}" />
+    <img [src]="shape.img" alt="{{ shape.alt }}" loading="lazy" />
     <figcaption>
       <span>{{ shape.desc }}</span>
     </figcaption>
@@ -31,6 +32,6 @@
 </div>
 <div class="preview-block">
   <figure role="group" *ngFor="let ownShape of ownShapes">
-    <img [src]="ownShape.img" alt="{{ ownShape.alt }}" />
+    <img [src]="ownShape.img" alt="{{ ownShape.alt }}" loading="lazy" />
   </figure>
 </div>

@@ -16,6 +16,7 @@
       [class]="consumerEvent.styleClass"
       [src]="consumerEvent.img"
       alt="{{ consumerEvent.alt }}"
+      loading="lazy"
     />
     <figcaption>
       <span *ngIf="consumerEvent.desc">{{ consumerEvent.desc }}</span>

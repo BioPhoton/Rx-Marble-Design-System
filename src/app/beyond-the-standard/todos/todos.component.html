@@ -4,7 +4,12 @@
 </div>
 <div class="preview-block">
   <figure role="group" *ngFor="let todo of todos">
-    <img [class]="todo.styleClass" [src]="todo.img" alt="{{ todo.alt }}" />
+    <img
+      [class]="todo.styleClass"
+      [src]="todo.img"
+      alt="{{ todo.alt }}"
+      loading="lazy"
+    />
     <figcaption>
       <span *ngIf="todo.desc">{{ todo.desc }}</span>
     </figcaption>

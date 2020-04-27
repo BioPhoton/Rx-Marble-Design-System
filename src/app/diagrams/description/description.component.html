@@ -14,6 +14,7 @@
       [class]="description.styleClass"
       [src]="description.img"
       alt="{{ description.alt }}"
+      loading="lazy"
     />
     <figcaption>
       <span *ngIf="description.desc">{{ description.desc }}</span>

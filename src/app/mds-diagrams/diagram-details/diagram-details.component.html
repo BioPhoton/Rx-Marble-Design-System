@@ -4,12 +4,14 @@
   [src]="diagram.image"
   alt="Diagram Preview Image"
   class="bigger"
+  loading="lazy"
 />
 <img
   *ngIf="!diagram.image && diagram.text"
   src="../../assets/no-preview.svg"
   alt="No Preview Image"
   class="bigger"
+  loading="lazy"
 />
 
 <img
@@ -17,6 +19,7 @@
   src="../../assets/no-details.svg"
   alt="No Details Image"
   class="bigger"
+  loading="lazy"
 />
 
 <div *ngIf="diagram.text" class="text-block">

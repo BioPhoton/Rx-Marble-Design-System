@@ -12,6 +12,7 @@
       [class]="operation.styleClass"
       [src]="operation.img"
       alt="{{ operation.alt }}"
+      loading="lazy"
     />
     <figcaption>
       <span *ngIf="operation.desc">{{ operation.desc }}</span>

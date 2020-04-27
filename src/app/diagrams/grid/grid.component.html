@@ -14,7 +14,12 @@
 </div>
 <div class="preview-block">
   <figure role="group" *ngFor="let grid of grids">
-    <img [class]="grid.styleClass" [src]="grid.img" alt="{{ grid.alt }}" />
+    <img
+      [class]="grid.styleClass"
+      [src]="grid.img"
+      alt="{{ grid.alt }}"
+      loading="lazy"
+    />
     <figcaption>
       <span *ngIf="grid.desc">{{ grid.desc }}</span>
     </figcaption>

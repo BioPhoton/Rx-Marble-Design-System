@@ -7,11 +7,16 @@
     class="bigger"
     src="/assets/graphics/beyond-the-standard/alternative-shape/alternative-shapes.svg"
     alt="Alternative Shapes Graphic"
+    loading="lazy"
   />
 </div>
 <div class="preview-block">
   <figure role="group" *ngFor="let alternativeShape of alternativeShapes">
-    <img [src]="alternativeShape.img" alt="{{ alternativeShape.alt }}" />
+    <img
+      [src]="alternativeShape.img"
+      alt="{{ alternativeShape.alt }}"
+      loading="lazy"
+    />
     <figcaption>
       <span>{{ alternativeShape.desc }}</span>
     </figcaption>
@@ -20,6 +25,10 @@
 
 <div class="preview-block">
   <figure role="group" *ngFor="let ownAlternativeShape of ownAlternativeShapes">
-    <img [src]="ownAlternativeShape.img" alt="{{ ownAlternativeShape.alt }}" />
+    <img
+      [src]="ownAlternativeShape.img"
+      alt="{{ ownAlternativeShape.alt }}"
+      loading="lazy"
+    />
   </figure>
 </div>

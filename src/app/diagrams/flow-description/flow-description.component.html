@@ -13,6 +13,7 @@
       [class]="flowDescription.styleClass"
       [src]="flowDescription.img"
       alt="{{ flowDescription.alt }}"
+      loading="lazy"
     />
     <figcaption>
       <span *ngIf="flowDescription.desc">{{ flowDescription.desc }}</span>

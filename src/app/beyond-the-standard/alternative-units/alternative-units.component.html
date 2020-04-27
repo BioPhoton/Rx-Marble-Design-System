@@ -11,6 +11,7 @@
       [class]="alternativeUnit.styleClass"
       [src]="alternativeUnit.img"
       alt="{{ alternativeUnit.alt }}"
+      loading="lazy"
     />
     <figcaption>
       <span *ngIf="alternativeUnit.desc">{{ alternativeUnit.desc }}</span>

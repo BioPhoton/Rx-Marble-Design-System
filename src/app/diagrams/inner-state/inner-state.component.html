@@ -8,6 +8,7 @@
       [class]="innerState.styleClass"
       [src]="innerState.img"
       alt="{{ innerState.alt }}"
+      loading="lazy"
     />
     <figcaption>
       <span *ngIf="innerState.desc">{{ innerState.desc }}</span>

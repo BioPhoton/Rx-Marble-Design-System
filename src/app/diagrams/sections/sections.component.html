@@ -11,6 +11,7 @@
       [class]="section.styleClass"
       [src]="section.img"
       alt="{{ section.alt }}"
+      loading="lazy"
     />
     <figcaption>
       <span *ngIf="section.desc">{{ section.desc }}</span>

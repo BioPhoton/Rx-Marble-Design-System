@@ -38,6 +38,7 @@
       [class]="notificationAndContent.styleClass"
       [src]="notificationAndContent.img"
       alt="{{ notificationAndContent.alt }}"
+      loading="lazy"
     />
     <figcaption>
       <span *ngIf="notificationAndContent.desc">{{

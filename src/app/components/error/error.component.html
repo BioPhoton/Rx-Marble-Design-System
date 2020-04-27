@@ -6,7 +6,12 @@
 </div>
 <div class="preview-block">
   <figure role="group" *ngFor="let error of errors">
-    <img [class]="error.styleClass" [src]="error.img" alt="{{ error.alt }}" />
+    <img
+      [class]="error.styleClass"
+      [src]="error.img"
+      alt="{{ error.alt }}"
+      loading="lazy"
+    />
     <figcaption>
       <span *ngIf="error.desc">{{ error.desc }}</span>
     </figcaption>

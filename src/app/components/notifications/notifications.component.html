@@ -29,6 +29,7 @@
       [class]="notification.styleClass"
       [src]="notification.img"
       alt="{{ notification.alt }}"
+      loading="lazy"
     />
     <figcaption>
       <span *ngIf="notification.desc">{{ notification.desc }}</span>

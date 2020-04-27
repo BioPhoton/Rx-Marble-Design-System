@@ -43,6 +43,7 @@
       [class]="diagramCanvas.styleClass"
       [src]="diagramCanvas.img"
       alt="{{ diagramCanvas.alt }}"
+      loading="lazy"
     />
     <figcaption>
       <span *ngIf="diagramCanvas.desc">{{ diagramCanvas.desc }}</span>

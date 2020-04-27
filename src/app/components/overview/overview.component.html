@@ -8,7 +8,7 @@
 </div>
 <div class="preview-block">
   <figure role="group" *ngFor="let component of components">
-    <img [src]="component.img" alt="{{ component.alt }}" />
+    <img [src]="component.img" alt="{{ component.alt }}" loading="lazy" />
     <figcaption>
       <span>{{ component.desc }}</span>
     </figcaption>

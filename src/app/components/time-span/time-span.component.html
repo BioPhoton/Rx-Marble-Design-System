@@ -16,7 +16,7 @@
 </div>
 <div class="preview-block">
   <figure role="group" *ngFor="let timeSpan of timeSpans">
-    <img [src]="timeSpan.img" alt="{{ timeSpan.alt }}" />
+    <img [src]="timeSpan.img" alt="{{ timeSpan.alt }}" loading="lazy" />
     <figcaption>
       <span *ngIf="timeSpan.object">Object: {{ timeSpan.object }}</span>
       <span *ngIf="timeSpan.shape">Shape: {{ timeSpan.shape }}</span>

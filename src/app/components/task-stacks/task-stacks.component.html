@@ -8,6 +8,7 @@
       [class]="taskStack.styleClass"
       [src]="taskStack.img"
       alt="{{ taskStack.alt }}"
+      loading="lazy"
     />
     <figcaption>
       <span *ngIf="taskStack.desc">{{ taskStack.desc }}</span>

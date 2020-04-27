@@ -16,6 +16,7 @@
       [class]="inactiveComponent.styleClass"
       [src]="inactiveComponent.img"
       alt="{{ inactiveComponent.alt }}"
+      loading="lazy"
     />
     <figcaption>
       <span *ngIf="inactiveComponent.desc">{{ inactiveComponent.desc }}</span>

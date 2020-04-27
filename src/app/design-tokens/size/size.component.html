@@ -18,7 +18,7 @@
 </div>
 <div class="preview-block">
   <figure role="group" *ngFor="let size of sizes">
-    <img [src]="size.img" alt="{{ size.alt }}" />
+    <img [src]="size.img" alt="{{ size.alt }}" loading="lazy" />
     <figcaption>
       <span>{{ size.desc }}</span>
     </figcaption>

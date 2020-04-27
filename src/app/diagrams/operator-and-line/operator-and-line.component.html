@@ -20,6 +20,7 @@
       [class]="operatorAndLine.styleClass"
       [src]="operatorAndLine.img"
       alt="{{ operatorAndLine.alt }}"
+      loading="lazy"
     />
     <figcaption>
       <span *ngIf="operatorAndLine.desc">{{ operatorAndLine.desc }}</span>
