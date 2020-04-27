@@ -17,12 +17,8 @@
       [treeControl]="treeControl"
       class="nav-tree"
     >
-      <mat-tree-node
-        *matTreeNodeDef="let node"
-        matTreeNodeToggle
-        [matTreeNodeToggleRecursive]="true"
-      >
-        <a [routerLink]="node.routerLink">
+      <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+        <a [routerLink]="node.routerLink" routerLinkActive="list-item-active">
           <li class="mat-tree-node">
             <mat-icon fontSet="material-icons-outlined" *ngIf="node.icon">{{
               node.icon

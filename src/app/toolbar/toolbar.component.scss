@@ -84,6 +84,12 @@ mat-toolbar {
   display: none;
 }
 
+.list-item-active > li > .nav-caption,
+.list-item-active > li > .mat-icon {
+  color: $color__secondary-600;
+  transition: none;
+}
+
 // MAT-Tree
 
 .nav-tree-invisible {
