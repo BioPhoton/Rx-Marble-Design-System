@@ -1,9 +1,236 @@
-import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
-import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
-import { map, take } from 'rxjs/operators';
-import { Router, NavigationStart } from '@angular/router';
+import { map } from 'rxjs/operators';
+import { NestedTreeControl } from '@angular/cdk/tree';
+import { MatTreeNestedDataSource } from '@angular/material/tree';
 import { MatButton } from '@angular/material/button';
+
+interface NavNode {
+  name: string;
+  routerLink?: string;
+  icon?: string;
+  children?: NavNode[];
+}
+
+const TREE_DATA: NavNode[] = [
+  {
+    name: 'Introduction',
+    routerLink: '/introduction',
+    icon: 'home',
+  },
+  {
+    name: 'Marble Design System',
+    icon: 'blur_circular',
+    children: [
+      {
+        name: 'Design Tokens',
+        icon: 'brush',
+        children: [
+          {
+            routerLink: '/design-tokens/unit',
+            name: 'Unit',
+          },
+          {
+            routerLink: '/design-tokens/font',
+            name: 'Font',
+          },
+          {
+            routerLink: '/design-tokens/color',
+            name: 'Color',
+          },
+          {
+            routerLink: '/design-tokens/line',
+            name: 'Line',
+          },
+          {
+            routerLink: '/design-tokens/shape',
+            name: 'Shape',
+          },
+          {
+            routerLink: '/design-tokens/size',
+            name: 'Size',
+          }
+        ]
+      },
+      {
+        name: 'Components',
+        icon: 'widgets',
+        children: [
+          {
+            routerLink: '/components/overview',
+            name: 'Overview',
+          },
+          {
+            routerLink: '/components/observable',
+            name: 'Observable',
+          },
+          {
+            routerLink: '/components/time-span',
+            name: 'Time Span',
+          },
+          {
+            routerLink: '/components/event-in-time',
+            name: 'Event in Time',
+          },
+          {
+            routerLink: '/components/operation',
+            name: 'Operation',
+          },
+          {
+            routerLink: '/components/consumer-event',
+            name: 'Consumer Event',
+          },
+          {
+            routerLink: '/components/notifications',
+            name: 'Notifications',
+          },
+          {
+            routerLink: '/components/completion',
+            name: 'Completion',
+          },
+          {
+            routerLink: '/components/error',
+            name: 'Error',
+          },
+          {
+            routerLink: '/components/operator',
+            name: 'Operator',
+          },
+          {
+            routerLink: '/components/task-stacks',
+            name: 'Task Stacks',
+          }
+        ]
+      },
+      {
+        name: 'Diagrams',
+        icon: 'insert_chart',
+        children: [
+          {
+            routerLink: '/diagrams/sections',
+            name: 'Sections',
+          },
+          {
+            routerLink: '/diagrams/description',
+            name: 'Description',
+          },
+          {
+            routerLink: '/diagrams/legend',
+            name: 'Legend',
+          },
+          {
+            routerLink: '/diagrams/flow-description',
+            name: 'Flow Description',
+          },
+          {
+            routerLink: '/diagrams/diagram-canvas',
+            name: 'Diagram Canvas',
+          },
+          {
+            routerLink: '/diagrams/grid',
+            name: 'Grid',
+          },
+          {
+            routerLink: '/diagrams/positioning',
+            name: 'Positioning',
+          },
+          {
+            routerLink: '/diagrams/notification-and-content',
+            name: 'Notification and Content',
+          },
+          {
+            routerLink: '/diagrams/notification-and-shape',
+            name: 'Notification and Shape',
+          },
+          {
+            routerLink: '/diagrams/notification-and-color',
+            name: 'Notification and Color',
+          },
+          {
+            routerLink: '/diagrams/multiple-notifications',
+            name: 'Multiple Notifications',
+          },
+          {
+            routerLink: '/diagrams/notification-and-dynamic-width',
+            name: 'Notification and Dynamic Width',
+          },
+          {
+            routerLink: '/diagrams/notification-and-inner-components',
+            name: 'Notification and Inner Components',
+          },
+          {
+            routerLink: '/diagrams/inner-state',
+            name: 'Inner State',
+          },
+          {
+            routerLink: '/diagrams/operator-padding',
+            name: 'Operator Padding',
+          },
+          {
+            routerLink: '/diagrams/operator-and-line',
+            name: 'Operator and Line',
+          },
+          {
+            routerLink: '/diagrams/multiple-operations',
+            name: 'Multiple Operations',
+          },
+          {
+            routerLink: '/diagrams/operator-nesting',
+            name: 'Operator Nesting',
+          },
+          {
+            routerLink: '/diagrams/inactive-components',
+            name: 'Inactive Components',
+          },
+          {
+            routerLink: '/diagrams/examples-per-operator',
+            name: 'Examples per Operator',
+          }
+        ]
+      },
+      {
+        name: 'Beyond the Standard',
+        icon: 'toys',
+        children: [
+          {
+            routerLink: '/beyond-the-standard/alternative-shape',
+            name: 'Alternative Shape',
+          },
+          {
+            routerLink: '/beyond-the-standard/alternative-units',
+            name: 'Alternative Units',
+          },
+          {
+            routerLink: '/beyond-the-standard/todos',
+            name: 'ToDos',
+          },
+          {
+            routerLink: '/beyond-the-standard/vertical-layout',
+            name: 'Vertical Layout',
+          }
+        ]
+      },
+      {
+        name: 'Open Issues',
+        icon: 'report_problem',
+        children: [
+          {
+            routerLink: '/open-issues/operations-and-their-end',
+            name: 'Operation and their end',
+          }
+        ]
+      },
+    ]
+  },
+  {
+    name: 'Marble Diagrams',
+    routerLink: '/mds-diagrams',
+    icon: 'list',
+  },
+];
+
+
 
 @Component({
   selector: 'mds-toolbar',
@@ -11,232 +238,8 @@ import { MatButton } from '@angular/material/button';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
-  isExpanded: boolean;
-
-  public navItems = [
-    {
-      routerLink: '/introduction',
-      icon: 'home',
-      caption: 'Introduction',
-      isExpanded: false
-    },
-    {
-      routerLink: '/design-tokens/unit',
-      icon: 'blur_circular',
-      caption: 'Design Tokens',
-      isExpanded: false,
-      children: [
-        {
-          routerLink: '/design-tokens/unit',
-          caption: 'Unit',
-        },
-        {
-          routerLink: '/design-tokens/font',
-          caption: 'Font',
-        },
-        {
-          routerLink: '/design-tokens/color',
-          caption: 'Color',
-        },
-        {
-          routerLink: '/design-tokens/line',
-          caption: 'Line',
-        },
-        {
-          routerLink: '/design-tokens/shape',
-          caption: 'Shape',
-        },
-        {
-          routerLink: '/design-tokens/size',
-          caption: 'Size',
-        }
-      ]
-    },
-    {
-      routerLink: '/components/overview',
-      icon: 'widgets',
-      isExpanded: false,
-      caption: 'Components',
-      children: [
-        {
-          routerLink: '/components/overview',
-          caption: 'Overview',
-        },
-        {
-          routerLink: '/components/observable',
-          caption: 'Observable',
-        },
-        {
-          routerLink: '/components/time-span',
-          caption: 'Time Span',
-        },
-        {
-          routerLink: '/components/event-in-time',
-          caption: 'Event in Time',
-        },
-        {
-          routerLink: '/components/operation',
-          caption: 'Operation',
-        },
-        {
-          routerLink: '/components/consumer-event',
-          caption: 'Consumer Event',
-        },
-        {
-          routerLink: '/components/notifications',
-          caption: 'Notifications',
-        },
-        {
-          routerLink: '/components/completion',
-          caption: 'Completion',
-        },
-        {
-          routerLink: '/components/error',
-          caption: 'Error',
-        },
-        {
-          routerLink: '/components/operator',
-          caption: 'Operator',
-        },
-        {
-          routerLink: '/components/task-stacks',
-          caption: 'Task Stacks',
-        }
-      ]
-    },
-    {
-      routerLink: '/diagrams/sections',
-      icon: 'insert_chart',
-      caption: 'Diagrams',
-      isExpanded: false,
-      children: [
-        {
-          routerLink: '/diagrams/sections',
-          caption: 'Sections',
-        },
-        {
-          routerLink: '/diagrams/description',
-          caption: 'Description',
-        },
-        {
-          routerLink: '/diagrams/legend',
-          caption: 'Legend',
-        },
-        {
-          routerLink: '/diagrams/flow-description',
-          caption: 'Flow Description',
-        },
-        {
-          routerLink: '/diagrams/diagram-canvas',
-          caption: 'Diagram Canvas',
-        },
-        {
-          routerLink: '/diagrams/grid',
-          caption: 'Grid',
-        },
-        {
-          routerLink: '/diagrams/positioning',
-          caption: 'Positioning',
-        },
-        {
-          routerLink: '/diagrams/notification-and-content',
-          caption: 'Notification and Content',
-        },
-        {
-          routerLink: '/diagrams/notification-and-shape',
-          caption: 'Notification and Shape',
-        },
-        {
-          routerLink: '/diagrams/notification-and-color',
-          caption: 'Notification and Color',
-        },
-        {
-          routerLink: '/diagrams/multiple-notifications',
-          caption: 'Multiple Notifications',
-        },
-        {
-          routerLink: '/diagrams/notification-and-dynamic-width',
-          caption: 'Notification and Dynamic Width',
-        },
-        {
-          routerLink: '/diagrams/notification-and-inner-components',
-          caption: 'Notification and Inner Components',
-        },
-        {
-          routerLink: '/diagrams/inner-state',
-          caption: 'Inner State',
-        },
-        {
-          routerLink: '/diagrams/operator-padding',
-          caption: 'Operator Padding',
-        },
-        {
-          routerLink: '/diagrams/operator-and-line',
-          caption: 'Operator and Line',
-        },
-        {
-          routerLink: '/diagrams/multiple-operations',
-          caption: 'Multiple Operations',
-        },
-        {
-          routerLink: '/diagrams/operator-nesting',
-          caption: 'Operator Nesting',
-        },
-        {
-          routerLink: '/diagrams/inactive-components',
-          caption: 'Inactive Components',
-        },
-        {
-          routerLink: '/diagrams/examples-per-operator',
-          caption: 'Examples per Operator',
-        }
-      ]
-    },
-    {
-      routerLink: '/beyond-the-standard/alternative-shape',
-      icon: 'toys',
-      caption: 'Beyond the Standard',
-      isExpanded: false,
-      children: [
-        {
-          routerLink: '/beyond-the-standard/alternative-shape',
-          caption: 'Alternative Shape',
-        },
-        {
-          routerLink: '/beyond-the-standard/alternative-units',
-          caption: 'Alternative Units',
-        },
-        {
-          routerLink: '/beyond-the-standard/todos',
-          caption: 'ToDos',
-        },
-        {
-          routerLink: '/beyond-the-standard/vertical-layout',
-          caption: 'Vertical Layout',
-        }
-      ]
-    },
-    {
-      routerLink: '/open-issues/operations-and-their-end',
-      icon: 'report_problem',
-      caption: 'Open Issues',
-      isExpanded: false,
-      children: [
-        {
-          routerLink: '/open-issues/operations-and-their-end',
-          caption: 'Operation and their end',
-        }
-      ]
-    },
-    {
-      routerLink: '/mds-diagrams',
-      icon: 'toc',
-      caption: 'Marble Design Diagrams',
-      isExpanded: false
-    }
-  ];
-
-  @Output() closeSidenav = new EventEmitter<void>();
+  treeControl = new NestedTreeControl<NavNode>(node => node.children);
+  dataSource = new MatTreeNestedDataSource<NavNode>();
 
   @ViewChild('toggleSidenav') toggleSidenav: MatButton;
 
@@ -245,46 +248,13 @@ export class ToolbarComponent implements OnInit {
       map(result => result.matches)
     );
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
-    this.router.events.pipe(take(1)).subscribe((event: NavigationStart) => {
-      if (!event.url) {
-        return;
-      }
-
-      const item = this.navItems.find(it => it.routerLink.indexOf('/' + event.url.split('/')[1]) === 0);
-      if (item) {
-        item['isExpanded'] = true;
-      }
-    });
+  constructor(private breakpointObserver: BreakpointObserver) {
+    this.dataSource.data = TREE_DATA;
   }
+
+  hasChild = (_: number, node: NavNode) => !!node.children && node.children.length > 0;
 
   ngOnInit() {
   }
-  public toggleSubMenu(event, navItem) {
-    if (!navItem.isExpanded) {
-      this.closeOpenItems();
-      navItem.isExpanded = true;
-    } else {
-      navItem.isExpanded = false;
-    }
-  }
 
-  private closeOpenItems() {
-    this.navItems.forEach(item => {
-      item.isExpanded = false;
-    });
-  }
-
-  public changeParentLink(parentLink, childLink) {
-    const item = this.navItems.find(it => it.routerLink === parentLink);
-    if (item) {
-      item.routerLink = childLink;
-    }
-  }
-
-  public closeSidebar(hasChildren) {
-    if (this.toggleSidenav && !hasChildren) {
-      this.toggleSidenav._elementRef.nativeElement.click();
-    }
-  }
 }

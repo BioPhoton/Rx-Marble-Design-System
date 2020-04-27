@@ -15,8 +15,6 @@
 }
 
 .nav-caption {
-  display: inline-block;
-  padding: 0 2rem;
   font-size: 1.6rem;
   color: $color__primary-900;
 }
@@ -51,19 +49,11 @@ mat-toolbar {
 .mat-icon {
   color: $color__primary-700;
   transition: all 200ms ease-in-out;
+  margin-right: 10px;
 }
 
 .mat-drawer-side {
   border: none;
-}
-
-.mat-list-base {
-  margin-top: 2rem;
-}
-
-.mat-icon-button {
-  height: 35px;
-  line-height: 25px;
 }
 
 .logo {
@@ -90,31 +80,43 @@ mat-toolbar {
   }
 }
 
-//////
-
-.full-width {
-  width: 100%;
-}
-.menu-button {
-  transition: 300ms ease-in-out;
-  transform: rotate(0deg);
-}
-.menu-button.rotated {
-  transform: rotate(180deg);
-}
-.submenu {
-  overflow-y: hidden;
-  transition: transform 300ms ease;
-  transform: scaleY(0);
-  transform-origin: top;
+.mat-icon-button[disabled] {
   display: none;
+}
+
+// MAT-Tree
+
+.nav-tree-invisible {
+  display: none;
+}
+
+.nav-tree ul,
+.nav-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.mat-icon-button {
+  box-shadow: none;
+  margin: 0 0 0 auto;
+}
+
+.mat-tree {
+  background: transparent;
+  padding: 2rem;
+}
+
+.mat-tree-node {
+  cursor: pointer;
+  min-height: auto;
+  padding: 0.7rem 0;
 
   a {
-    padding-left: 5.2rem;
-    color: $color__primary-900 !important;
+    width: 100%;
   }
 }
-.submenu.expanded {
-  transform: scaleY(1);
-  display: block;
+
+.nav-tree-nested > ul {
+  padding-left: 1rem;
 }
