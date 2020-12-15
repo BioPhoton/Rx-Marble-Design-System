@@ -1,13 +1,13 @@
-@import "mixins";
-@import "fonts";
+@import 'mixins';
+@import 'fonts';
 
 //Fonts
-$font__sans-serif: "SourceSansProRegular", sans-serif;
-$font__sans-serif-bold: "SourceSansProBold", sans-serif;
-$font__monospace: "SourceCodeProRegular", sans-serif;
-$font__monospace-bold: "SourceCodeProBold", sans-serif;
+$font__sans-serif: 'SourceSansProRegular', sans-serif;
+$font__sans-serif-bold: 'SourceSansProBold', sans-serif;
+$font__monospace: 'SourceCodeProRegular', sans-serif;
+$font__monospace-bold: 'SourceCodeProBold', sans-serif;
 
-$font__serif: "Georgia, Times, " Times New Roman ", serif";
+$font__serif: 'Georgia, Times, ' Times New Roman ', serif';
 $font__proportional: Arial, Geneva, sans-serif;
 
 //Page Colors

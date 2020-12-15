@@ -1,23 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'mds-notification-and-dynamic-width',
   templateUrl: './notification-and-dynamic-width.component.html',
-  styleUrls: ['./notification-and-dynamic-width.component.scss']
+  styleUrls: ['./notification-and-dynamic-width.component.scss'],
 })
-export class NotificationAndDynamicWidthComponent implements OnInit {
-
+export class NotificationAndDynamicWidthComponent {
   public notificationAndDynamicWidths = [
     {
-      img: '/assets/graphics/diagrams/notification-and-dynamic-width/notification-and-dynamic-width1.svg',
+      img:
+        '/assets/graphics/diagrams/notification-and-dynamic-width/notification-and-dynamic-width1.svg',
       alt: 'Notification and Dynamic Width 1 Graphic',
-      styleClass: 'big'
-    }
+      styleClass: 'big',
+    },
   ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

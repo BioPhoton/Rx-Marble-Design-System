@@ -1,57 +1,58 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'mds-alternative-shape',
   templateUrl: './alternative-shape.component.html',
-  styleUrls: ['./alternative-shape.component.scss']
+  styleUrls: ['./alternative-shape.component.scss'],
 })
-export class AlternativeShapeComponent implements OnInit {
-
+export class AlternativeShapeComponent {
   public alternativeShapes = [
     {
-      img: '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape1.svg',
+      img:
+        '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape1.svg',
       alt: 'Alternative Shape 1 Graphic',
-      desc: 'Cloud'
+      desc: 'Cloud',
     },
     {
-      img: '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape2.svg',
+      img:
+        '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape2.svg',
       alt: 'Alternative Shape 1 Graphic',
-      desc: 'Bottle'
+      desc: 'Bottle',
     },
     {
-      img: '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape3.svg',
+      img:
+        '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape3.svg',
       alt: 'Alternative Shape 4 Graphic',
-      desc: 'Emoji'
+      desc: 'Emoji',
     },
     {
-      img: '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape4.svg',
+      img:
+        '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape4.svg',
       alt: 'Alternative Shape 4 Graphic',
-      desc: 'Rounded Rectangle'
-    }
+      desc: 'Rounded Rectangle',
+    },
   ];
 
   public ownAlternativeShapes = [
     {
-      img: '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape5.svg',
-      alt: 'Alternative Shape 5 Graphic'
+      img:
+        '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape5.svg',
+      alt: 'Alternative Shape 5 Graphic',
     },
     {
-      img: '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape6.svg',
-      alt: 'Alternative Shape 6 Graphic'
+      img:
+        '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape6.svg',
+      alt: 'Alternative Shape 6 Graphic',
     },
     {
-      img: '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape7.svg',
-      alt: 'Alternative Shape 7 Graphic'
+      img:
+        '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape7.svg',
+      alt: 'Alternative Shape 7 Graphic',
     },
     {
-      img: '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape8.svg',
-      alt: 'Alternative Shape 8 Graphic'
-    }
+      img:
+        '/assets/graphics/beyond-the-standard/alternative-shape/alternative-shape8.svg',
+      alt: 'Alternative Shape 8 Graphic',
+    },
   ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

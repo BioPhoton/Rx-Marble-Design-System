@@ -1,23 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'mds-notification-and-inner-components',
   templateUrl: './notification-and-inner-components.component.html',
-  styleUrls: ['./notification-and-inner-components.component.scss']
+  styleUrls: ['./notification-and-inner-components.component.scss'],
 })
-export class NotificationAndInnerComponentsComponent implements OnInit {
-
+export class NotificationAndInnerComponentsComponent {
   public notificationAndInnerComponents = [
     {
-      img: '/assets/graphics/diagrams/notification-and-inner-components/notification-and-inner-components1.svg',
+      img:
+        '/assets/graphics/diagrams/notification-and-inner-components/notification-and-inner-components1.svg',
       alt: 'Notification and Inner Components 1 Graphic',
-      styleClass: 'bigger'
-    }
+      styleClass: 'bigger',
+    },
   ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

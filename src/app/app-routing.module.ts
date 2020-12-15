@@ -55,11 +55,11 @@ import { DiagramDetailsComponent } from './mds-diagrams/diagram-details/diagram-
 const routes: Routes = [
   {
     path: '',
-    component: IntroductionComponent
+    component: IntroductionComponent,
   },
   {
     path: 'introduction',
-    component: IntroductionComponent
+    component: IntroductionComponent,
   },
   {
     path: 'design-tokens',
@@ -70,8 +70,8 @@ const routes: Routes = [
       { path: 'color', component: ColorComponent },
       { path: 'line', component: LineComponent },
       { path: 'shape', component: ShapeComponent },
-      { path: 'size', component: SizeComponent }
-    ]
+      { path: 'size', component: SizeComponent },
+    ],
   },
   {
     path: 'components',
@@ -87,8 +87,8 @@ const routes: Routes = [
       { path: 'completion', component: CompletionComponent },
       { path: 'error', component: ErrorComponent },
       { path: 'operator', component: OperatorComponent },
-      { path: 'task-stacks', component: TaskStacksComponent }
-    ]
+      { path: 'task-stacks', component: TaskStacksComponent },
+    ],
   },
   {
     path: 'diagrams',
@@ -101,20 +101,41 @@ const routes: Routes = [
       { path: 'diagram-canvas', component: DiagramCanvasComponent },
       { path: 'grid', component: GridComponent },
       { path: 'positioning', component: PositioningComponent },
-      { path: 'notification-and-content', component: NotificationAndContentComponent },
-      { path: 'notification-and-shape', component: NotificationAndShapeComponent },
-      { path: 'notification-and-color', component: NotificationAndColorComponent },
-      { path: 'multiple-notifications', component: MultipleNotificationsComponent },
-      { path: 'notification-and-dynamic-width', component: NotificationAndDynamicWidthComponent },
-      { path: 'notification-and-inner-components', component: NotificationAndInnerComponentsComponent },
+      {
+        path: 'notification-and-content',
+        component: NotificationAndContentComponent,
+      },
+      {
+        path: 'notification-and-shape',
+        component: NotificationAndShapeComponent,
+      },
+      {
+        path: 'notification-and-color',
+        component: NotificationAndColorComponent,
+      },
+      {
+        path: 'multiple-notifications',
+        component: MultipleNotificationsComponent,
+      },
+      {
+        path: 'notification-and-dynamic-width',
+        component: NotificationAndDynamicWidthComponent,
+      },
+      {
+        path: 'notification-and-inner-components',
+        component: NotificationAndInnerComponentsComponent,
+      },
       { path: 'inner-state', component: InnerStateComponent },
       { path: 'operator-padding', component: OperatorPaddingComponent },
       { path: 'operator-and-line', component: OperatorAndLineComponent },
       { path: 'multiple-operations', component: MultipleOperationsComponent },
       { path: 'operator-nesting', component: OperatorNestingComponent },
       { path: 'inactive-components', component: InactiveComponentsComponent },
-      { path: 'examples-per-operator', component: ExamplesPerOperatorComponent }
-    ]
+      {
+        path: 'examples-per-operator',
+        component: ExamplesPerOperatorComponent,
+      },
+    ],
   },
   {
     path: 'beyond-the-standard',
@@ -123,28 +144,31 @@ const routes: Routes = [
       { path: 'alternative-shape', component: AlternativeShapeComponent },
       { path: 'alternative-units', component: AlternativeUnitsComponent },
       { path: 'todos', component: TodosComponent },
-      { path: 'vertical-layout', component: VerticalLayoutComponent }
-    ]
+      { path: 'vertical-layout', component: VerticalLayoutComponent },
+    ],
   },
   {
     path: 'open-issues',
     component: OpenIssuesComponent,
     children: [
-      { path: 'operations-and-their-end', component: OperationsAndTheirEndComponent }
-    ]
+      {
+        path: 'operations-and-their-end',
+        component: OperationsAndTheirEndComponent,
+      },
+    ],
   },
   {
     path: 'mds-diagrams',
     children: [
-      { path: '', component: MdsDiagramsComponent},
-      { path: 'detail/:selected', component: DiagramDetailsComponent }
-    ]
+      { path: '', component: MdsDiagramsComponent },
+      { path: 'detail/:selected', component: DiagramDetailsComponent },
+    ],
   },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

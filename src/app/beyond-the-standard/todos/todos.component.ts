@@ -1,28 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'mds-todos',
   templateUrl: './todos.component.html',
-  styleUrls: ['./todos.component.scss']
+  styleUrls: ['./todos.component.scss'],
 })
-export class TodosComponent implements OnInit {
-
+export class TodosComponent {
   public todos = [
     {
       img: '/assets/graphics/beyond-the-standard/todos/todos1.svg',
       alt: 'Todos 1 Graphic',
-      styleClass: 'big'
+      styleClass: 'big',
     },
     {
       img: '/assets/graphics/beyond-the-standard/todos/todos2.svg',
       alt: 'Todos 2 Graphic',
-      styleClass: 'big'
-    }
+      styleClass: 'big',
+    },
   ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

@@ -2,10 +2,7 @@
   "extends": "tslint:recommended",
   "rules": {
     "align": {
-      "options": [
-        "parameters",
-        "statements"
-      ]
+      "options": ["parameters", "statements"]
     },
     "array-type": false,
     "arrow-parens": false,
@@ -18,22 +15,12 @@
     "curly": true,
     "directive-class-suffix": true,
     "directive-selector": [true, "attribute", "mds", "camelCase"],
-    "component-selector": [
-      true,
-      "element",
-      "mds",
-      "kebab-case"
-    ],
+    "component-selector": [true, "element", "mds", "kebab-case"],
     "eofline": true,
-    "import-blacklist": [
-      true,
-      "rxjs/Rx"
-    ],
+    "import-blacklist": [true, "rxjs/Rx"],
     "import-spacing": true,
     "indent": {
-      "options": [
-        "spaces"
-      ]
+      "options": ["spaces"]
     },
     "interface-name": false,
     "max-classes-per-file": false,
@@ -71,9 +58,7 @@
     "no-output-on-prefix": true,
     "no-output-rename": true,
     "semicolon": {
-      "options": [
-        "always"
-      ]
+      "options": ["always"]
     },
     "space-before-function-paren": {
       "options": {
@@ -108,11 +93,7 @@
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
     "variable-name": {
-      "options": [
-        "ban-keywords",
-        "check-format",
-        "allow-pascal-case"
-      ]
+      "options": ["ban-keywords", "check-format", "allow-pascal-case"]
     },
     "whitespace": {
       "options": [

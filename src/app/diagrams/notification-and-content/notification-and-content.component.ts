@@ -1,28 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'mds-notification-and-content',
   templateUrl: './notification-and-content.component.html',
-  styleUrls: ['./notification-and-content.component.scss']
+  styleUrls: ['./notification-and-content.component.scss'],
 })
-export class NotificationAndContentComponent implements OnInit {
-
+export class NotificationAndContentComponent {
   public notificationAndContents = [
     {
-      img: '/assets/graphics/diagrams/notification-and-content/notification-and-content1.svg',
+      img:
+        '/assets/graphics/diagrams/notification-and-content/notification-and-content1.svg',
       alt: 'Notification and Content 1 Graphic',
-      styleClass: 'big'
+      styleClass: 'big',
     },
     {
-      img: '/assets/graphics/diagrams/notification-and-content/notification-and-content2.svg',
+      img:
+        '/assets/graphics/diagrams/notification-and-content/notification-and-content2.svg',
       alt: 'Notification and Content 2 Graphic',
-      styleClass: 'bigger'
-    }
+      styleClass: 'bigger',
+    },
   ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

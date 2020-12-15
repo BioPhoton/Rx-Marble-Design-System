@@ -1,28 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'mds-operator',
   templateUrl: './operator.component.html',
-  styleUrls: ['./operator.component.scss']
+  styleUrls: ['./operator.component.scss'],
 })
-export class OperatorComponent implements OnInit {
-
+export class OperatorComponent {
   public operators = [
     {
       img: '/assets/graphics/components/operator/operator1.svg',
       alt: 'Operator 1 Graphic',
-      desc: 'Operator'
+      desc: 'Operator',
     },
     {
       img: '/assets/graphics/components/operator/operator2.svg',
       alt: 'Operator 2 Graphic',
-      styleClass: 'big'
-    }
+      styleClass: 'big',
+    },
   ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

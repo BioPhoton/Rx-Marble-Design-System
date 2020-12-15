@@ -21,7 +21,7 @@ import { MatTreeModule } from '@angular/material/tree';
     MatInputModule,
     MatFormFieldModule,
     MatAutocompleteModule,
-    MatTreeModule
-  ]
+    MatTreeModule,
+  ],
 })
-export class AngularMaterialModule { }
+export class AngularMaterialModule {}

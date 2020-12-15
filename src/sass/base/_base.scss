@@ -1,4 +1,4 @@
-@import "abstracts/index";
+@import 'abstracts/index';
 
 html,
 body {
@@ -135,7 +135,7 @@ strong {
 
 .bold {
   color: $color__black;
-  font-family: "SourceSansProBold";
+  font-family: 'SourceSansProBold';
 }
 
 /// UTILS
@@ -209,7 +209,7 @@ figure {
   }
 
   figcaption {
-    font-family: "SourceCodeProRegular";
+    font-family: 'SourceCodeProRegular';
     font-size: 1.4rem;
   }
 }

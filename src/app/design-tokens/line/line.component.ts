@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'mds-line',
   templateUrl: './line.component.html',
-  styleUrls: ['./line.component.scss']
+  styleUrls: ['./line.component.scss'],
 })
-export class LineComponent implements OnInit {
-
+export class LineComponent {
   public lines = [
     {
       img: '/assets/graphics/design-tokens/lines/line1.svg',
@@ -14,7 +13,7 @@ export class LineComponent implements OnInit {
       style: 'Solid',
       weight: '0.06em',
       start: 'none',
-      end: 'Filled Arrow'
+      end: 'Filled Arrow',
     },
     {
       img: '/assets/graphics/design-tokens/lines/line2.svg',
@@ -22,7 +21,7 @@ export class LineComponent implements OnInit {
       style: 'Dashed',
       weight: '0.06em',
       start: 'Filled Arrow',
-      end: 'none'
+      end: 'none',
     },
     {
       img: '/assets/graphics/design-tokens/lines/line3.svg',
@@ -30,7 +29,7 @@ export class LineComponent implements OnInit {
       style: 'Dashed',
       weight: '0.06em',
       start: 'none',
-      end: 'Filled Arrow'
+      end: 'Filled Arrow',
     },
     {
       img: '/assets/graphics/design-tokens/lines/line4.svg',
@@ -38,7 +37,7 @@ export class LineComponent implements OnInit {
       style: 'Dashed',
       weight: '0.06em',
       start: 'none',
-      end: 'Filled Arrow'
+      end: 'Filled Arrow',
     },
     {
       img: '/assets/graphics/design-tokens/lines/line5.svg',
@@ -46,7 +45,7 @@ export class LineComponent implements OnInit {
       style: 'Dashed',
       weight: '0.06em',
       start: 'none',
-      end: 'none'
+      end: 'none',
     },
     {
       img: '/assets/graphics/design-tokens/lines/line6.svg',
@@ -54,7 +53,7 @@ export class LineComponent implements OnInit {
       style: 'Solid',
       weight: '0.06em',
       start: 'none',
-      end: 'none'
+      end: 'none',
     },
     {
       img: '/assets/graphics/design-tokens/lines/line7.svg',
@@ -62,7 +61,7 @@ export class LineComponent implements OnInit {
       style: 'Solid',
       weight: '0.06em',
       start: 'none',
-      end: 'none'
+      end: 'none',
     },
     {
       img: '/assets/graphics/design-tokens/lines/line8.svg',
@@ -70,13 +69,7 @@ export class LineComponent implements OnInit {
       style: 'Dashed',
       weight: '0.06em',
       start: 'none',
-      end: 'Filled Arrow'
-    }
+      end: 'Filled Arrow',
+    },
   ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

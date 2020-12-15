@@ -30,34 +30,34 @@ const TREE_DATA: NavNode[] = [
           {
             routerLink: '/design-tokens/unit',
             name: 'Unit',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/design-tokens/font',
             name: 'Font',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/design-tokens/color',
             name: 'Color',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/design-tokens/line',
             name: 'Line',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/design-tokens/shape',
             name: 'Shape',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/design-tokens/size',
             name: 'Size',
-            icon: 'remove'
-          }
-        ]
+            icon: 'remove',
+          },
+        ],
       },
       {
         name: 'Components',
@@ -66,59 +66,59 @@ const TREE_DATA: NavNode[] = [
           {
             routerLink: '/components/overview',
             name: 'Overview',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/components/observable',
             name: 'Observable',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/components/time-span',
             name: 'Time Span',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/components/event-in-time',
             name: 'Event in Time',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/components/operation',
             name: 'Operation',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/components/consumer-event',
             name: 'Consumer Event',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/components/notifications',
             name: 'Notifications',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/components/completion',
             name: 'Completion',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/components/error',
             name: 'Error',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/components/operator',
             name: 'Operator',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/components/task-stacks',
             name: 'Task Stacks',
-            icon: 'remove'
-          }
-        ]
+            icon: 'remove',
+          },
+        ],
       },
       {
         name: 'Diagrams',
@@ -127,104 +127,104 @@ const TREE_DATA: NavNode[] = [
           {
             routerLink: '/diagrams/sections',
             name: 'Sections',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/description',
             name: 'Description',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/legend',
             name: 'Legend',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/flow-description',
             name: 'Flow Description',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/diagram-canvas',
             name: 'Diagram Canvas',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/grid',
             name: 'Grid',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/positioning',
             name: 'Positioning',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/notification-and-content',
             name: 'Notification and Content',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/notification-and-shape',
             name: 'Notification and Shape',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/notification-and-color',
             name: 'Notification and Color',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/multiple-notifications',
             name: 'Multiple Notifications',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/notification-and-dynamic-width',
             name: 'Notification and Dynamic Width',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/notification-and-inner-components',
             name: 'Notification and Inner Components',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/inner-state',
             name: 'Inner State',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/operator-padding',
             name: 'Operator Padding',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/operator-and-line',
             name: 'Operator and Line',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/multiple-operations',
             name: 'Multiple Operations',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/operator-nesting',
             name: 'Operator Nesting',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/inactive-components',
             name: 'Inactive Components',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/diagrams/examples-per-operator',
             name: 'Examples per Operator',
-            icon: 'remove'
-          }
-        ]
+            icon: 'remove',
+          },
+        ],
       },
       {
         name: 'Beyond the Standard',
@@ -233,24 +233,24 @@ const TREE_DATA: NavNode[] = [
           {
             routerLink: '/beyond-the-standard/alternative-shape',
             name: 'Alternative Shape',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/beyond-the-standard/alternative-units',
             name: 'Alternative Units',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/beyond-the-standard/todos',
             name: 'ToDos',
-            icon: 'remove'
+            icon: 'remove',
           },
           {
             routerLink: '/beyond-the-standard/vertical-layout',
             name: 'Vertical Layout',
-            icon: 'remove'
-          }
-        ]
+            icon: 'remove',
+          },
+        ],
       },
       {
         name: 'Open Issues',
@@ -259,11 +259,11 @@ const TREE_DATA: NavNode[] = [
           {
             routerLink: '/open-issues/operations-and-their-end',
             name: 'Operation and their end',
-            icon: 'remove'
-          }
-        ]
+            icon: 'remove',
+          },
+        ],
       },
-    ]
+    ],
   },
   {
     name: 'Marble Diagrams',
@@ -272,31 +272,25 @@ const TREE_DATA: NavNode[] = [
   },
 ];
 
-
-
 @Component({
   selector: 'mds-toolbar',
   templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.scss']
+  styleUrls: ['./toolbar.component.scss'],
 })
-export class ToolbarComponent implements OnInit {
+export class ToolbarComponent {
   treeControl = new NestedTreeControl<NavNode>(node => node.children);
   dataSource = new MatTreeNestedDataSource<NavNode>();
 
   @ViewChild('toggleSidenav') toggleSidenav: MatButton;
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.HandsetPortrait)
-    .pipe(
-      map(result => result.matches)
-    );
+  isHandset$: Observable<boolean> = this.breakpointObserver
+    .observe(Breakpoints.HandsetPortrait)
+    .pipe(map(result => result.matches));
 
   constructor(private breakpointObserver: BreakpointObserver) {
     this.dataSource.data = TREE_DATA;
   }
 
-  hasChild = (_: number, node: NavNode) => !!node.children && node.children.length > 0;
-
-  ngOnInit() {
-  }
-
+  hasChild = (_: number, node: NavNode) =>
+    !!node.children && node.children.length > 0;
 }

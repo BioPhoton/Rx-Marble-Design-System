@@ -1,33 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'mds-operations-and-their-end',
   templateUrl: './operations-and-their-end.component.html',
-  styleUrls: ['./operations-and-their-end.component.scss']
+  styleUrls: ['./operations-and-their-end.component.scss'],
 })
-export class OperationsAndTheirEndComponent implements OnInit {
-
+export class OperationsAndTheirEndComponent {
   public operationsAndTheirEnd = [
     {
-      img: '/assets/graphics/open-issues/operations-and-their-end/operations-and-their-end1.svg',
+      img:
+        '/assets/graphics/open-issues/operations-and-their-end/operations-and-their-end1.svg',
       alt: 'Operations and their End 1 Graphic',
-      styleClass: 'big'
+      styleClass: 'big',
     },
     {
-      img: '/assets/graphics/open-issues/operations-and-their-end/operations-and-their-end2.svg',
+      img:
+        '/assets/graphics/open-issues/operations-and-their-end/operations-and-their-end2.svg',
       alt: 'Operations and their End 2 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'bigger',
     },
     {
-      img: '/assets/graphics/open-issues/operations-and-their-end/operations-and-their-end3.svg',
+      img:
+        '/assets/graphics/open-issues/operations-and-their-end/operations-and-their-end3.svg',
       alt: 'Operations and their End 3 Graphic',
-      styleClass: 'bigger'
-    }
+      styleClass: 'bigger',
+    },
   ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

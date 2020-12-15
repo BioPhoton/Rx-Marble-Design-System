@@ -113,7 +113,7 @@ import { DiagramDetailsComponent } from './mds-diagrams/diagram-details/diagram-
     OperationsAndTheirEndComponent,
     PageNotFoundComponent,
     MdsDiagramsComponent,
-    DiagramDetailsComponent
+    DiagramDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -121,9 +121,9 @@ import { DiagramDetailsComponent } from './mds-diagrams/diagram-details/diagram-
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

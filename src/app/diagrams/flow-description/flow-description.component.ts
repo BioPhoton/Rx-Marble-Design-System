@@ -1,28 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'mds-flow-description',
   templateUrl: './flow-description.component.html',
-  styleUrls: ['./flow-description.component.scss']
+  styleUrls: ['./flow-description.component.scss'],
 })
-export class FlowDescriptionComponent implements OnInit {
-
+export class FlowDescriptionComponent {
   public flowDescriptions = [
     {
       img: '/assets/graphics/diagrams/flow-description/flow-description1.svg',
       alt: 'Flow Description 1 Graphic',
-      styleClass: 'bigger'
+      styleClass: 'bigger',
     },
     {
       img: '/assets/graphics/diagrams/flow-description/flow-description2.svg',
       alt: 'Flow Description 2 Graphic',
-      styleClass: 'big'
-    }
+      styleClass: 'big',
+    },
   ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
