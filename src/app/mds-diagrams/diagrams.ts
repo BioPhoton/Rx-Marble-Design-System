@@ -135,7 +135,7 @@ export const mdsDiagrams: MdsDiagram[] = [
   {
     hidden: false,
     class: 'filter',
-    desc: 'distinctUntilKexChanged',
+    desc: 'distinctUntilKeyChanged',
   },
   {
     hidden: false,
