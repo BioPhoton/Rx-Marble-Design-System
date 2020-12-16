@@ -4,9 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --no-progress",
+    "build:dev": "ng build",
     "lint": "ng lint",
     "prettier": "pretty-quick",
+    "prettier:check": "pretty-quick --check",
     "lint:fix": "ng lint --fix"
   },
   "private": true,
