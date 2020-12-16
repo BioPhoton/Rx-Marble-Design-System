@@ -5,11 +5,11 @@ import { diagrams$, MdsDiagram } from './diagrams';
 
 @Component({
   selector: 'mds-diagrams-list',
-  templateUrl: './mds-diagrams-list.component.html',
-  styleUrls: ['./mds-diagrams-list.component.scss'],
+  templateUrl: './diagrams-list.component.html',
+  styleUrls: ['./diagrams-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MdsDiagramsListComponent {
+export class DiagramsListComponent {
   readonly indexGroups = [
     { label: 'Show all', value: undefined },
     { label: 'Rate limiting', value: 'rate-limiting' },

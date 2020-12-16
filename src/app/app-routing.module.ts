@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './design-system/page-not-found/page-not-found.component';
-import { DiagramDetailsComponent } from './diagrams-list/diagram-details/diagram-details.component';
-import { MdsDiagramsListComponent } from './diagrams-list/mds-diagrams-list.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 
 const routes: Routes = [
@@ -26,10 +24,10 @@ const routes: Routes = [
 
   {
     path: 'diagrams',
-    children: [
-      { path: '', component: MdsDiagramsListComponent },
-      { path: 'detail/:selected', component: DiagramDetailsComponent },
-    ],
+    loadChildren: () =>
+      import('./diagrams-list/diagrams-list.module').then(
+        m => m.DiagramsListModule,
+      ),
   },
 
   { path: '**', component: PageNotFoundComponent },
