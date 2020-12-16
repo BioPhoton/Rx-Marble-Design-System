@@ -62,7 +62,7 @@ const routes: Routes = [
     component: IntroductionComponent,
   },
   {
-    path: 'design-tokens',
+    path: 'design-system/design-tokens',
     component: DesignTokensComponent,
     children: [
       { path: 'unit', component: UnitComponent },
@@ -74,7 +74,7 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'components',
+    path: 'design-system/components',
     component: ComponentsComponent,
     children: [
       { path: 'overview', component: OverviewComponent },
@@ -91,7 +91,7 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'diagrams',
+    path: 'design-system/diagrams',
     component: DiagramsComponent,
     children: [
       { path: 'sections', component: SectionsComponent },
@@ -135,10 +135,11 @@ const routes: Routes = [
         path: 'examples-per-operator',
         component: ExamplesPerOperatorComponent,
       },
+      { path: '', pathMatch: 'full', redirectTo: 'sections' },
     ],
   },
   {
-    path: 'beyond-the-standard',
+    path: 'design-system/beyond-the-standard',
     component: BeyondTheStandardComponent,
     children: [
       { path: 'alternative-shape', component: AlternativeShapeComponent },
@@ -148,7 +149,7 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'open-issues',
+    path: 'design-system/open-issues',
     component: OpenIssuesComponent,
     children: [
       {

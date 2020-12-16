@@ -28,32 +28,32 @@ const TREE_DATA: NavNode[] = [
         icon: 'brush',
         children: [
           {
-            routerLink: '/design-tokens/unit',
+            routerLink: '/design-system/design-tokens/unit',
             name: 'Unit',
             icon: 'remove',
           },
           {
-            routerLink: '/design-tokens/font',
+            routerLink: '/design-system/design-tokens/font',
             name: 'Font',
             icon: 'remove',
           },
           {
-            routerLink: '/design-tokens/color',
+            routerLink: '/design-system/design-tokens/color',
             name: 'Color',
             icon: 'remove',
           },
           {
-            routerLink: '/design-tokens/line',
+            routerLink: '/design-system/design-tokens/line',
             name: 'Line',
             icon: 'remove',
           },
           {
-            routerLink: '/design-tokens/shape',
+            routerLink: '/design-system/design-tokens/shape',
             name: 'Shape',
             icon: 'remove',
           },
           {
-            routerLink: '/design-tokens/size',
+            routerLink: '/design-system/design-tokens/size',
             name: 'Size',
             icon: 'remove',
           },
@@ -64,57 +64,57 @@ const TREE_DATA: NavNode[] = [
         icon: 'widgets',
         children: [
           {
-            routerLink: '/components/overview',
+            routerLink: '/design-system/components/overview',
             name: 'Overview',
             icon: 'remove',
           },
           {
-            routerLink: '/components/observable',
+            routerLink: '/design-system/components/observable',
             name: 'Observable',
             icon: 'remove',
           },
           {
-            routerLink: '/components/time-span',
+            routerLink: '/design-system/components/time-span',
             name: 'Time Span',
             icon: 'remove',
           },
           {
-            routerLink: '/components/event-in-time',
+            routerLink: '/design-system/components/event-in-time',
             name: 'Event in Time',
             icon: 'remove',
           },
           {
-            routerLink: '/components/operation',
+            routerLink: '/design-system/components/operation',
             name: 'Operation',
             icon: 'remove',
           },
           {
-            routerLink: '/components/consumer-event',
+            routerLink: '/design-system/components/consumer-event',
             name: 'Consumer Event',
             icon: 'remove',
           },
           {
-            routerLink: '/components/notifications',
+            routerLink: '/design-system/components/notifications',
             name: 'Notifications',
             icon: 'remove',
           },
           {
-            routerLink: '/components/completion',
+            routerLink: '/design-system/components/completion',
             name: 'Completion',
             icon: 'remove',
           },
           {
-            routerLink: '/components/error',
+            routerLink: '/design-system/components/error',
             name: 'Error',
             icon: 'remove',
           },
           {
-            routerLink: '/components/operator',
+            routerLink: '/design-system/components/operator',
             name: 'Operator',
             icon: 'remove',
           },
           {
-            routerLink: '/components/task-stacks',
+            routerLink: '/design-system/components/task-stacks',
             name: 'Task Stacks',
             icon: 'remove',
           },
@@ -125,102 +125,104 @@ const TREE_DATA: NavNode[] = [
         icon: 'insert_chart',
         children: [
           {
-            routerLink: '/diagrams/sections',
+            routerLink: '/design-system/diagrams/sections',
             name: 'Sections',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/description',
+            routerLink: '/design-system/diagrams/description',
             name: 'Description',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/legend',
+            routerLink: '/design-system/diagrams/legend',
             name: 'Legend',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/flow-description',
+            routerLink: '/design-system/diagrams/flow-description',
             name: 'Flow Description',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/diagram-canvas',
+            routerLink: '/design-system/diagrams/diagram-canvas',
             name: 'Diagram Canvas',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/grid',
+            routerLink: '/design-system/diagrams/grid',
             name: 'Grid',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/positioning',
+            routerLink: '/design-system/diagrams/positioning',
             name: 'Positioning',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/notification-and-content',
+            routerLink: '/design-system/diagrams/notification-and-content',
             name: 'Notification and Content',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/notification-and-shape',
+            routerLink: '/design-system/diagrams/notification-and-shape',
             name: 'Notification and Shape',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/notification-and-color',
+            routerLink: '/design-system/diagrams/notification-and-color',
             name: 'Notification and Color',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/multiple-notifications',
+            routerLink: '/design-system/diagrams/multiple-notifications',
             name: 'Multiple Notifications',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/notification-and-dynamic-width',
+            routerLink:
+              '/design-system/diagrams/notification-and-dynamic-width',
             name: 'Notification and Dynamic Width',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/notification-and-inner-components',
+            routerLink:
+              '/design-system/diagrams/notification-and-inner-components',
             name: 'Notification and Inner Components',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/inner-state',
+            routerLink: '/design-system/diagrams/inner-state',
             name: 'Inner State',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/operator-padding',
+            routerLink: '/design-system/diagrams/operator-padding',
             name: 'Operator Padding',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/operator-and-line',
+            routerLink: '/design-system/diagrams/operator-and-line',
             name: 'Operator and Line',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/multiple-operations',
+            routerLink: '/design-system/diagrams/multiple-operations',
             name: 'Multiple Operations',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/operator-nesting',
+            routerLink: '/design-system/diagrams/operator-nesting',
             name: 'Operator Nesting',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/inactive-components',
+            routerLink: '/design-system/diagrams/inactive-components',
             name: 'Inactive Components',
             icon: 'remove',
           },
           {
-            routerLink: '/diagrams/examples-per-operator',
+            routerLink: '/design-system/diagrams/examples-per-operator',
             name: 'Examples per Operator',
             icon: 'remove',
           },
@@ -231,22 +233,22 @@ const TREE_DATA: NavNode[] = [
         icon: 'toys',
         children: [
           {
-            routerLink: '/beyond-the-standard/alternative-shape',
+            routerLink: '/design-system/beyond-the-standard/alternative-shape',
             name: 'Alternative Shape',
             icon: 'remove',
           },
           {
-            routerLink: '/beyond-the-standard/alternative-units',
+            routerLink: '/design-system/beyond-the-standard/alternative-units',
             name: 'Alternative Units',
             icon: 'remove',
           },
           {
-            routerLink: '/beyond-the-standard/todos',
+            routerLink: '/design-system/beyond-the-standard/todos',
             name: 'ToDos',
             icon: 'remove',
           },
           {
-            routerLink: '/beyond-the-standard/vertical-layout',
+            routerLink: '/design-system/beyond-the-standard/vertical-layout',
             name: 'Vertical Layout',
             icon: 'remove',
           },
@@ -257,7 +259,7 @@ const TREE_DATA: NavNode[] = [
         icon: 'report_problem',
         children: [
           {
-            routerLink: '/open-issues/operations-and-their-end',
+            routerLink: '/design-system/open-issues/operations-and-their-end',
             name: 'Operation and their end',
             icon: 'remove',
           },
