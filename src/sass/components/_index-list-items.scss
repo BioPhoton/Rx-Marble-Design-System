@@ -73,7 +73,7 @@
     text-align: center;
   }
 
-  &.rate-limit {
+  &.rate-limiting {
     background-color: lightsteelblue;
     &::after {
       content: 'r';
