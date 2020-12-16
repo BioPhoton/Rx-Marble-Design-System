@@ -1,31 +1,22 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { MdsDiagram, mdsDiagrams } from '../diagrams';
+import { filter, map, switchMap } from 'rxjs/operators';
+import { diagrams$ } from '../diagrams';
 
 @Component({
   selector: 'mds-diagram-details',
   templateUrl: './diagram-details.component.html',
   styleUrls: ['./diagram-details.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DiagramDetailsComponent implements OnInit, OnDestroy {
-  private subscriptionGroup: Subscription = new Subscription();
-  public diagram: MdsDiagram;
-  private diagramId: string;
+export class DiagramDetailsComponent {
   constructor(private route: ActivatedRoute) {}
 
-  ngOnInit(): void {
-    this.subscriptionGroup.add(
-      this.route.paramMap.subscribe(params => {
-        this.diagramId = params.get('selected');
-        this.diagram = mdsDiagrams.find(
-          diagram => diagram.desc === this.diagramId,
-        );
-      }),
-    );
-  }
-
-  ngOnDestroy(): void {
-    this.subscriptionGroup.unsubscribe();
-  }
+  diagram$ = this.route.paramMap.pipe(
+    map(params => params.get('selected')),
+    filter(diagramName => !!diagramName),
+    switchMap(diagramName =>
+      diagrams$.pipe(map(diagrams => diagrams[diagramName])),
+    ),
+  );
 }

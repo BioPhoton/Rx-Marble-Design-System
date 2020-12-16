@@ -1,31 +1,36 @@
-<h1><span class="index-group {{ diagram.class }}"></span>{{ diagram.desc }}</h1>
-<img
-  *ngIf="diagram.image"
-  [src]="diagram.image"
-  alt="Diagram Preview Image"
-  class="bigger"
-  loading="lazy"
-/>
-<img
-  *ngIf="!diagram.image && diagram.text"
-  src="../../assets/no-preview.svg"
-  alt="No Preview Image"
-  class="bigger"
-  loading="lazy"
-/>
+<ng-container *ngIf="diagram$ | async as diagram">
+  <h1>
+    <span class="index-group group-indication" [ngClass]="diagram.group"></span
+    >{{ diagram.name }}
+  </h1>
 
-<img
-  *ngIf="!diagram.image && !diagram.text"
-  src="../../assets/no-details.svg"
-  alt="No Details Image"
-  class="bigger"
-  loading="lazy"
-/>
+  <img
+    *ngIf="diagram.image"
+    [src]="diagram.image"
+    alt="Diagram Preview Image"
+    class="bigger"
+    loading="lazy"
+  />
+  <img
+    *ngIf="!diagram.image && diagram.body"
+    src="assets/no-preview.svg"
+    alt="No Preview Image"
+    class="bigger"
+    loading="lazy"
+  />
+  <img
+    *ngIf="!diagram.image && !diagram.body"
+    src="assets/no-details.svg"
+    alt="No Details Image"
+    class="bigger"
+    loading="lazy"
+  />
 
-<div *ngIf="diagram.text" class="text-block">
-  <p>{{ diagram.text }}</p>
-</div>
+  <div *ngIf="diagram.body" class="text-block">
+    <p>{{ diagram.body }}</p>
+  </div>
 
-<div>
-  <a [routerLink]="'/mds-diagrams'" mat-button>&larr; Back to Overview</a>
-</div>
+  <div>
+    <a [routerLink]="'/mds-diagrams'" mat-button>&larr; Back to Overview</a>
+  </div>
+</ng-container>

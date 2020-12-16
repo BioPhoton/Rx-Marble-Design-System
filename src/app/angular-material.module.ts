@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -22,6 +24,8 @@ import { MatTreeModule } from '@angular/material/tree';
     MatFormFieldModule,
     MatAutocompleteModule,
     MatTreeModule,
+    MatButtonToggleModule,
+    MatChipsModule,
   ],
 })
 export class AngularMaterialModule {}
