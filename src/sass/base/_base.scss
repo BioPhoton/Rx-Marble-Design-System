@@ -125,7 +125,7 @@ a {
 
 p {
   font-size: 1.6rem;
-  margin-top: 0px;
+  margin-top: 0;
   line-height: 1.6;
 }
 
@@ -135,7 +135,7 @@ strong {
 
 .bold {
   color: $color__black;
-  font-family: 'SourceSansProBold';
+  font-family: $font__sans-serif-bold;
 }
 
 /// UTILS
@@ -209,7 +209,7 @@ figure {
   }
 
   figcaption {
-    font-family: 'SourceCodeProRegular';
+    font-family: $font__sans-serif;
     font-size: 1.4rem;
   }
 }
