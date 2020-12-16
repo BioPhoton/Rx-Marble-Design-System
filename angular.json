@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "marbles-design-system-docu": {
+    "rx-marbles-design-system": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -42,7 +42,7 @@
             "customWebpackConfig": {
               "path": "./extra-webpack.config.js"
             },
-            "outputPath": "dist/marbles-design-system-docu",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -93,18 +93,18 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "marbles-design-system-docu:build"
+            "browserTarget": "rx-marbles-design-system:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "marbles-design-system-docu:build:production"
+              "browserTarget": "rx-marbles-design-system:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "marbles-design-system-docu:build"
+            "browserTarget": "rx-marbles-design-system:build"
           }
         },
         "lint": {
@@ -117,7 +117,7 @@
       }
     }
   },
-  "defaultProject": "marbles-design-system-docu",
+  "defaultProject": "rx-marbles-design-system",
   "cli": {
     "analytics": false
   }
