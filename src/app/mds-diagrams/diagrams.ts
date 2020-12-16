@@ -3,9 +3,8 @@ import { fromPromise } from 'rxjs/internal-compatibility';
 import { shareReplay } from 'rxjs/operators';
 
 export interface MdsDiagram {
-  class: string;
+  group: string;
   name: string;
-  desc?: string;
   image?: string;
   body?: string;
 }
