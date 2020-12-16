@@ -1,3 +1,5 @@
+@import 'abstracts/variables';
+
 .index-list {
   @include breakpoint(tablet) {
     display: flex;
@@ -5,8 +7,8 @@
   }
 }
 
-.index-list-route {
-  cursor: pointer;
+.index-list-item {
+  margin-bottom: 0.8rem;
   color: $color__black;
 
   @include breakpoint(tablet) {
@@ -18,11 +20,11 @@
   }
 }
 
-.index-list-item {
-  margin-bottom: 0.8rem;
+.index-list-route {
+  cursor: pointer;
 }
 
-.index-list-route-tile {
+.index-list-item-tile {
   cursor: pointer;
   color: $color__black;
   width: 100%;
@@ -41,7 +43,7 @@
   }
 }
 
-.index-list-item-tile {
+.index-list-route-tile {
   background-color: #f6f6fa;
 
   img {

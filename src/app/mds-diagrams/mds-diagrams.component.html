@@ -39,32 +39,25 @@
   </mat-form-field>
 </form>
 
-<div class="index-items" *ngIf="listView">
+<div *ngIf="listView">
   <ul class="index-list">
-    <ng-container *ngFor="let indexItem of displayItems">
-      <a
-        class="index-list-route"
-        *ngIf="!indexItem.hidden"
-        [routerLink]="'detail/' + indexItem.desc"
-      >
-        <li class="index-list-item">
-          <span class="index-group {{ indexItem.class }}"></span
-          >{{ indexItem.desc }}
-        </li>
+    <li class="index-list-item" *ngFor="let indexItem of displayItems">
+      <a class="index-list-route" [routerLink]="'detail/' + indexItem.name">
+        <span class="index-group {{ indexItem.class }}"></span
+        >{{ indexItem.name }}
       </a>
-    </ng-container>
+    </li>
   </ul>
 </div>
 
-<div class="index-items" *ngIf="tileView">
+<div *ngIf="tileView">
   <ul class="index-list">
     <ng-container *ngFor="let indexItem of displayItems">
-      <a
-        class="index-list-route-tile"
-        *ngIf="!indexItem.hidden"
-        [routerLink]="'detail/' + indexItem.desc"
-      >
-        <li class="index-list-item-tile">
+      <li class="index-list-item-tile">
+        <a
+          class="index-list-route-tile"
+          [routerLink]="'detail/' + indexItem.name"
+        >
           <img
             *ngIf="indexItem.image"
             [src]="indexItem.image"
@@ -79,10 +72,10 @@
           />
           <div class="index-info">
             <span class="index-group {{ indexItem.class }}"></span
-            >{{ indexItem.desc }}
+            >{{ indexItem.name }}
           </div>
-        </li>
-      </a>
+        </a>
+      </li>
     </ng-container>
   </ul>
 </div>
