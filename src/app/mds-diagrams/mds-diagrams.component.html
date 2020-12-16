@@ -41,7 +41,7 @@
 
 <div *ngIf="listView">
   <ul class="index-list">
-    <li class="index-list-item" *ngFor="let indexItem of displayItems">
+    <li class="index-list-item" *ngFor="let indexItem of displayItems$ | async">
       <a class="index-list-route" [routerLink]="'detail/' + indexItem.name">
         <span class="index-group {{ indexItem.class }}"></span
         >{{ indexItem.name }}
@@ -52,7 +52,7 @@
 
 <div *ngIf="tileView">
   <ul class="index-list">
-    <ng-container *ngFor="let indexItem of displayItems">
+    <ng-container *ngFor="let indexItem of displayItems$ | async">
       <li class="index-list-item-tile">
         <a
           class="index-list-route-tile"

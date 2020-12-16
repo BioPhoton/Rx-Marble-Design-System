@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { MdsDiagram, mdsDiagrams } from './diagrams';
+import { Component } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { diagrams$ } from './diagrams';
 
 @Component({
   selector: 'mds-mds-diagrams',
   templateUrl: './mds-diagrams.component.html',
   styleUrls: ['./mds-diagrams.component.scss'],
 })
-export class MdsDiagramsComponent implements OnInit {
+export class MdsDiagramsComponent {
   public listView = true;
   public tileView = false;
   public activeView = 1;
@@ -15,7 +16,7 @@ export class MdsDiagramsComponent implements OnInit {
   public groupFilter: string;
   public indexGroups = [
     { group: 'All', value: '' },
-    { group: 'Rate-Limit', value: 'rate-limit' },
+    { group: 'Rate-Limiting', value: 'rate-limiting' },
     { group: 'Buffer', value: 'buffer' },
     { group: 'Error-Handling', value: 'error-handling' },
     { group: 'Combine', value: 'combine' },
@@ -33,12 +34,9 @@ export class MdsDiagramsComponent implements OnInit {
     { group: 'Creation', value: 'creation' },
   ];
 
-  public displayItems: MdsDiagram[];
-  private indexItems = mdsDiagrams;
-
-  ngOnInit(): void {
-    this.displayItems = this.indexItems;
-  }
+  public displayItems$ = diagrams$.pipe(
+    map(diagrams => Object.values(diagrams)),
+  );
 
   public changeView(event) {
     this.activeView = event;
