@@ -269,7 +269,7 @@ const TREE_DATA: NavNode[] = [
   },
   {
     name: 'Marble Diagrams',
-    routerLink: '/mds-diagrams',
+    routerLink: '/diagrams',
     icon: 'list',
   },
 ];

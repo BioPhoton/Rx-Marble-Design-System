@@ -49,8 +49,8 @@ import { VerticalLayoutComponent } from './beyond-the-standard/vertical-layout/v
 import { OpenIssuesComponent } from './open-issues/open-issues.component';
 import { OperationsAndTheirEndComponent } from './open-issues/operations-and-their-end/operations-and-their-end.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { MdsDiagramsComponent } from './mds-diagrams/mds-diagrams.component';
-import { DiagramDetailsComponent } from './mds-diagrams/diagram-details/diagram-details.component';
+import { MdsDiagramsListComponent } from './diagrams-list/mds-diagrams-list.component';
+import { DiagramDetailsComponent } from './diagrams-list/diagram-details/diagram-details.component';
 
 const routes: Routes = [
   {
@@ -159,9 +159,9 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'mds-diagrams',
+    path: 'diagrams',
     children: [
-      { path: '', component: MdsDiagramsComponent },
+      { path: '', component: MdsDiagramsListComponent },
       { path: 'detail/:selected', component: DiagramDetailsComponent },
     ],
   },

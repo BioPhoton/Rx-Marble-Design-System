@@ -4,12 +4,12 @@ import { map, switchMap } from 'rxjs/operators';
 import { diagrams$, MdsDiagram } from './diagrams';
 
 @Component({
-  selector: 'mds-mds-diagrams',
-  templateUrl: './mds-diagrams.component.html',
-  styleUrls: ['./mds-diagrams.component.scss'],
+  selector: 'mds-diagrams-list',
+  templateUrl: './mds-diagrams-list.component.html',
+  styleUrls: ['./mds-diagrams-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MdsDiagramsComponent {
+export class MdsDiagramsListComponent {
   readonly indexGroups = [
     { label: 'Show all', value: undefined },
     { label: 'Rate limiting', value: 'rate-limiting' },
