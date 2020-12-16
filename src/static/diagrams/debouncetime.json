@@ -1,0 +1,4 @@
+{
+  "group": "rate-limiting",
+  "name": "debounceTime"
+}
