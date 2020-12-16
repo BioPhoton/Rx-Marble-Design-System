@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { filter, map, switchMap, tap } from 'rxjs/operators';
+import { filter, map, switchMap } from 'rxjs/operators';
 import { diagrams$ } from '../diagrams';
 
 @Component({
@@ -13,7 +13,6 @@ export class DiagramDetailComponent {
   constructor(private route: ActivatedRoute) {}
 
   diagram$ = this.route.paramMap.pipe(
-    tap(x => console.log('x', x)),
     map(params => params.get('name')),
     filter(diagramName => !!diagramName),
     switchMap(diagramName =>
