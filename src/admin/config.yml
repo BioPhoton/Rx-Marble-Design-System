@@ -1,0 +1,60 @@
+backend:
+  name: github
+  repo: BioPhoton/Rx-Marble-Design-System
+  branch: feat/cms
+
+# use local git repository when developing to avoid unnecessary commits in upstream repo
+# 1. uncomment the local backend with git-gateway
+# 2. run npx netlify-cms-proxy-server
+# 3. use CMS admin on localhost:4200/admin/#
+#local_backend: true
+#backend:
+#  name: git-gateway
+
+#publish_mode: editorial_workflow # enables workflow with drafts & approvals via pull requests
+
+media_folder: 'src/static/images' # Media files will be stored in the repo under static/images/uploads
+public_folder: '/images' # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  - name: 'diagram'
+    label: 'Diagram'
+    create: true # Allow users to create new documents in this collection
+    format: json
+    slug: '{{fields.name}}'
+    folder: 'src/static/diagrams'
+    fields:
+      - {
+          label: 'Group',
+          name: 'group',
+          widget: 'select',
+          required: true,
+          options:
+            [
+              'rate-limiting',
+              'buffer',
+              'error-handling',
+              'combine',
+              'merge',
+              'scan',
+              'condition',
+              'timing',
+              'transform',
+              'filter',
+              'side-effect',
+              'multicast',
+              'scheduling',
+              'slice',
+              'subject',
+              'creation',
+            ],
+        }
+      - {
+          label: 'Name',
+          name: 'name',
+          widget: 'string',
+          required: true,
+          pattern: ['^[a-z][A-Za-z]*$', 'Name has to be in camelCase'],
+        }
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
