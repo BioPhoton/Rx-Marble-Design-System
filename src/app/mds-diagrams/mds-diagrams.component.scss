@@ -1,33 +1,42 @@
 @import 'abstracts/index';
 
-.layout-buttons {
+.diagrams-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 3rem;
+}
 
-  button {
-    margin-right: 1rem;
-    @include breakpoint-less(mobile) {
-      font-size: 13px;
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+
+  > * {
+    @include breakpoint(desktop-wide) {
+      max-width: 80%;
     }
   }
 }
 
-form {
-  margin-bottom: 3rem;
+.groups-filer {
+  width: 100%;
 }
 
 mat-form-field {
-  font: inherit;
-  margin-right: 4rem;
-  @include breakpoint-less(tablet) {
-    width: 100%;
-    margin-right: 0;
-  }
+  width: 100%;
 }
 
-mat-option {
-  font: inherit;
-}
+//mat-form-field {
+//  font: inherit;
+//  margin-right: 4rem;
+//  @include breakpoint-less(tablet) {
+//    width: 100%;
+//    margin-right: 0;
+//  }
+//}
 
-.active {
-  background-color: $color__primary-600;
-}
+//.active {
+//  background-color: $color__primary-600;
+//}

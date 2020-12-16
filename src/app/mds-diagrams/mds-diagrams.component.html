@@ -1,58 +1,69 @@
-<h1>Operators</h1>
-<div class="layout-buttons">
-  <button mat-button (click)="changeView(1)" [class.active]="activeView === 1">
-    List View
-  </button>
-  <button mat-button (click)="changeView(2)" [class.active]="activeView === 2">
-    Tile View
-  </button>
+<div class="diagrams-header">
+  <h1>Operators</h1>
+  <mat-button-toggle-group name="viewMode" aria-label="View Mode">
+    <mat-button-toggle
+      routerLink="."
+      routerLinkActive="mat-button-toggle-checked"
+      queryParamsHandling="merge"
+      [queryParams]="{
+        viewMode: 'list'
+      }"
+      >List View</mat-button-toggle
+    >
+    <mat-button-toggle
+      routerLink="."
+      routerLinkActive="mat-button-toggle-checked"
+      queryParamsHandling="merge"
+      [queryParams]="{
+        viewMode: 'tile'
+      }"
+      >Tile View</mat-button-toggle
+    >
+  </mat-button-toggle-group>
 </div>
 
-<h3>Search</h3>
-<form>
-  <mat-form-field>
-    <mat-label>Select Type</mat-label>
-    <mat-select
-      [(ngModel)]="groupFilter"
-      (ngModelChange)="applyFilters()"
-      [ngModelOptions]="{ standalone: true }"
+<div class="filters">
+  <mat-chip-list aria-label="Group selection">
+    <mat-chip
+      *ngFor="let group of indexGroups"
+      routerLink="."
+      [routerLinkActive]="group.value || ''"
+      [routerLinkActiveOptions]="{ exact: true }"
+      queryParamsHandling="merge"
+      [queryParams]="{
+        group: group.value
+      }"
+      class="group-chip group-indication"
+      [selectable]="true"
     >
-      <mat-option
-        *ngFor="let indexGroup of indexGroups"
-        [value]="indexGroup.value"
-      >
-        {{ indexGroup.group }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
+      <span class="index-group group-indication" [ngClass]="group.value"></span
+      >{{ group.label }}
+    </mat-chip>
+  </mat-chip-list>
+</div>
 
-  <mat-form-field>
-    <mat-label>Search Text</mat-label>
-    <input
-      matInput
-      [(ngModel)]="searchFilter"
-      (ngModelChange)="applyFilters()"
-      [ngModelOptions]="{ standalone: true }"
-      placeholder="ex. defaultEmpty"
-      value=""
-    />
-  </mat-form-field>
-</form>
-
-<div *ngIf="listView">
+<ng-container *ngIf="listViewMode$ | async; else tileView">
   <ul class="index-list">
-    <li class="index-list-item" *ngFor="let indexItem of displayItems$ | async">
+    <li
+      class="index-list-item"
+      *ngFor="let indexItem of displayItems$ | async; trackBy: trackByFn"
+    >
       <a class="index-list-route" [routerLink]="'detail/' + indexItem.name">
-        <span class="index-group {{ indexItem.class }}"></span
+        <span
+          class="index-group group-indication"
+          [ngClass]="indexItem.group"
+        ></span
         >{{ indexItem.name }}
       </a>
     </li>
   </ul>
-</div>
+</ng-container>
 
-<div *ngIf="tileView">
+<ng-template #tileView>
   <ul class="index-list">
-    <ng-container *ngFor="let indexItem of displayItems$ | async">
+    <ng-container
+      *ngFor="let indexItem of displayItems$ | async; trackBy: trackByFn"
+    >
       <li class="index-list-item-tile">
         <a
           class="index-list-route-tile"
@@ -66,16 +77,19 @@
           />
           <img
             *ngIf="!indexItem.image"
-            src="../../assets/no-preview.svg"
+            src="assets/no-preview.svg"
             alt="No Preview Image"
             loading="lazy"
           />
           <div class="index-info">
-            <span class="index-group {{ indexItem.class }}"></span
+            <span
+              class="index-group group-indication"
+              [ngClass]="indexItem.group"
+            ></span
             >{{ indexItem.name }}
           </div>
         </a>
       </li>
     </ng-container>
   </ul>
-</div>
+</ng-template>

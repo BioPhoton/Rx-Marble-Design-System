@@ -1,75 +1,56 @@
-import { Component } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { diagrams$ } from './diagrams';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { map, switchMap } from 'rxjs/operators';
+import { diagrams$, MdsDiagram } from './diagrams';
 
 @Component({
   selector: 'mds-mds-diagrams',
   templateUrl: './mds-diagrams.component.html',
   styleUrls: ['./mds-diagrams.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MdsDiagramsComponent {
-  public listView = true;
-  public tileView = false;
-  public activeView = 1;
-
-  public searchFilter: string;
-  public groupFilter: string;
-  public indexGroups = [
-    { group: 'All', value: '' },
-    { group: 'Rate-Limiting', value: 'rate-limiting' },
-    { group: 'Buffer', value: 'buffer' },
-    { group: 'Error-Handling', value: 'error-handling' },
-    { group: 'Combine', value: 'combine' },
-    { group: 'Merge', value: 'merge' },
-    { group: 'Scan', value: 'scan' },
-    { group: 'Condition', value: 'condition' },
-    { group: 'Timing', value: 'timing' },
-    { group: 'Transform', value: 'transform' },
-    { group: 'Filter', value: 'filter' },
-    { group: 'Side-Effect', value: 'side-effect' },
-    { group: 'Multicast', value: 'multicast' },
-    { group: 'Scheduling', value: 'scheduling' },
-    { group: 'Slice', value: 'slice' },
-    { group: 'Subject', value: 'subject' },
-    { group: 'Creation', value: 'creation' },
+  readonly indexGroups = [
+    { label: 'Show all', value: undefined },
+    { label: 'Rate limiting', value: 'rate-limiting' },
+    { label: 'Buffer', value: 'buffer' },
+    { label: 'Error handling', value: 'error-handling' },
+    { label: 'Combine', value: 'combine' },
+    { label: 'Merge', value: 'merge' },
+    { label: 'Scan', value: 'scan' },
+    { label: 'Condition', value: 'condition' },
+    { label: 'Timing', value: 'timing' },
+    { label: 'Transform', value: 'transform' },
+    { label: 'Filter', value: 'filter' },
+    { label: 'Side effect', value: 'side-effect' },
+    { label: 'Multicast', value: 'multicast' },
+    { label: 'Scheduling', value: 'scheduling' },
+    { label: 'Slice', value: 'slice' },
+    { label: 'Subject', value: 'subject' },
+    { label: 'Creation', value: 'creation' },
   ];
 
-  public displayItems$ = diagrams$.pipe(
+  displayItems$ = diagrams$.pipe(
     map(diagrams => Object.values(diagrams)),
+    switchMap(diagrams =>
+      this.route.queryParamMap.pipe(
+        map(params => params.get('group')),
+        map(groupName =>
+          !groupName
+            ? diagrams
+            : diagrams.filter(({ group }) => group === groupName),
+        ),
+      ),
+    ),
   );
 
-  public changeView(event) {
-    this.activeView = event;
-    if (this.listView === true) {
-      this.listView = false;
-      this.tileView = true;
-    } else {
-      this.listView = true;
-      this.tileView = false;
-    }
-  }
+  constructor(private route: ActivatedRoute) {}
 
-  filterIsSet = (filter: string): boolean =>
-    filter !== '' && filter !== undefined;
+  listViewMode$ = this.route.queryParamMap.pipe(
+    map(params => params.get('viewMode') !== 'tile'),
+  );
 
-  textMatchesTextFilter = (text): boolean =>
-    text.indexOf(this.searchFilter) === -1;
-  textMatchesGroupFilter = (text): boolean =>
-    text.indexOf(this.groupFilter) === -1;
-
-  applyFilters() {
-    this.displayItems.map(i => {
-      if (this.filterIsSet(this.groupFilter)) {
-        i.hidden = this.textMatchesGroupFilter(i.class)
-          ? true
-          : !this.filterIsSet(this.searchFilter)
-          ? false
-          : this.textMatchesTextFilter(i.desc);
-      } else {
-        i.hidden = !this.filterIsSet(this.searchFilter)
-          ? false
-          : this.textMatchesTextFilter(i.desc);
-      }
-    });
+  trackByFn(_, { name }: MdsDiagram): string {
+    return name;
   }
 }
