@@ -1,15 +1,20 @@
 backend:
   name: github
   repo: BioPhoton/Rx-Marble-Design-System
-  branch: feat/cms
+  branch: main
 
 # use local git repository when developing to avoid unnecessary commits in upstream repo
+# 0. comment out the github backend above
 # 1. uncomment the local backend with git-gateway
 # 2. run npx netlify-cms-proxy-server
 # 3. use CMS admin on localhost:4200/admin/#
+# ↓ ↓ ↓ ↓ local backend
+
 #local_backend: true
 #backend:
 #  name: git-gateway
+
+# ↑ ↑ ↑ ↑ local backend
 
 #publish_mode: editorial_workflow # enables workflow with drafts & approvals via pull requests
 
@@ -22,6 +27,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     format: json
     slug: '{{fields.name}}'
+    preview_path: diagrams/detail/{{slug}}
     folder: 'src/static/diagrams'
     fields:
       - {
@@ -54,7 +60,11 @@ collections:
           name: 'name',
           widget: 'string',
           required: true,
-          pattern: ['^[a-z][A-Za-z]*$', 'Name has to be in camelCase'],
+          pattern:
+            [
+              '^[A-Z]?[a-z]+(?:[A-Z][a-z]+)*$',
+              'Name has to be in camelCase or PascalCase',
+            ],
         }
       - { label: 'Image', name: 'image', widget: 'image', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
