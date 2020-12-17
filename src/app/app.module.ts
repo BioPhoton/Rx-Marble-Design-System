@@ -15,7 +15,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [AppComponent, ToolbarComponent, IntroductionComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
