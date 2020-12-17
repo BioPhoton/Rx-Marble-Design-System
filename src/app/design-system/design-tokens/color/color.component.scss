@@ -1,4 +1,5 @@
-@import 'abstracts/index';
+@import 'variables';
+@import 'mixins';
 
 h3 {
   @include breakpoint-less(mobile-land) {

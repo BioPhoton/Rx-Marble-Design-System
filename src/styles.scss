@@ -1,9 +1,5 @@
-@import 'abstracts/index';
-
-@import 'base/base';
-
-@import 'components/button';
-@import 'components/index-list-items';
-@import 'components/material';
-
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'base';
+@import 'button';
+@import 'fonts';
+@import 'index-list-items';
+@import 'material';
