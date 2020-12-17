@@ -14,7 +14,7 @@
     "lint:fix": "ng lint --fix",
     "serve:ssr": "node dist/server/main.js",
     "build:ssr": "npm run gen:static && ng build --prod && ng run rx-marble-design-system:server:production",
-    "prerender": "npm run gen:static && ng run rx-marble-design-system:prerender"
+    "prerender": "npm run gen:static && ng run rx-marble-design-system:prerender --routesFile routes.txt"
   },
   "private": true,
   "dependencies": {

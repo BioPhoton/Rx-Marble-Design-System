@@ -47,3 +47,4 @@ Thumbs.db
 
 # generated static files
 src/static/diagrams.json
+routes.txt

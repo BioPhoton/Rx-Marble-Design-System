@@ -19,3 +19,8 @@ function mergeSinglesToDictionary() {
 }
 
 fs.writeFileSync('./src/static/diagrams.json', mergeSinglesToDictionary());
+
+fs.writeFileSync(
+  './routes.txt',
+  staticDataFiles.map(({ name }) => `/diagrams/detail/${name}`).join('\n'),
+);
