@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "watch:static": "npx nodemon --watch src/static generate-static-data.js",
     "gen:static": "node generate-static-data.js",
-    "start": "npm run gen:static && ng serve",
-    "start:ssr": "npm run gen:static && ng run rx-marble-design-system:serve-ssr",
+    "start": "npm run watch:static & ng serve",
+    "start:ssr": "npm run watch:static & ng run rx-marble-design-system:serve-ssr",
     "build": "npm run gen:static && ng build --prod --no-progress",
     "build:dev": "npm run gen:static && ng build",
     "lint": "ng lint",
