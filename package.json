@@ -3,17 +3,18 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "start:ssr": "ng run rx-marble-design-system:serve-ssr",
-    "build": "ng build --prod --no-progress",
-    "build:dev": "ng build",
+    "gen:static": "node generate-static-data.js",
+    "start": "npm run gen:static && ng serve",
+    "start:ssr": "npm run gen:static && ng run rx-marble-design-system:serve-ssr",
+    "build": "npm run gen:static && ng build --prod --no-progress",
+    "build:dev": "npm run gen:static && ng build",
     "lint": "ng lint",
     "prettier": "pretty-quick",
     "prettier:check": "pretty-quick --check",
     "lint:fix": "ng lint --fix",
     "serve:ssr": "node dist/server/main.js",
-    "build:ssr": "ng build --prod && ng run rx-marble-design-system:server:production",
-    "prerender": "ng run rx-marble-design-system:prerender"
+    "build:ssr": "npm run gen:static && ng build --prod && ng run rx-marble-design-system:server:production",
+    "prerender": "npm run gen:static && ng run rx-marble-design-system:prerender"
   },
   "private": true,
   "dependencies": {
@@ -36,8 +37,7 @@
     "zone.js": "^0.11.3"
   },
   "devDependencies": {
-    "@angular-builders/custom-webpack": "^11.0.0-beta.4",
-    "@angular-devkit/build-angular": "~0.1100.4",
+    "@angular-devkit/build-angular": "~0.1100.5",
     "@angular/cli": "~11.0.4",
     "@angular/compiler-cli": "~11.0.5",
     "@angular/language-service": "~11.0.5",
