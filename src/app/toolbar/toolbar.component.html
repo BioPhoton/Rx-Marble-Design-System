@@ -50,9 +50,9 @@
       </mat-nested-tree-node>
     </mat-tree>
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content class="sidenav-content">
     <mat-toolbar class="toolbar-topnav">
-      <a routerLink="/" class="logo" *ngIf="isHandset$ | async">
+      <a routerLink="/" class="logo">
         <img src="/assets/mds-logo-quer.svg" alt="Marble Design System Logo" />
       </a>
       <a
@@ -67,7 +67,7 @@
         mat-icon-button
         #toggleSidenav
         (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async"
+        class="sidenav-toggle-btn"
       >
         <mat-icon>notes</mat-icon>
       </button>

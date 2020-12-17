@@ -1,10 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { Component, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
 import { MatButton } from '@angular/material/button';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 interface NavNode {
   name: string;
@@ -286,13 +286,16 @@ export class ToolbarComponent {
   @ViewChild('toggleSidenav') toggleSidenav: MatButton;
 
   isHandset$: Observable<boolean> = this.breakpointObserver
-    .observe(Breakpoints.HandsetPortrait)
+    .observe('(max-width: 768px)') // minimum for tablet breakpoint (max of mobile)
     .pipe(map(result => result.matches));
 
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    @Inject(PLATFORM_ID)
+    private readonly platformId: {},
+  ) {
     this.dataSource.data = TREE_DATA;
   }
 
-  hasChild = (_: number, node: NavNode) =>
-    !!node.children && node.children.length > 0;
+  hasChild = (_: number, node: NavNode) => node.children?.length > 0;
 }

@@ -6,12 +6,31 @@
   background: $color__body;
 }
 
+$sidenav-width: 280px;
+
 .sidenav {
+  display: block;
   width: 260px;
   background-color: $color__sidenav;
 
-  @include breakpoint(mobile-land) {
-    width: 280px;
+  @include breakpoint(tablet) {
+    width: $sidenav-width;
+  }
+
+  @include breakpoint-less(tablet) {
+    display: none;
+  }
+}
+
+.sidenav-content {
+  @include breakpoint(tablet) {
+    margin-left: 280px;
+  }
+}
+
+.sidenav-toggle-btn {
+  @include breakpoint(tablet) {
+    display: none;
   }
 }
 
@@ -63,6 +82,12 @@ mat-toolbar {
     vertical-align: middle;
     margin-bottom: 0;
   }
+
+  .toolbar-topnav & {
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
 }
 
 .mat-toolbar-single-row {
@@ -76,7 +101,7 @@ mat-toolbar {
     }
   }
 
-  @include breakpoint-less(mobile-land) {
+  @include breakpoint-less(tablet) {
     height: 64px;
   }
 }
