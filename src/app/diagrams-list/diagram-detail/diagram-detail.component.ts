@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { filter, map, switchMap } from 'rxjs/operators';
-import { diagrams$ } from '../diagrams';
+import { DIAGRAMS$ } from '../diagrams';
 
 @Component({
   selector: 'mds-diagram-detail',
@@ -16,7 +16,7 @@ export class DiagramDetailComponent {
     map(params => params.get('name')),
     filter(diagramName => !!diagramName),
     switchMap(diagramName =>
-      diagrams$.pipe(map(diagrams => diagrams[diagramName])),
+      DIAGRAMS$.pipe(map(diagrams => diagrams[diagramName])),
     ),
   );
 }
