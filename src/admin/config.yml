@@ -2,6 +2,7 @@ backend:
   name: github
   repo: BioPhoton/Rx-Marble-Design-System
   branch: main
+  site_domain: rx-marble-design-system.web.app
 
 # use local git repository when developing to avoid unnecessary commits in upstream repo
 # 0. comment out the github backend above
