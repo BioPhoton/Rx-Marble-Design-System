@@ -20,7 +20,7 @@ backend:
 publish_mode: editorial_workflow # enables workflow with drafts & approvals via pull requests
 
 media_folder: 'src/static/images' # Media files will be stored in the repo under static/images/uploads
-public_folder: '/images' # The src attribute for uploaded media will begin with /images/uploads
+public_folder: '/static/images' # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
   - name: 'diagram'
