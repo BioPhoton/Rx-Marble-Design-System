@@ -26,9 +26,7 @@
     loading="lazy"
   />
 
-  <div *ngIf="diagram.body" class="text-block">
-    <p>{{ diagram.body }}</p>
-  </div>
+  <div markdown *ngIf="diagram.body" [data]="diagram.body"></div>
 
   <div>
     <a [routerLink]="'/diagrams'" mat-button>&larr; Back to Overview</a>
