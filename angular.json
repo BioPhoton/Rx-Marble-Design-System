@@ -59,6 +59,7 @@
           },
           "configurations": {
             "production": {
+              "assets": ["src/static", "src/favicon.ico", "src/assets"],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",

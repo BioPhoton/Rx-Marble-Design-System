@@ -1,23 +1,6 @@
+local_backend: true
 backend:
-  name: github
-  repo: BioPhoton/Rx-Marble-Design-System
-  branch: main
-  site_domain: rx-marble-design-system.web.app
-
-# use local git repository when developing to avoid unnecessary commits in upstream repo
-# 0. comment out the github backend above
-# 1. uncomment the local backend with git-gateway
-# 2. run npx netlify-cms-proxy-server
-# 3. use CMS admin on localhost:4200/admin/#
-# ↓ ↓ ↓ ↓ local backend
-
-#local_backend: true
-#backend:
-#  name: git-gateway
-
-# ↑ ↑ ↑ ↑ local backend
-
-publish_mode: editorial_workflow # enables workflow with drafts & approvals via pull requests
+  name: git-gateway
 
 media_folder: 'src/static/images' # Media files will be stored in the repo under static/images/uploads
 public_folder: '/static/images' # The src attribute for uploaded media will begin with /images/uploads
