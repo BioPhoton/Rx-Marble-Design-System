@@ -8,14 +8,7 @@ Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The 
 
 ### A local server for the Netlify CMS admin
 
-If you want to commit the changes from Netlify CMS admin to your current local branch you need to temporarily disable the default config that commits directly to GitHub repository.
-It is just a few easy steps, follow the instructions in `src/admin/config.yml`.
-
-### Using the Netlify CMS admin
-
-Visit the `/admin/#` route on the local/preview/live application.
-
-_Disclaimer: For live and preview CMS admin access you might need a some specific rights to the repository_.
+If you want to commit the changes from Netlify CMS admin to your current local branch you need to run `npm run start:admin` that runs admin CMS local server and serves app locally. Navigate to `http://localhost:4200/admin/#` to use the CMS and `http://localhost:4200/` to see the application. The app will automatically reload if you change any of the source files and file watcher will reload the app with changes to the static data files at `src/static/diagrams` folder.
 
 ## Code scaffolding
 
